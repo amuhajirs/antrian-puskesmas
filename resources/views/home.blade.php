@@ -1,54 +1,29 @@
-<!DOCTYPE html>
-<html lang="en">
+@extends('layouts.main')
+@section('styles')
+<style>
+  .btncostume{
+    background: #2c3e50;
+    color: white;
+  }
+  sup{
+    color: red;
+  }
+  .border1{
+    border: thin solid;
+  }
+  
+  .costum{
+    background: white;
+    border: thin solid #fff;
+  }
+  
+  .masthead .masthead-avatar {
+    width: 8rem !important;
+  }
+</style>
+@endsection
 
-<head>
-
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-  <meta name="description" content="">
-  <meta name="author" content="">
-
-  <title>Antrian Puskesmas </title>
-  <link rel="shortcut icon" href="assets/user/img/logo.png">
-
-  <!-- Custom fonts for this theme -->
-  <link href="http://localhost/antrian-puskesmas/assets/user/vendor/fontawesome-free/css/all.min.css" rel="stylesheet" type="text/css">
-  <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet" type="text/css">
-  <link href="https://fonts.googleapis.com/css?family=Lato:400,700,400italic,700italic" rel="stylesheet" type="text/css">
-
-  <!-- Theme CSS -->
-  <link href="http://localhost/antrian-puskesmas/assets/user/css/freelancer.min.css" rel="stylesheet">
-  <link href="http://localhost/antrian-puskesmas/assets/user/lib/noty.css" rel="stylesheet">
-  <link href="http://localhost/antrian-puskesmas/assets/user/lib/themes/metroui.css" rel="stylesheet">
-  <link rel="stylesheet" href="style.css">
-
-</head>
-
-
-<body id="page-top">
-
-  <!-- Navigation -->
-  <nav class="navbar navbar-expand-lg bg-secondary text-uppercase fixed-top" id="mainNav">
-    <div class="container">
-      <a class="navbar-brand js-scroll-trigger" href="#page-top">Antrian Puskesmas</a>
-      <button class="navbar-toggler navbar-toggler-right text-uppercase font-weight-bold bg-primary text-white rounded" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
-        Menu
-        <i class="fas fa-bars"></i>
-      </button>
-      <div class="collapse navbar-collapse" id="navbarResponsive">
-        <ul class="navbar-nav ml-auto">
-                      <li class="nav-item mx-0 mx-lg-1">
-              <a class="nav-link py-3 px-0 px-lg-3 rounded js-scroll-trigger" href="#registrasi">Login</a>
-            </li>
-                    <li class="nav-item mx-0 mx-lg-1">
-            <a class="nav-link py-3 px-0 px-lg-3 rounded js-scroll-trigger" href="#bantuan">Bantuan</a>
-          </li>
-        </ul>
-      </div>
-    </div>
-  </nav>
-
-
+@section('content')
   <!-- Masthead -->
   <header class="masthead bg-primary text-white text-center">
     <div class="container d-flex align-items-center flex-column">
@@ -57,7 +32,7 @@
       
 
       <!-- Masthead Heading -->
-      <h1 class="masthead-heading text-uppercase mb-0"><img class="masthead-avatar mb-5" src="http://localhost/antrian-puskesmas/assets/user/img/logo.png" alt="">Puskesmas X</h1>
+      <h1 class="masthead-heading text-uppercase mb-0"><img class="masthead-avatar mb-5" src="/assets/user/img/logo.png" alt="">Puskesmas X</h1>
       <div class="row">
           <div class="col-md-12" style="border: thin solid; ">
             <h3>NO ANTRIAN SAAT INI</h3>
@@ -277,21 +252,9 @@
     </div>
   </div>
 </div>
+@endsection
 
-  <!-- Bootstrap core JavaScript -->
-  <script src="http://localhost/antrian-puskesmas/assets/user/vendor/jquery/jquery.min.js"></script>
-  <script src="http://localhost/antrian-puskesmas/assets/user/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
-
-  <!-- Plugin JavaScript -->
-  <script src="http://localhost/antrian-puskesmas/assets/user/vendor/jquery-easing/jquery.easing.min.js"></script>
-
-  <!-- Contact Form JavaScript -->
-  <script src="http://localhost/antrian-puskesmas/assets/user/js/jqBootstrapValidation.js"></script>
-  <script src="http://localhost/antrian-puskesmas/assets/user/js/contact_me.js"></script>
-
-  <!-- Custom scripts for this template -->
-  <script src="http://localhost/antrian-puskesmas/assets/user/js/freelancer.min.js"></script>
-  <script src="http://localhost/antrian-puskesmas/assets/user/lib/noty.min.js"></script>
+@section('scripts')
   <script type="text/javascript">
     function noAntrian(id_poli){
     // alert(id_poli);?
@@ -324,8 +287,7 @@
     }
   }
   </script>
-
-   
+@endsection
 </body>
 
 </html>
