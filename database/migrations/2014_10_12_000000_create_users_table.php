@@ -15,7 +15,7 @@ return new class extends Migration
     {
         Schema::create('users', function (Blueprint $table) {
             $table->id('id_pasien');
-            $table->bigInteger('no_identitas', 25);
+            $table->string('no_identitas');
             $table->string('nama', 150);
             $table->enum('jenis_kelamin', ['Perempuan', 'Laki-laki']);
             $table->date('tgl_lahir');

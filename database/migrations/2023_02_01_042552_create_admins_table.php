@@ -19,7 +19,7 @@ return new class extends Migration
             $table->string('password');
             $table->string('nama', 40);
             $table->boolean('status')->default(1);
-            $table->string('gambar');
+            $table->string('gambar')->default('/assets/user/img/default-avatar.png');
             $table->timestamps();
         });
     }
