@@ -20,20 +20,47 @@ use App\Http\Controllers\admin\LoginAdminController;
 
 Route::get('/', function () {
     return view('home');
-});
+})->name('home');
 
 // Guest Pasien
 Route::middleware(['guest'])->group(function () {
-    Route::post('/register', [RegisterController::class, 'register'])->name('daftar');
+    Route::post('/daftar', [RegisterController::class, 'register']);
+    Route::post('/login', [LoginController::class, 'authenticate']);
+    Route::get('/logout', [LoginController::class, 'logout'])->name('logout');
 });
-Route::post('/login', [LoginController::class, 'authenticate'])->name('login');
 
 // Require login Pasien
-// Route::middleware(['auth:web'])->group(function () {
-
-// });
+Route::middleware(['auth:web'])->group(function () {
+    Route::get('/yea', function(){
+        return view('dh_login');
+    });
+});
 
 // Guest Admin
-// Route::middleware(['guest:admin'])->group(function () {
-//     Route::get('/admin/login', [LoginAdminController::class, 'index'])->name('login.admin');
-// });
+Route::middleware(['guest:admin'])->group(function () {
+    Route::get('/admin/login', [LoginAdminController::class, 'index'])->name('admin.login');
+});
+
+Route::get('/admin/dashboard', function (){
+    return view('admin.dashboard-admin', [
+        'title'=>'Dashboard',
+    ]);
+});
+
+Route::get('/admin/pasien', function (){
+    return view('admin.pasien-admin', [
+        'title'=>'Data Pasien',
+    ]);
+});
+
+Route::get('/admin/poli', function (){
+    return view('admin.poli-admin', [
+        'title'=>'Poli',
+    ]);
+});
+
+Route::get('/admin/antrian_poli', function (){
+    return view('admin.antrian-poli-admin', [
+        'title'=>'Antrian Poli',
+    ]);
+});

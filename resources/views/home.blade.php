@@ -117,7 +117,7 @@
         </button>
       </div>
       <div class="modal-body">
-        <form action="/register" method="POST">
+        <form action="/daftar" method="POST">
           @csrf
           <div>
               <label >Nomor KTP <sup>*</sup></label>
@@ -188,26 +188,22 @@
         </button>
       </div>
       <div class="modal-body">
-        <form action="{{ route('login') }}" method="POST">
+        <form action="/login" method="POST">
           @csrf
           <div>
-              <label>Username<sup>*</sup></label>
-              <input type="text" id="usernameLogin" name="username" class="form-control @error('username') is-invalid @enderror" placeholder="Username" required>
-              @error('username')
-              <div class="invalid-feedback">
-                {{ $message }}
-              </div>
-              @enderror
-            </div>
+            <label>Username<sup>*</sup></label>
+            <input type="text" id="usernameLogin" name="username" class="form-control @error('username') is-invalid @enderror" placeholder="Username" required>
+            @error('username')
+            <div class="invalid-feedback">{{ $message }}</div>
+            @enderror
+          </div>
             
-            <div>
-              <label>Password<sup>*</sup></label>
-              <input type="password" id="passwordLogin" name="password" class="form-control  @error('password') is-invalid @enderror" placeholder="Password" required>
-              @error('password')
-              <div class="invalid-feedback">
-                {{ $message }}
-              </div>
-              @enderror
+          <div>
+            <label>Password<sup>*</sup></label>
+            <input type="password" id="passwordLogin" name="password" class="form-control  @error('password') is-invalid @enderror" placeholder="Password" required>
+            @error('password')
+            <div class="invalid-feedback">{{ $message }}</div>
+            @enderror
           </div>
           
           <br><br>
@@ -224,39 +220,36 @@
 @endsection
 
 @section('scripts')
-  <script type="text/javascript">
-    function noAntrian(id_poli){
-    // alert(id_poli);?
-    if(id_poli!=""){
-      $.ajax({
+<script type="text/javascript">
+  function noAntrian(id_poli){
+  // alert(id_poli);?
+  if(id_poli!=""){
+    $.ajax({
 
-        url: "http://localhost/antrian-puskesmas/Index/getNoAntrian",
-        type : "POST",
-        data : "id_poli="+id_poli,
-        datatype: "json",
-        success:function(response){
-          console.log(response);
-          // alert(data);
-          var output = JSON.parse(response);
-          if(output.no > output.maks){
-            $("#no_antrian_poli2").val('Data Sudah Penuh');
-            // $("#simpan").toggle('slow');
-            $("#simpan").prop("disabled",true);
-          }else{
+      url: "http://localhost/antrian-puskesmas/Index/getNoAntrian",
+      type : "POST",
+      data : "id_poli="+id_poli,
+      datatype: "json",
+      success:function(response){
+        console.log(response);
+        // alert(data);
+        var output = JSON.parse(response);
+        if(output.no > output.maks){
+          $("#no_antrian_poli2").val('Data Sudah Penuh');
+          // $("#simpan").toggle('slow');
+          $("#simpan").prop("disabled",true);
+        }else{
 
-            $("#no_antrian_poli").val(output.no_hasil);
-            $("#no_antrian_poli2").val(output.no_hasil);
-            $("#simpan").prop("disabled",false);
-          }
-        } // Munculkan alert error
-      });
-    }else{
-      $("#no_antrian_poli").val("");
-      $("#no_antrian_poli2").val("");
-    }
+          $("#no_antrian_poli").val(output.no_hasil);
+          $("#no_antrian_poli2").val(output.no_hasil);
+          $("#simpan").prop("disabled",false);
+        }
+      } // Munculkan alert error
+    });
+  }else{
+    $("#no_antrian_poli").val("");
+    $("#no_antrian_poli2").val("");
   }
-  </script>
+}
+</script>
 @endsection
-</body>
-
-</html>

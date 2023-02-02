@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html lang="en">
 
@@ -13,14 +12,14 @@
   <link rel="shortcut icon" href="assets/user/img/logo.png">
 
   <!-- Custom fonts for this theme -->
-  <link href="http://localhost:8080/antrian-puskesmas/assets/user/vendor/fontawesome-free/css/all.min.css" rel="stylesheet" type="text/css">
+  <link href="/assets/user/vendor/fontawesome-free/css/all.min.css" rel="stylesheet" type="text/css">
   <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet" type="text/css">
   <link href="https://fonts.googleapis.com/css?family=Lato:400,700,400italic,700italic" rel="stylesheet" type="text/css">
 
   <!-- Theme CSS -->
-  <link href="http://localhost:8080/antrian-puskesmas/assets/user/css/freelancer.min.css" rel="stylesheet">
-  <link href="http://localhost:8080/antrian-puskesmas/assets/user/lib/noty.css" rel="stylesheet">
-  <link href="http://localhost:8080/antrian-puskesmas/assets/user/lib/themes/metroui.css" rel="stylesheet">
+  <link href="/assets/user/css/freelancer.min.css" rel="stylesheet">
+  <link href="/assets/user/lib/noty.css" rel="stylesheet">
+  <link href="/assets/user/lib/themes/metroui.css" rel="stylesheet">
 
   <link rel="stylesheet" href="/assets/user/css/style.css">
 </head>
@@ -41,7 +40,7 @@
               <a class="nav-link py-3 px-0 px-lg-3 rounded js-scroll-trigger" href="#">Ahmad Muhajir Syamlan</a>
             </li>
             <li class="nav-item mx-0 mx-lg-1">
-              <a class="nav-link py-3 px-0 px-lg-3 rounded js-scroll-trigger" href="http://localhost:8080/antrian-puskesmas/Index/logout">Logout</a>
+              <a class="nav-link py-3 px-0 px-lg-3 rounded js-scroll-trigger" href="/logout">Logout</a>
             </li>
                     <li class="nav-item mx-0 mx-lg-1">
             <a class="nav-link py-3 px-0 px-lg-3 rounded js-scroll-trigger" href="#bantuan">Bantuan</a>
@@ -60,7 +59,7 @@
       
 
       <!-- Masthead Heading -->
-      <h1 class="masthead-heading text-uppercase mb-0"><img class="masthead-avatar mb-5" src="http://localhost:8080/antrian-puskesmas/assets/user/img/logo.png" alt="">Puskesmas X</h1>
+      <h1 class="masthead-heading text-uppercase mb-0"><img class="masthead-avatar mb-5" src="/assets/user/img/logo.png" alt="">Puskesmas X</h1>
       <div class="row">
           <div class="col-md-12" style="border: thin solid; ">
             <h3>NO ANTRIAN SAAT INI</h3>
@@ -96,7 +95,7 @@
             <label><h5>Nomor Antrian Anda :</label></h5>
           </div>
           <div class="col-md-2 text-justify"><h5>2</h5></div>
-                      <div class="col-md-5"><a href="http://localhost:8080/antrian-puskesmas/Index/cetak/38" style="color: #000; background: #fff; padding: 10px;" target="_blank">Cetak</a></div>
+                      <div class="col-md-5"><a href="/Index/cetak/38" style="color: #000; background: #fff; padding: 10px;" target="_blank">Cetak</a></div>
                   </div>
         <div class="row" style="width: 60%;">
           <div class="col-md-5 text-right"><label><h5>Poli :</label></h5></div>
@@ -128,7 +127,7 @@
             <div class="row justify-content-md-center">
               <div class="col-md-12" style="margin-top: 20px">
                 <!-- <h1 align="center">Login </h1> -->
-                <form action="http://localhost:8080/antrian-puskesmas/Index/saveAntrian" method="post">
+                <form action="/Index/saveAntrian" method="post">
                   <div class ="row">
                     <div class ="col-md-2">
                       <h6><label>Pilih Poli</label></h6>   
@@ -272,7 +271,7 @@
         </button>
       </div>
       <div class="modal-body">
-        <form action="http://localhost:8080/antrian-puskesmas/Index/registrasi" method="post">
+        <form action="/Index/registrasi" method="post">
 
             <div>
                 <label >Nomor KTP <sup>*</sup></label>
@@ -333,26 +332,26 @@
 </div>
 
   <!-- Bootstrap core JavaScript -->
-  <script src="http://localhost:8080/antrian-puskesmas/assets/user/vendor/jquery/jquery.min.js"></script>
-  <script src="http://localhost:8080/antrian-puskesmas/assets/user/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+  <script src="/assets/user/vendor/jquery/jquery.min.js"></script>
+  <script src="/assets/user/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
 
   <!-- Plugin JavaScript -->
-  <script src="http://localhost:8080/antrian-puskesmas/assets/user/vendor/jquery-easing/jquery.easing.min.js"></script>
+  <script src="/assets/user/vendor/jquery-easing/jquery.easing.min.js"></script>
 
   <!-- Contact Form JavaScript -->
-  <script src="http://localhost:8080/antrian-puskesmas/assets/user/js/jqBootstrapValidation.js"></script>
-  <script src="http://localhost:8080/antrian-puskesmas/assets/user/js/contact_me.js"></script>
+  <script src="/assets/user/js/jqBootstrapValidation.js"></script>
+  <script src="/assets/user/js/contact_me.js"></script>
 
   <!-- Custom scripts for this template -->
-  <script src="http://localhost:8080/antrian-puskesmas/assets/user/js/freelancer.min.js"></script>
-  <script src="http://localhost:8080/antrian-puskesmas/assets/user/lib/noty.min.js"></script>
+  <script src="/assets/user/js/freelancer.min.js"></script>
+  <script src="/assets/user/lib/noty.min.js"></script>
   <script type="text/javascript">
     function noAntrian(id_poli){
     // alert(id_poli);?
     if(id_poli!=""){
       $.ajax({
 
-        url: "http://localhost:8080/antrian-puskesmas/Index/getNoAntrian",
+        url: "/Index/getNoAntrian",
         type : "POST",
         data : "id_poli="+id_poli,
         datatype: "json",

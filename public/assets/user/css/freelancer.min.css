@@ -5800,6 +5800,7 @@ a.close.disabled {
     -ms-flex: 1 1 auto;
     flex: 1 1 auto;
     padding: 0px 1rem;
+    padding-bottom: 20px;
 }
 .modal-footer {
     display: -webkit-box;
