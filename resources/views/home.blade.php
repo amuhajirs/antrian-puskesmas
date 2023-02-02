@@ -1,26 +1,6 @@
 @extends('layouts.main')
 @section('styles')
-<style>
-  .btncostume{
-    background: #2c3e50;
-    color: white;
-  }
-  sup{
-    color: red;
-  }
-  .border1{
-    border: thin solid;
-  }
-  
-  .costum{
-    background: white;
-    border: thin solid #fff;
-  }
-  
-  .masthead .masthead-avatar {
-    width: 8rem !important;
-  }
-</style>
+<link rel="stylesheet" href="/assets/user/css/style.css">
 @endsection
 
 @section('content')
@@ -127,11 +107,11 @@
 </section>
 
 <!-- Modal Daftar -->
-<div class="modal fade bd-example-modal-lg" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+<div class="modal fade bd-example-modal-lg" id="daftarModal" tabindex="-1" role="dialog" aria-labelledby="daftarModalLabel" aria-hidden="true">
   <div class="modal-dialog" role="document">
     <div class="modal-content">
       <div class="modal-header">
-        <h5 class="modal-title" id="exampleModalLabel">Registrasi</h5>
+        <h5 class="modal-title" id="daftarModalLabel">Registrasi</h5>
         <button type="button" class="close" data-dismiss="modal" aria-label="Close">
           <span aria-hidden="true">&times;</span>
         </button>
@@ -193,6 +173,51 @@
         </form>
       </div>
       
+    </div>
+  </div>
+</div>
+
+<!-- Modal Login-->
+<div class="modal fade bd-example-modal-lg" id="loginModal" tabindex="-1" aria-labelledby="loginModalLabel" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered" role="document" id="login">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="loginModalLabel">Login</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        <form action="{{ route('login') }}" method="POST">
+          @csrf
+          <div>
+              <label>Username<sup>*</sup></label>
+              <input type="text" id="usernameLogin" name="username" class="form-control @error('username') is-invalid @enderror" placeholder="Username" required>
+              @error('username')
+              <div class="invalid-feedback">
+                {{ $message }}
+              </div>
+              @enderror
+            </div>
+            
+            <div>
+              <label>Password<sup>*</sup></label>
+              <input type="password" id="passwordLogin" name="password" class="form-control  @error('password') is-invalid @enderror" placeholder="Password" required>
+              @error('password')
+              <div class="invalid-feedback">
+                {{ $message }}
+              </div>
+              @enderror
+          </div>
+          
+          <br><br>
+          <div align="right">
+            <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+            <button type="submit" class="btn btn-primary">Simpan</button>
+          </div>
+        </form>
+      </div>
+
     </div>
   </div>
 </div>
