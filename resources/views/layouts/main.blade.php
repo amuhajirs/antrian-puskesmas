@@ -7,8 +7,8 @@
     <meta name="description" content="Aplikasi-Antri">
     <meta name="author" content="Kelompok-3">
 
-    <title>Antrian Puskesmas</title>
-    <link rel="icon" href="/assets/user/img/logo.png">
+    <title>Isekai Klinik</title>
+    <link rel="icon" href="/assets/user/img/icon_logo.png">
 
     <!-- Custom fonts for this theme -->
     <link href="/assets/user/vendor/fontawesome-free/css/all.min.css" rel="stylesheet" type="text/css">
@@ -19,6 +19,7 @@
     <link href="/assets/user/css/freelancer.min.css" rel="stylesheet">
     <link href="/assets/user/lib/noty.css" rel="stylesheet">
     <link href="/assets/user/lib/themes/metroui.css" rel="stylesheet">
+
 
     {{-- Blade Styles --}}
     @yield('styles')

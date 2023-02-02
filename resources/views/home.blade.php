@@ -32,27 +32,18 @@
     
 
     <!-- Masthead Heading -->
-    <h1 class="masthead-heading text-uppercase mb-0"><img class="masthead-avatar mb-5" src="/assets/user/img/logo.png" alt="">Puskesmas X</h1>
+    <h1 class="masthead-heading text-uppercase mb-0" style="text-align: center">Klinik Isekai</h1>
+    <h4 class="masthead mb-0" style="margin-top: 10px !important;padding: 20px;">Selamat Datang di Isekai Klinik 
+      <br> Lorem ipsum dolor sit amet consectetur adipisicing elit. Vitae doloremque, odio possimus minus voluptatem odit, maiores assumenda officiis eveniet omnis dolores temporibus dolor quasi vero itaque eaque! Nemo, sunt obcaecati!
+    </h4>
     <div class="row">
         <div class="col-md-12" style="border: thin solid; ">
           <h3>NO ANTRIAN SAAT INI</h3>
           <h1 style="margin-top: 5px;">1</h1>
         </div>
     </div>
-      <h4 class="masthead mb-0" style="margin-top: 10px !important;padding: 20px;">Selamat Datang di Puskesmas X. 
-        <br> Jika anda belum memiliki akun, silakan Registrasi terlebih dahulu.
-      </h4>
-      <button type="button" class="btn btncostume" data-toggle="modal" data-target="#exampleModal">
-        Registrasi
-      </button>
-      <!-- Icon Divider -->
-      <div class="divider-custom divider-light">
-        <div class="divider-custom-line"></div>
-        <div class="divider-custom-icon">
-          <i class="fas fa-star"></i>
-        </div>
-        <div class="divider-custom-line"></div>
-      </div>
+
+
 
     <!-- Masthead Subheading -->
     
@@ -64,24 +55,15 @@
     <div class="container">
 
       <!-- Portfolio Section Heading -->
-      <h2 class="page-section-heading text-center text-uppercase text-secondary mb-0">Login</h2>
-
-      <!-- Icon Divider -->
-      <div class="divider-custom">
-        <div class="divider-custom-line"></div>
-          <div class="divider-custom-icon">
-            <i class="fas fa-star"></i>
-          </div>
-        <div class="divider-custom-line"></div>
-      </div>
+      <h2 class="page-section-heading text-center text-uppercase text-secondary mb-0">JENIS PELAYANAN</h2>
 
       <!-- Portfolio Grid Items -->
-      <div class="row">
+      {{-- <div class="row">
 
         <div class="container">
           <div class="row justify-content-md-center">
             <div class="col-md-4" style="margin-top: 20px">
-              {{-- <h1 align="center">Login </h1> --}}
+              <h1 align="center">Login </h1>
               <form action="http://localhost/antrian-puskesmas/Index/proses_login" method='POST'>
                 @csrf
                 <label >Username</label>
@@ -102,7 +84,7 @@
           </div>
         </div>
 
-      </div>
+      </div> --}}
       <!-- /.row -->
 
     </div>
@@ -144,7 +126,7 @@
   </div> -->
 </section>
 
-<!-- Modal -->
+<!-- Modal Daftar -->
 <div class="modal fade bd-example-modal-lg" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
   <div class="modal-dialog" role="document">
     <div class="modal-content">
