@@ -5,9 +5,9 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use App\Models\User;
 
-class RegisterController extends Controller
+class DaftarController extends Controller
 {
-    public function register(Request $request){
+    public function daftar(Request $request){
         $request->validate([
             'no_identitas'=>'required|min:16|max:16',
             'nama'=>'required|min:3',
@@ -30,6 +30,6 @@ class RegisterController extends Controller
             'password'=>bcrypt($request->password),
         ]);
         
-        return redirect('/')->with('registerSuccess', 'Pendaftaran berhasil, silahkan login!');
+        return redirect('/')->with('daftarSukses', 'Pendaftaran berhasil, silahkan login!');
     }
 }

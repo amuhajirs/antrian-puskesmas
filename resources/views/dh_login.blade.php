@@ -378,17 +378,17 @@
   }
   </script>
 
-           <script type="text/javascript">
-            new Noty({
-                
-                text: 'Login Berhasil',
-                timeout: 3000,
-                theme: "metroui",
-                type: "success",
+  <script type="text/javascript">
+    new Noty({
+        
+        text: 'Login Berhasil',
+        timeout: 3000,
+        theme: "metroui",
+        type: "success",
 
-                
-            }).show();
-        </script>
+        
+    }).show();
+  </script>
         
 </body>
 

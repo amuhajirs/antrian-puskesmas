@@ -120,52 +120,76 @@
         <form action="/daftar" method="POST">
           @csrf
           <div>
-              <label >Nomor KTP <sup>*</sup></label>
-              <input type="text" id="no_identitas" name="no_identitas" class="form-control" value="" placeholder="Nomor KTP" required="">
+              <label for="no_identitas">Nomor KTP <sup>*</sup></label>
+              <input type="text" id="no_identitas" name="no_identitas" class="form-control @error('no_identitas') is-invalid @enderror" placeholder="Nomor KTP" required>
+              @error('no_identitas')
+              <div class="invalid-feedback">{{ $message }}</div>
+              @enderror
           </div>
 
           <div>
-              <label >Nama <sup>*</sup></label>
-              <input type="text" id="nama" name="nama" class="form-control" value="" placeholder="Nama" required="">
+              <label for="nama">Nama <sup>*</sup></label>
+              <input type="text" id="nama" name="nama" class="form-control @error('nama') is-invalid @enderror" placeholder="Nama" required>
+              @error('nama')
+              <div class="invalid-feedback">{{ $message }}</div>
+              @enderror
           </div>
 
           <div>
-            <label >Jenis Kelamin</label>
-            <select id="jenis_kelamin" name="jenis_kelamin" class="form-control">
-              <option value="">Pilih</option>
+            <label for="jenis_kelamin">Jenis Kelamin</label>
+            <select id="jenis_kelamin" name="jenis_kelamin" class="form-control @error('jenis_kelamin') is-invalid @enderror">
+              <option>Pilih</option>
               <option value="Laki-Laki">Laki-Laki</option>
               <option value="Perempuan">Perempuan</option>
             </select>
+            @error('jenis_kelamin')
+            <div class="invalid-feedback">{{ $message }}</div>
+            @enderror
           </div>
 
           <div>
-              <label >Tanggal Lahir <sup>*</sup></label>
-              <input type="date" id="tgl_lahir" name="tgl_lahir" class="form-control" value="" placeholder="Tanggal Lahir" required="">
+              <label for="tgl_lahir">Tanggal Lahir <sup>*</sup></label>
+              <input type="date" id="tgl_lahir" name="tgl_lahir" class="form-control @error('tgl_lahir') is-invalid @enderror" placeholder="Tanggal Lahir" required>
+              @error('tgl_lahir')
+              <div class="invalid-feedback">{{ $message }}</div>
+              @enderror
           </div>
 
           <div>
-            <label >Alamat</label>
-            <textarea id="alamat" name="alamat" class="form-control" placeholder="Alamat"></textarea>
+            <label for="alamat">Alamat</label>
+            <textarea id="alamat" name="alamat" class="form-control @error('alamat') is-invalid @enderror" placeholder="Alamat"></textarea>
+            @error('alamat')
+            <div class="invalid-feedback">{{ $message }}</div>
+            @enderror
           </div>
 
           <div>
-              <label >No Telephone</label>
-              <input type="no_telp" id="no_telp" name="no_telp" class="form-control" value="" placeholder="No Telephone">
+              <label for="no_telp">No Telephone</label>
+              <input type="no_telp" id="no_telp" name="no_telp" class="form-control @error('no_telp') is-invalid @enderror" placeholder="No Telephone">
+              @error('username')
+              <div class="invalid-feedback">{{ $message }}</div>
+              @enderror
           </div>
 
           <div>
-              <label >Username <sup>*</sup></label>
-              <input type="text" id="username" name="username" class="form-control" value="" placeholder="Username" required="">
+              <label for="username">Username <sup>*</sup></label>
+              <input type="text" id="username" name="username" class="form-control @error('username') is-invalid @enderror" placeholder="Username" required>
+              @error('username')
+              <div class="invalid-feedback">{{ $message }}</div>
+              @enderror
           </div>
 
           <div>
-              <label >Password <sup>*</sup></label>
-              <input type="password" id="password" name="password" class="form-control" value="" placeholder="Password" required="">
+              <label for="password">Password <sup>*</sup></label>
+              <input type="password" id="password" name="password" class="form-control @error('password') is-invalid @enderror" placeholder="Password" required>
+              @error('password')
+              <div class="invalid-feedback">{{ $message }}</div>
+              @enderror
           </div>
 
           <br><br>
           <div align="right">
-          <!-- <a href=""  >Registrasi</a> -->
+          <!-- <a href  >Registrasi</a> -->
             <button type="button" class="btn btn-secondary" data-dismiss="modal">Tutup</button>
             <button type="submit" class="btn btn-primary">Simpan</button>
           </div>
@@ -190,8 +214,8 @@
       <div class="modal-body">
         <form action="/login" method="POST">
           @csrf
-          <div>
-            <label>Username<sup>*</sup></label>
+          <div class="mb-3">
+            <label for="usernameLogin">Username<sup>*</sup></label>
             <input type="text" id="usernameLogin" name="username" class="form-control @error('username') is-invalid @enderror" placeholder="Username" required>
             @error('username')
             <div class="invalid-feedback">{{ $message }}</div>
@@ -199,7 +223,7 @@
           </div>
             
           <div>
-            <label>Password<sup>*</sup></label>
+            <label for="passwordLogin">Password<sup>*</sup></label>
             <input type="password" id="passwordLogin" name="password" class="form-control  @error('password') is-invalid @enderror" placeholder="Password" required>
             @error('password')
             <div class="invalid-feedback">{{ $message }}</div>
@@ -220,10 +244,10 @@
 @endsection
 
 @section('scripts')
-<script type="text/javascript">
+{{-- <script type="text/javascript">
   function noAntrian(id_poli){
   // alert(id_poli);?
-  if(id_poli!=""){
+  if(id_poli!){
     $.ajax({
 
       url: "http://localhost/antrian-puskesmas/Index/getNoAntrian",
@@ -251,5 +275,29 @@
     $("#no_antrian_poli2").val("");
   }
 }
+</script> --}}
+
+@error('loginFailed')
+<script type="text/javascript">
+  new Noty({
+      
+      text: 'Username atau Password Salah',
+      timeout: 3000,
+      theme: "metroui",
+      type: "warning",
+  }).show();
 </script>
+@enderror
+
+@if(request()->session()->has('daftarSukses'))
+<script type="text/javascript">
+  new Noty({
+      
+      text: 'Pendaftaran Berhasil',
+      timeout: 3000,
+      theme: "metroui",
+      type: "success",
+  }).show();
+</script>
+@endif
 @endsection
