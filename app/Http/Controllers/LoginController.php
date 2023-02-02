@@ -15,7 +15,7 @@ class LoginController extends Controller
 
         if(Auth::guard('web')->attempt($credentials)) {
             $request->session()->regenerate();
-            return redirect('/');
+            return redirect('/')->with('loginSuccess', 'Login Berhasil');
         }
 
         return back()->withErrors([

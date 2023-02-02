@@ -300,4 +300,16 @@
   }).show();
 </script>
 @endif
+
+@if(request()->session()->has('loginSuccess'))
+<script type="text/javascript">
+  new Noty({
+      
+      text: 'Login Berhasil',
+      timeout: 3000,
+      theme: "metroui",
+      type: "success",
+  }).show();
+</script>
+@endif
 @endsection

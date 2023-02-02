@@ -22,11 +22,12 @@ Route::get('/', function () {
     return view('home');
 })->name('home');
 
+Route::get('/logout', [LoginController::class, 'logout'])->name('logout');
+
 // Guest Pasien
 Route::middleware(['guest'])->group(function () {
     Route::post('/daftar', [DaftarController::class, 'daftar']);
     Route::post('/login', [LoginController::class, 'authenticate']);
-    Route::get('/logout', [LoginController::class, 'logout'])->name('logout');
 });
 
 // Require login Pasien
