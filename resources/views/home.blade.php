@@ -303,4 +303,16 @@
   }).show();
 </script>
 @endif
+
+@if(request()->session()->has('loggedOut'))
+<script type="text/javascript">
+  new Noty({
+      
+      text: 'Anda Telah Logout',
+      timeout: 3000,
+      theme: "metroui",
+      type: "success",
+  }).show();
+</script>
+@endif
 @endsection

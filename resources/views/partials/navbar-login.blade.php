@@ -1,4 +1,3 @@
-<!-- Navigation -->
 <nav class="navbar navbar-expand-lg text-uppercase fixed-top" id="mainNav" style="background-color: #1e789c">
     <div class="container">
         <a href="#page-top" class="js-scroll-trigger"><img class="navbar-brand" src="/assets/user/img/klinik_logo.png" height="65px" /></a>
