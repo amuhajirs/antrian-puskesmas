@@ -8,9 +8,9 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 <html>
 
 <head>
-    <base href="http://localhost:8080/antrian-puskesmas/assets/admin/login/purple_login/" />
-    <title>Login Administrator</title>
-    <link rel="shortcut icon" href="assets/user/img/logo.png">
+    <base href="/assets/admin/login/purple_login/" />
+    <title>Login Admin</title>
+    <link rel="shortcut icon" href="images/icon_logo.png">
     <link href='http://fonts.googleapis.com/css?family=Droid+Sans' rel='stylesheet' type='text/css'>
     <link href="css/style.css" rel="stylesheet" type="text/css" media="all" />
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
@@ -34,9 +34,8 @@ License URL: http://creativecommons.org/licenses/by/3.0/
     <div class="message warning">
         <div class="inset">
             <div class="login-head" style="">
-                <h1><img src="http://localhost:8080/antrian-puskesmas/assets/user/img/logo.png" alt="" width="80"
-                        height="80" style="float: left; margin-top: -25px;">Login Administrator</h1>
-                <div class="alert-close"> </div>
+                <h1><img src="images/klinik_logo.png" alt="" width="80"
+                        height="80" style="float: left; margin-top: -25px; margin-right: 25px">Login Administrator</h1>
             </div>
             <form method="post" action="">
                 <li>
