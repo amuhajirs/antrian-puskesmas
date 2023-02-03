@@ -172,15 +172,16 @@ return [
 
     'attributes' => [
         'name'=>'Nama',
+        'usename'=>'Username',
         'business_name'=>'Nama Bisnis',
         'email'=> 'Email',
         'phone'=> 'Nomor HP',
         'business_phone'=> 'Nomor Telepon Bisnis',
         'hpEmail'=>'Kolom ini',
-        'password'=>'Kata Sandi',
-        'current_password'=>'Kata Sandi saat ini',
-        'new_password'=>'Kata Sandi Baru',
-        'password_confirmation'=>'Konfirmasi Kata Sandi',
-        'confirm_password'=>'Konfirmasi Kata Sandi',
+        'password'=>'Password',
+        'current_password'=>'Password saat ini',
+        'new_password'=>'Password Baru',
+        'password_confirmation'=>'Konfirmasi Password',
+        'confirm_password'=>'Konfirmasi Password',
     ],
 ];

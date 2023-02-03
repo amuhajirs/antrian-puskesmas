@@ -20,7 +20,7 @@
     <link href="/assets/user/lib/noty.css" rel="stylesheet">
     <link href="/assets/user/lib/themes/metroui.css" rel="stylesheet">
 
-
+    @livewireStyles
     {{-- Blade Styles --}}
     @yield('styles')
 </head>
@@ -61,6 +61,8 @@
     <script src="/assets/user/js/freelancer.min.js"></script>
     <script src="/assets/user/lib/noty.min.js"></script>
     
+    @livewireScripts
+
     {{-- Blade Scripts --}}
     @yield('scripts')
 </body>

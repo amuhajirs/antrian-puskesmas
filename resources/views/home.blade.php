@@ -341,45 +341,7 @@
 </div>
 
 <!-- Modal Login-->
-<div class="modal fade bd-example-modal-lg" id="loginModal" tabindex="-1" aria-labelledby="loginModalLabel" aria-hidden="true">
-  <div class="modal-dialog modal-dialog-centered" role="document" id="login">
-    <div class="modal-content">
-      <div class="modal-header">
-        <h5 class="modal-title" id="loginModalLabel">Login</h5>
-        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-          <span aria-hidden="true">&times;</span>
-        </button>
-      </div>
-      <div class="modal-body">
-        <form action="/login" method="POST">
-          @csrf
-          <div class="mb-3">
-            <label for="usernameLogin">Username<sup>*</sup></label>
-            <input type="text" id="usernameLogin" name="username" class="form-control @error('username') is-invalid @enderror" placeholder="Username" required>
-            @error('username')
-            <div class="invalid-feedback">{{ $message }}</div>
-            @enderror
-          </div>
-            
-          <div>
-            <label for="passwordLogin">Password<sup>*</sup></label>
-            <input type="password" id="passwordLogin" name="password" class="form-control  @error('password') is-invalid @enderror" placeholder="Password" required>
-            @error('password')
-            <div class="invalid-feedback">{{ $message }}</div>
-            @enderror
-          </div>
-          
-          <br><br>
-          <div align="right">
-            <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-            <button type="submit" class="btn btn-primary">Simpan</button>
-          </div>
-        </form>
-      </div>
-
-    </div>
-  </div>
-</div>
+<livewire:login-modal />
 @endsection
 
 @section('scripts')
