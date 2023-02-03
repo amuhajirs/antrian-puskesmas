@@ -171,13 +171,12 @@ return [
     */
 
     'attributes' => [
-        'name'=>'Nama',
+        'nama'=>'Nama',
+        'no_identitas'=>'Nomor KTP',
+        'no_telp'=>'No Telephone',
         'usename'=>'Username',
-        'business_name'=>'Nama Bisnis',
         'email'=> 'Email',
         'phone'=> 'Nomor HP',
-        'business_phone'=> 'Nomor Telepon Bisnis',
-        'hpEmail'=>'Kolom ini',
         'password'=>'Password',
         'current_password'=>'Password saat ini',
         'new_password'=>'Password Baru',

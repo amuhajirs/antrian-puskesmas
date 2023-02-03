@@ -24,11 +24,6 @@ Route::get('/', function () {
 
 Route::get('/logout', [LoginController::class, 'logout'])->name('logout');
 
-// Guest Pasien
-Route::middleware(['guest'])->group(function () {
-    Route::post('/daftar', [DaftarController::class, 'daftar']);
-});
-
 Route::get('/yea', function(){
     return view('dh_login');
 });
