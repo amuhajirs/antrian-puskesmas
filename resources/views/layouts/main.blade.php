@@ -27,7 +27,11 @@
 
 <body id="page-top">
     {{-- Navbar --}}
+    @auth('web')
+    @include('partials.navbar-login')
+    @else
     @include('partials.navbar')
+    @endauth
 
     {{-- Content --}}
     @yield('content')
