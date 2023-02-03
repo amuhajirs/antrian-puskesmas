@@ -12,12 +12,12 @@
     
 
     <!-- Masthead Heading -->
-    <h1 class="masthead-heading text-uppercase mb-0" style="text-align: center">Klinik Isekai</h1>
-    <h4 class="masthead mb-0" style="margin-top: 10px !important;padding: 20px;">Selamat Datang di Isekai Klinik 
-      <br> Lorem ipsum dolor sit amet consectetur adipisicing elit. Vitae doloremque, odio possimus minus voluptatem odit, maiores assumenda officiis eveniet omnis dolores temporibus dolor quasi vero itaque eaque! Nemo, sunt obcaecati!
+    <h1 class="masthead-heading text-uppercase mb-0 text-left" >Selamat Datang di Isekai Klinik </h1>
+    <h4 class="masthead mb-0" style="margin-top: 50px !important;padding: 5px; text-align:left">
+      Lorem ipsum dolor sit amet consectetur adipisicing elit. Vitae doloremque, odio possimus minus voluptatem odit, maiores assumenda officiis eveniet omnis dolores temporibus dolor quasi vero itaque eaque! Nemo, sunt obcaecati!
     </h4>
     <div class="row">
-        <div class="col-md-12" style="border: thin solid; ">
+        <div class="col-md-12" style="border: thin solid; margin-top:70px">
           <h3>NO ANTRIAN SAAT INI</h3>
           <h1 style="margin-top: 5px;">1</h1>
         </div>
@@ -98,10 +98,10 @@
     
                                     <div class="col-md-4 mb-3">
                                         <div class="card">
-                                            <img class="img-fluid" alt="100%x280" src="https://images.unsplash.com/photo-1532771098148-525cefe10c23?ixlib=rb-0.3.5&amp;q=80&amp;fm=jpg&amp;crop=entropy&amp;cs=tinysrgb&amp;w=1080&amp;fit=max&amp;ixid=eyJhcHBfaWQiOjMyMDc0fQ&amp;s=3f317c1f7a16116dec454fbc267dd8e4">
+                                            <img class="img-fluid" alt="100%x280" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT3qO57x8JQIFAoxDdP5wh4ZEVMT265r1Y87oVHtlJkEVcEAeNMwugS6wvKKKgMWRLd0Co&usqp=CAU">
                                             <div class="card-body">
-                                                <h4 class="card-title">Special title treatment</h4>
-                                                <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
+                                                <h4 class="card-title">Poliklinik Jiwa</h4>
+                                                <p class="card-text">Poliklinik Jiwa Melayani pemeriksaan, pengobatan, tindakan dan konsultasi berbagai penyakit yang berhubungan dengan kejiwaan.</p>
     
                                             </div>
     
@@ -109,60 +109,27 @@
                                     </div>
                                     <div class="col-md-4 mb-3">
                                         <div class="card">
-                                            <img class="img-fluid" alt="100%x280" src="https://images.unsplash.com/photo-1532715088550-62f09305f765?ixlib=rb-0.3.5&amp;q=80&amp;fm=jpg&amp;crop=entropy&amp;cs=tinysrgb&amp;w=1080&amp;fit=max&amp;ixid=eyJhcHBfaWQiOjMyMDc0fQ&amp;s=ebadb044b374504ef8e81bdec4d0e840">
+                                            <img class="img-fluid" alt="100%x280" src="https://www.rsupermatahati.com/files/image/1570171111_hal-hal-seputar-konsultasi-penyakit-saraf-yang-perlu-anda-tahu-alodokter.jpg">
                                             <div class="card-body">
-                                                <h4 class="card-title">Special title treatment</h4>
-                                                <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
+                                                <h4 class="card-title">Poliklinik Saraf</h4>
+                                                <p class="card-text">Poliklinik Saraf merupakan Poliklinik yang menangani dan melayani pemeriksaan kondisi dan mendeteksi gangguan pada sistem saraf tubuh.</p>
     
                                             </div>
                                         </div>
                                     </div>
                                     <div class="col-md-4 mb-3">
                                         <div class="card">
-                                            <img class="img-fluid" alt="100%x280" src="https://images.unsplash.com/photo-1506197603052-3cc9c3a201bd?ixlib=rb-0.3.5&amp;q=80&amp;fm=jpg&amp;crop=entropy&amp;cs=tinysrgb&amp;w=1080&amp;fit=max&amp;ixid=eyJhcHBfaWQiOjMyMDc0fQ&amp;s=0754ab085804ae8a3b562548e6b4aa2e">
+                                            <img class="img-fluid" alt="100%x280" src="https://stikeshb.ac.id/wp-content/uploads/2022/08/8.jpg">
                                             <div class="card-body">
-                                                <h4 class="card-title">Special title treatment</h4>
-                                                <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
+                                                <h4 class="card-title">Poliklinik Gizi</h4>
+                                                <p class="card-text">Poli Gizi merupakan poliklinik yang didalamnya terdapat ahli gizi dan tenaga spesialis yang bertugas memberikan saran dan informasi kepada pasien tentang penatalaksanaan gizi dan masalah kesehatan.</p>
     
                                             </div>
                                         </div>
                                     </div>
     
                                 </div>
-                            </div>
-                            <div class="carousel-item">
-                                <div class="row">
-    
-                                    <div class="col-md-4 mb-3">
-                                        <div class="card">
-                                            <img class="img-fluid" alt="100%x280" src="https://images.unsplash.com/photo-1507525428034-b723cf961d3e?ixlib=rb-0.3.5&amp;q=80&amp;fm=jpg&amp;crop=entropy&amp;cs=tinysrgb&amp;w=1080&amp;fit=max&amp;ixid=eyJhcHBfaWQiOjMyMDc0fQ&amp;s=ee8417f0ea2a50d53a12665820b54e23">
-                                            <div class="card-body">
-                                                <h4 class="card-title">Special title treatment</h4>
-                                                <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
-    
-                                            </div>
-    
-                                        </div>
-                                    </div>
-                                    <div class="col-md-4 mb-3">
-                                        <div class="card">
-                                            <img class="img-fluid" alt="100%x280" src="https://images.unsplash.com/photo-1532777946373-b6783242f211?ixlib=rb-0.3.5&amp;q=80&amp;fm=jpg&amp;crop=entropy&amp;cs=tinysrgb&amp;w=1080&amp;fit=max&amp;ixid=eyJhcHBfaWQiOjMyMDc0fQ&amp;s=8ac55cf3a68785643998730839663129">
-                                            <div class="card-body">
-                                                <h4 class="card-title">Special title treatment</h4>
-                                                <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
-    
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="col-md-4 mb-3">
-                                        <div class="card">
-                                            <img class="img-fluid" alt="100%x280" src="https://images.unsplash.com/photo-1532763303805-529d595877c5?ixlib=rb-0.3.5&amp;q=80&amp;fm=jpg&amp;crop=entropy&amp;cs=tinysrgb&amp;w=1080&amp;fit=max&amp;ixid=eyJhcHBfaWQiOjMyMDc0fQ&amp;s=5ee4fd5d19b40f93eadb21871757eda6">
-                                            <div class="card-body">
-                                                <h4 class="card-title">Special title treatment</h4>
-                                                <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
-                                            </div>
-                                        </div>
-                                    </div>
+                          
                                 </div>
                             </div>
                         </div>
@@ -214,26 +181,53 @@
   <div class="container">
 
     <!-- About Section Heading -->
-    <h2 class="page-section-heading text-center text-uppercase text-white">Bantuan</h2>
-
-    <!-- Icon Divider -->
-    <div class="divider-custom divider-light">
-      <div class="divider-custom-line"></div>
-        <div class="divider-custom-icon">
-          <i class="fas fa-star"></i>
-        </div>
-      <div class="divider-custom-line"></div>
-    </div>
+    <h2 class="page-section-heading text-uppercase text-white text-left" >Bagaimana cara mengambil nomor antrian ?</h2>
 
     <!-- About Section Content -->
-    <div class="container">  
-      <div class="row">
-        <div class="col-lg-4.ml-auto" align="center" >
-          <p class="lead">Klik Login > Pilih Poli > Klik Cetak</p>
-          <p class="lead">Pasien melakukan Registrasi > Input Nomor Identitas, Nama Pasien, Jenis Kelamin, Usia, Tanggal Lahir, Alamat, Nomor Telephone, Username dan Password > Klik Login >  Pilih Poli > Klik Cetak </p>
+      
+    <div class="wpb-timeline-block">
+
+        <div class="wpb-timeline-content">
+        
+        <h3>1. Klik Tombol Login </h3>
+        <ul>
+          <li>Jika belum memiliki akun, silahkan <strong>Daftar</strong> Dahulu.</li>
+          <li>Silahkan mengisi dan melengkapi isi form.</li>     
+        </ul>
+
       </div>
     </div>
+
+    
+    <div class="wpb-timeline-block">
+
+      <div class="wpb-timeline-content">
+      
+      <h3>2. Pilih Poliklinik</h3>
+      <ul>
+        <li>Jika sudah memilih <strong>Poliklinik</strong></li>
+        <li>Silahkan ambil nomor antrian.</li>     
+      </ul>
+
+    </div>
   </div>
+
+    
+  <div class="wpb-timeline-block">
+
+    <div class="wpb-timeline-content">
+    
+    <h3>3. Cetak Nomor Antrian</h3>
+    <ul>
+      <li>Klik tombol <strong>Cetak</strong> jika ingin mencetak nomor antrian.</li>
+      <li>Silahkan tunggu sampai dipanggil sesuai dengan nomor antrian.</li>     
+    </ul>
+
+  </div>
+</div>
+
+
+
     <!-- About Section Button -->
     <!-- <div class="text-center mt-4">
       <a class="btn btn-xl btn-outline-light" href="https://startbootstrap.com/themes/freelancer/">
