@@ -27,12 +27,8 @@ Route::get('/logout', [LoginController::class, 'logout'])->name('logout');
 // Guest Pasien
 Route::middleware(['guest'])->group(function () {
     Route::post('/daftar', [DaftarController::class, 'daftar']);
-    Route::post('/login', [LoginController::class, 'authenticate']);
 });
 
-// Require login Pasien
-Route::middleware(['auth:web'])->group(function () {
-});
 Route::get('/yea', function(){
     return view('dh_login');
 });
