@@ -7,9 +7,11 @@ use Illuminate\Support\Facades\Auth;
 
 class LoginController extends Controller{
     public function logout(Request $request){
-        Auth::guard('admin')->logout();
-        $request->session()->invalidate();
-        $request->session()->regenerateToken();
+        Auth::guard('web')->logout();
+        if(!Auth::guard('admin')->check()){
+            $request->session()->invalidate();
+            $request->session()->regenerateToken();
+        }
         return redirect('/')->with('loggedOut', 'yea');
     }
 }

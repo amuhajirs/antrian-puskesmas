@@ -4,18 +4,19 @@ Author URL: http://w3layouts.com
 License: Creative Commons Attribution 3.0 Unported
 License URL: http://creativecommons.org/licenses/by/3.0/
 -->
-<!DOCTYPE HTML>
+<!DOCTYPE html>
 <html>
 
 <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+
     <base href="/assets/admin/login/purple_login/" />
     <title>Login Admin</title>
-    <link rel="shortcut icon" href="images/icon_logo.png">
+    <link rel="icon" href="images/icon_logo.png">
     <link href='http://fonts.googleapis.com/css?family=Droid+Sans' rel='stylesheet' type='text/css'>
     <link href="css/style.css" rel="stylesheet" type="text/css" media="all" />
-    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     <!-- -->
     <script>var __links = document.querySelectorAll('a'); function __linkClick(e) { parent.window.postMessage(this.href, '*'); }; for (var i = 0, l = __links.length; i < l; i++) { if (__links[i].getAttribute('data-t') == '_blank') { __links[i].addEventListener('click', __linkClick, false); } }</script>
     <script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
@@ -37,17 +38,16 @@ License URL: http://creativecommons.org/licenses/by/3.0/
                 <h1><img src="images/klinik_logo.png" alt="" width="80"
                         height="80" style="float: left; margin-top: -25px; margin-right: 25px">Login Administrator</h1>
             </div>
-            <form method="post" action="">
+            <form method="POST" action="">
+                @csrf
                 <li>
-                    <input type="text" class="text" value="Email" name="email" onfocus="this.value = '';"
-                        onblur="if (this.value == '') {this.value = 'Email';}"
-                        required><!-- <span class="icon user"></span> -->
+                    <input type="text" class="text" name="email" placeholder="Email" required>
+                    <span class="icon user"></span>
                 </li>
                 <div class="clear"> </div>
                 <li>
-                    <input type="password" value="Password" name="password" onfocus="this.value = '';"
-                        onblur="if (this.value == '') {this.value = 'Password';}" required>
-                    <!-- <span class="icon lock"></span> -->
+                    <input type="password" name="password" placeholder="Password" required>
+                    <span class="icon lock"></span>
                 </li>
                 <div class="clear"> </div>
                 <div class="submit">

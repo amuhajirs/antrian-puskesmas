@@ -174,7 +174,7 @@ return [
         'nama'=>'Nama',
         'no_identitas'=>'Nomor KTP',
         'no_telp'=>'No Telephone',
-        'usename'=>'Username',
+        'username'=>'Username',
         'email'=> 'Email',
         'phone'=> 'Nomor HP',
         'password'=>'Password',

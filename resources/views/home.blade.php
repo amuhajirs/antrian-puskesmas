@@ -1,6 +1,11 @@
 @extends('layouts.main')
 @section('styles')
 <link rel="stylesheet" href="/assets/user/css/style.css">
+<style>
+  .carousel-item .card{
+    height: 450px;
+  }
+</style>
 @endsection
 
 @section('content')
@@ -56,10 +61,11 @@
                     <div id="carouselExampleIndicators2" class="carousel slide" data-ride="carousel">
     
                         <div class="carousel-inner">
+
                             <div class="carousel-item active">
                                 <div class="row">
     
-                                    <div class="col-md-4 mb-3" >
+                                    <div class="col-md-4 mb-3" h>
                                         <div class="card">
                                             <img class="img-fluid" alt="" src="https://o-cdf.sirclocdn.com/unsafe/o-cdn-cas.sirclocdn.com/parenting/images/dokter_mata_di_bogor_6BYIDoj.width-800.jpegquality-80.jpg">
                                             <div class="card-body">
@@ -93,6 +99,7 @@
     
                                 </div>
                             </div>
+
                             <div class="carousel-item">
                                 <div class="row">
     
@@ -102,9 +109,7 @@
                                             <div class="card-body">
                                                 <h4 class="card-title">Poliklinik Jiwa</h4>
                                                 <p class="card-text">Poliklinik Jiwa Melayani pemeriksaan, pengobatan, tindakan dan konsultasi berbagai penyakit yang berhubungan dengan kejiwaan.</p>
-    
                                             </div>
-    
                                         </div>
                                     </div>
                                     <div class="col-md-4 mb-3">
@@ -181,7 +186,7 @@
   <div class="container">
 
     <!-- About Section Heading -->
-    <h2 class="page-section-heading text-uppercase text-white text-left" >Bagaimana cara mengambil nomor antrian ?</h2>
+    <h2 class="page-section-heading text-uppercase text-white text-left mb-5" >Bagaimana cara mengambil nomor antrian ?</h2>
 
     <!-- About Section Content -->
       
@@ -217,14 +222,14 @@
 
     <div class="wpb-timeline-content">
     
-    <h3>3. Cetak Nomor Antrian</h3>
-    <ul>
-      <li>Klik tombol <strong>Cetak</strong> jika ingin mencetak nomor antrian.</li>
-      <li>Silahkan tunggu sampai dipanggil sesuai dengan nomor antrian.</li>     
-    </ul>
+      <h3>3. Cetak Nomor Antrian</h3>
+      <ul>
+        <li>Klik tombol <strong>Cetak</strong> jika ingin mencetak nomor antrian.</li>
+        <li>Silahkan tunggu sampai dipanggil sesuai dengan nomor antrian.</li>     
+      </ul>
 
+    </div>
   </div>
-</div>
 
 
 
@@ -247,6 +252,42 @@
 @endsection
 
 @section('scripts')
+@if(request()->session()->has('daftarSukses'))
+<script type="text/javascript">
+  new Noty({
+      
+      text: 'Pendaftaran Berhasil',
+      timeout: 3000,
+      theme: "metroui",
+      type: "success",
+  }).show();
+</script>
+@endif
+
+@if(request()->session()->has('loginSuccess'))
+<script type="text/javascript">
+  new Noty({
+      
+    text: 'Login Berhasil',
+      timeout: 3000,
+      theme: "metroui",
+      type: "success",
+    }).show();
+</script>
+@endif
+
+@if(request()->session()->has('loggedOut'))
+<script type="text/javascript">
+  new Noty({
+      
+    text: 'Anda Telah Logout',
+    timeout: 3000,
+    theme: "metroui",
+    type: "success",
+  }).show();
+</script>
+@endif
+
 {{-- <script type="text/javascript">
   function noAntrian(id_poli){
   // alert(id_poli);?
@@ -279,40 +320,4 @@
   }
 }
 </script> --}}
-
-@if(request()->session()->has('daftarSukses'))
-<script type="text/javascript">
-  new Noty({
-      
-      text: 'Pendaftaran Berhasil',
-      timeout: 3000,
-      theme: "metroui",
-      type: "success",
-  }).show();
-</script>
-@endif
-
-@if(request()->session()->has('loginSuccess'))
-<script type="text/javascript">
-  new Noty({
-      
-      text: 'Login Berhasil',
-      timeout: 3000,
-      theme: "metroui",
-      type: "success",
-  }).show();
-</script>
-@endif
-
-@if(request()->session()->has('loggedOut'))
-<script type="text/javascript">
-  new Noty({
-      
-      text: 'Anda Telah Logout',
-      timeout: 3000,
-      theme: "metroui",
-      type: "success",
-  }).show();
-</script>
-@endif
 @endsection
