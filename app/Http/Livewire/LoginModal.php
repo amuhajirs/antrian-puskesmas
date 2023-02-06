@@ -9,8 +9,6 @@ class LoginModal extends Component{
     public $username;
     public $password;
 
-    protected $listeners = ['refreshComponent' => '$refresh'];
-
     public function render(){
         return view('livewire.login-modal');
     }
@@ -34,7 +32,6 @@ class LoginModal extends Component{
         }
 
         $this->addError('loginFailed', 'The provided credentials do not match our records.');
-        $this->emit('refreshComponent');
         $this->username = '';
         $this->password = '';
     }

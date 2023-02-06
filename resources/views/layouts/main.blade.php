@@ -3,7 +3,8 @@
 
 <head>
     <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <meta name="description" content="Aplikasi-Antri">
     <meta name="author" content="Kelompok-3">
 
@@ -28,9 +29,9 @@
 <body id="page-top">
     {{-- Navbar --}}
     @auth('web')
-    @include('partials.navbar-login')
+        @include('partials.navbar-login')
     @else
-    @include('partials.navbar')
+        @include('partials.navbar')
     @endauth
 
     {{-- Content --}}
