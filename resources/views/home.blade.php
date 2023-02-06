@@ -11,7 +11,7 @@
 
 @section('content')
 <!-- Masthead -->
-<header class="masthead text-white text-center" style="background-image: url('http://news.propanraya.com/upload/2018_april/Klinik_Darma_Nusantara_7.jpeg'); width:100%; height:750px; background-repeat: no-repeat; background-size : ">
+<header class="masthead text-white text-center" style="background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('http://news.propanraya.com/upload/2018_april/Klinik_Darma_Nusantara_7.jpeg'); width:100%; height:750px; background-repeat: no-repeat; background-size : cover;">
   <div class="container d-flex align-items-center flex-column">
 
     <!-- Masthead Avatar Image -->
@@ -185,7 +185,7 @@
   </section>
 
 <!-- About Section -->
-<section class="page-section bg-primary text-white mb-0" id="bantuan">
+<section class="page-section text-white mb-0" id="bantuan" style="background-color: #1a6988 ">
   <div class="container">
 
     <!-- About Section Heading -->
