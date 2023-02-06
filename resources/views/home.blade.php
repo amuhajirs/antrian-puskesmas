@@ -4,6 +4,7 @@
 <style>
   .carousel-item .card{
     height: 450px;
+    overflow: hidden;
   }
 </style>
 @endsection
@@ -65,15 +66,13 @@
                             <div class="carousel-item active">
                                 <div class="row">
     
-                                    <div class="col-md-4 mb-3" h>
+                                    <div class="col-md-4 mb-3">
                                         <div class="card">
                                             <img class="img-fluid" alt="" src="https://o-cdf.sirclocdn.com/unsafe/o-cdn-cas.sirclocdn.com/parenting/images/dokter_mata_di_bogor_6BYIDoj.width-800.jpegquality-80.jpg">
                                             <div class="card-body">
                                                 <h4 class="card-title">Poliklinik Mata</h4>
                                                 <p class="card-text">Poliklinik mata adalah klinik yang memberikan pemeriksaan, perawatan, serta diagnosis yang berhubungan dengan penyakit mata dan gangguan penglihatan.</p>
-    
                                             </div>
-    
                                         </div>
                                     </div>
                                     <div class="col-md-4 mb-3">
@@ -82,7 +81,6 @@
                                             <div class="card-body">
                                                 <h4 class="card-title">Poliklinik Anak</h4>
                                                 <p class="card-text">Poli anak merupakan poli spesialis yang melayani pemeriksaan pada anak-anak yang mengalami sakit maupun konsultasi dan penyediaan imunisasi bagi bayi dan anak.</p>
-    
                                             </div>
                                         </div>
                                     </div>
@@ -92,7 +90,6 @@
                                             <div class="card-body">
                                                 <h4 class="card-title">Poliklinik THT</h4>
                                                 <p class="card-text">Poliklinik THT merupakan Poliklinik yang menangani dan melayani pemeriksaan telinga/hidung/tenggorok.</p>
-    
                                             </div>
                                         </div>
                                     </div>
