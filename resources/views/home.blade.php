@@ -6,12 +6,21 @@
     height: 450px;
     overflow: hidden;
   }
+
+  ._header{
+    background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('http://news.propanraya.com/upload/2018_april/Klinik_Darma_Nusantara_7.jpeg');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size : cover;
+    background-attachment: fixed;
+    min-height: 100vh;
+  }
 </style>
 @endsection
 
 @section('content')
 <!-- Masthead -->
-<header class="masthead text-white text-center" style="background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('http://news.propanraya.com/upload/2018_april/Klinik_Darma_Nusantara_7.jpeg'); width:100%; height:750px; background-repeat: no-repeat; background-size : cover;">
+<header class="masthead text-white text-center _header" style="">
   <div class="container d-flex align-items-center flex-column">
 
     <!-- Masthead Avatar Image -->
@@ -22,7 +31,7 @@
   <div class="container">
     <div class="row justify-content-md-center">
       <div class="col-12 col-md-11 col-lg-9 col-xl-7 col-xxl-6 text-center text-white">
-        <h1 class="display-3 fw-bold mb-3">Isekai Klinik</h1>
+        <h1 class="display-3 mb-3" style="font-weight: bold;">Isekai Klinik</h1>
         <p class="lead mb-5">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quibusdam eos aut explicabo, aspernatur eligendi quasi perspiciatis nesciunt illum modi placeat distinctio, iusto corporis! Voluptate, sed.</p>
         <div class="row">
             <div class="col-md-12" style="border: thin solid; margin-top:70px">

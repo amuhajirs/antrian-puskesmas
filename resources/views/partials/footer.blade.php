@@ -40,7 +40,7 @@
       </div>
     </section>
 
-    <section class="d-flex justify-content-center p-4 border-bottom">
+    <section class="d-flex justify-content-center p-4">
   
       <!-- Center -->
       <div class="">
@@ -59,7 +59,7 @@
     </section>
 
 <!-- Copyright Section -->
-<section class="copyright py-4 text-center text-white" style="background-color: black">
+<section class="copyright py-3 text-center text-white" style="background-color: black">
     <div class="container">
         <small>&copy; 2023 - Kelompok 3</small>
     </div>
