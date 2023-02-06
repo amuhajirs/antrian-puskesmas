@@ -96,6 +96,6 @@
 <!-- Copyright Section -->
 <section class="copyright py-4 text-center text-white">
     <div class="container">
-        <small>&copy; 2022 - Abid Taufiqur Rohman </small>
+        <small>&copy; 2023 - Kelompok 3</small>
     </div>
 </section>
