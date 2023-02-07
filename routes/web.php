@@ -24,10 +24,6 @@ Route::get('/', function () {
 
 Route::get('/logout', [LoginController::class, 'logout'])->name('logout');
 
-Route::get('/yea', function(){
-    return view('dh_login');
-});
-
 
 
 

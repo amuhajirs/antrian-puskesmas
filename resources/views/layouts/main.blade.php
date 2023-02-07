@@ -21,6 +21,8 @@
     <link href="/assets/user/lib/noty.css" rel="stylesheet">
     <link href="/assets/user/lib/themes/metroui.css" rel="stylesheet">
 
+    <link rel="stylesheet" href="/assets/user/css/style.css">
+
     @livewireStyles
     {{-- Blade Styles --}}
     @yield('styles')
