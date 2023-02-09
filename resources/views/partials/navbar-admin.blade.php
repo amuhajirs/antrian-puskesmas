@@ -112,7 +112,7 @@
                 </li>
                 <li class="divider"></li>
                 <li>
-                    <a href="/admin/login/logout"><i
+                    <a href="/admin/logout"><i
                             class="fa fa-fw fa-power-off"></i> Log Out</a>
                 </li>
             </ul>
@@ -142,11 +142,6 @@
                 <a href="/admin/antrian_poli"><i
                         class="glyphicon glyphicon-list"></i>
                     Antrian Poli </a>
-
-            </li>
-            <li class="menu">
-                <a href="/admin/menu"><i class="fa fa-gear"></i>
-                    Menu </a>
 
             </li>
         </ul>

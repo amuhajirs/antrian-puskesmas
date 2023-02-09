@@ -22,4 +22,13 @@ class LoginAdminController extends Controller{
             return redirect('/admin/dashboard');
         }
     }
+
+    public function logout(Request $request){
+        Auth::guard('admin')->logout();
+        if(!Auth::guard('web')->check()){
+            $request->session()->invalidate();
+            $request->session()->regenerateToken();
+        }
+        return redirect('/admin/login')->with('loggedOut', 'yea');
+    }
 }

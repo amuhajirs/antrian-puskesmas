@@ -2,7 +2,6 @@
 
 use Illuminate\Support\Facades\Route;
 
-use App\Http\Controllers\DaftarController;
 use App\Http\Controllers\LoginController;
 
 use App\Http\Controllers\admin\LoginAdminController;
@@ -18,6 +17,7 @@ use App\Http\Controllers\admin\LoginAdminController;
 |
 */
 
+// User
 Route::get('/', function () {
     return view('home');
 })->name('home');
@@ -26,6 +26,8 @@ Route::get('/logout', [LoginController::class, 'logout'])->name('logout');
 
 
 
+// Admin
+Route::get('/admin/logout', [LoginAdminController::class, 'logout'])->name('admin.logout');
 
 // Guest Admin
 Route::middleware(['guest:admin'])->group(function () {
