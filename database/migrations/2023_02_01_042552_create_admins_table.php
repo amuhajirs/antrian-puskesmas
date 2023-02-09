@@ -18,7 +18,7 @@ return new class extends Migration
             $table->string('email')->unique();
             $table->string('username')->unique();
             $table->string('password');
-            $table->string('nama', 40);
+            $table->string('nama');
             $table->boolean('status')->default(1);
             $table->string('gambar')->default('/assets/user/img/default-avatar.png');
             $table->timestamps();
