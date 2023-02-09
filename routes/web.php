@@ -2,7 +2,7 @@
 
 use Illuminate\Support\Facades\Route;
 
-use App\Http\Controllers\LoginController;
+use App\Http\Livewire\LoginModal;
 
 use App\Http\Controllers\admin\LoginAdminController;
 
@@ -22,42 +22,45 @@ Route::get('/', function () {
     return view('home');
 })->name('home');
 
-Route::get('/logout', [LoginController::class, 'logout'])->name('logout');
+Route::get('/logout', [LoginModal::class, 'logout'])->name('logout');
 
 
 
 // Admin
-Route::get('/admin/logout', [LoginAdminController::class, 'logout'])->name('admin.logout');
-
-// Guest Admin
-Route::middleware(['guest:admin'])->group(function () {
-    Route::get('/admin/login', [LoginAdminController::class, 'index'])->name('admin.login');
-    Route::post('/admin/login', [LoginAdminController::class, 'authenticate']);
-});
-
-// Required Login Admin
-Route::middleware(['auth:admin'])->group(function () {
-    Route::get('/admin/dashboard', function (){
-        return view('admin.dashboard-admin', [
-            'title'=>'Dashboard',
-        ]);
+Route::prefix('admin')->group(function (){
+    // Logout
+    Route::get('/logout', [LoginAdminController::class, 'logout'])->name('admin.logout');
+    
+    // Guest Admin
+    Route::middleware(['guest:admin'])->group(function () {
+        Route::get('/login', [LoginAdminController::class, 'index'])->name('admin.login');
+        Route::post('/login', [LoginAdminController::class, 'authenticate']);
     });
     
-    Route::get('/admin/pasien', function (){
-        return view('admin.pasien-admin', [
-            'title'=>'Data Pasien',
-        ]);
-    });
-    
-    Route::get('/admin/poli', function (){
-        return view('admin.poli-admin', [
-            'title'=>'Poli',
-        ]);
-    });
-    
-    Route::get('/admin/antrian_poli', function (){
-        return view('admin.antrian-poli-admin', [
-            'title'=>'Antrian Poli',
-        ]);
+    // Required Login Admin
+    Route::middleware(['auth:admin'])->group(function () {
+        Route::get('/dashboard', function (){
+            return view('admin.dashboard-admin', [
+                'title'=>'Dashboard',
+            ]);
+        });
+        
+        Route::get('/pasien', function (){
+            return view('admin.pasien-admin', [
+                'title'=>'Data Pasien',
+            ]);
+        });
+        
+        Route::get('/poli', function (){
+            return view('admin.poli-admin', [
+                'title'=>'Poli',
+            ]);
+        });
+        
+        Route::get('/antrian_poli', function (){
+            return view('admin.antrian-poli-admin', [
+                'title'=>'Antrian Poli',
+            ]);
+        });
     });
 });

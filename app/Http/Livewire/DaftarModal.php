@@ -15,34 +15,27 @@ class DaftarModal extends Component{
     public $username;
     public $password;
 
+    protected $rules = [
+        'no_identitas'=>'required|numeric|digits:16',
+        'nama'=>'required|min:3',
+        'jenis_kelamin'=>'required',
+        'tgl_lahir'=>'required',
+        'alamat'=>'required',
+        'no_telp'=>'required|min:10',
+        'username'=>'required|min:3',
+        'password'=>'required',
+    ];
+
     public function render(){
         return view('livewire.daftar-modal');
     }
 
     public function updated($field){
-        $this->validateOnly($field, [
-            'no_identitas'=>'required|numeric|digits:16',
-            'nama'=>'required|min:3',
-            'jenis_kelamin'=>'required',
-            'tgl_lahir'=>'required',
-            'alamat'=>'required',
-            'no_telp'=>'required|min:10',
-            'username'=>'required|min:3',
-            'password'=>'required',
-        ]);
+        $this->validateOnly($field);
     }
 
     public function submit(){
-        $this->validate([
-            'no_identitas'=>'required|numeric|digits:16',
-            'nama'=>'required|min:3',
-            'jenis_kelamin'=>'required',
-            'tgl_lahir'=>'required',
-            'alamat'=>'required',
-            'no_telp'=>'required|min:10',
-            'username'=>'required|min:3',
-            'password'=>'required',
-        ]);
+        $this->validate();
 
         User::create([
             'no_identitas'=>$this->no_identitas,
@@ -55,6 +48,6 @@ class DaftarModal extends Component{
             'password'=>bcrypt($this->password),
         ]);
         
-        return redirect('/')->with('daftarSukses', 'Pendaftaran berhasil, silahkan login!');
+        return redirect('/')->with('daftarSukses', 'Pendaftaran berhasil');
     }
 }

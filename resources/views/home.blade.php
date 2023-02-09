@@ -104,7 +104,7 @@
 <script type="text/javascript">
   new Noty({
       
-      text: 'Pendaftaran Berhasil',
+      text: "{{session('daftarSukses')}}",
       timeout: 3000,
       theme: "metroui",
       type: "success",
@@ -116,11 +116,11 @@
 <script type="text/javascript">
   new Noty({
       
-    text: 'Login Berhasil',
-      timeout: 3000,
-      theme: "metroui",
-      type: "success",
-    }).show();
+    text: "{{session('loginSuccess')}}",
+    timeout: 3000,
+    theme: "metroui",
+    type: "success",
+  }).show();
 </script>
 @endif
 
@@ -128,7 +128,7 @@
 <script type="text/javascript">
   new Noty({
       
-    text: 'Anda Telah Logout',
+    text: "{{session('loggedOut')}}",
     timeout: 3000,
     theme: "metroui",
     type: "success",

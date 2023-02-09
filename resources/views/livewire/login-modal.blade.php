@@ -45,7 +45,7 @@
     <script type="text/javascript">
     new Noty({
         
-        text: 'Username atau Password Salah',
+        text: "{{$message}}",
         timeout: 3000,
         theme: "metroui",
         type: "warning",
