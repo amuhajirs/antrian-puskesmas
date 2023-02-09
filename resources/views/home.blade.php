@@ -37,14 +37,14 @@
   @include('partials.jenis-layanan')
 @endauth
 
-<!-- About Section -->
+<!-- Help Section -->
 <section class="page-section text-white mb-0" id="bantuan" style="background-color: #1a6988 ">
   <div class="container">
 
-    <!-- About Section Heading -->
+    <!-- Help Section Heading -->
     <h2 class="page-section-heading text-uppercase text-white text-left mb-5" >Bagaimana cara mengambil nomor antrian ?</h2>
 
-    <!-- About Section Content -->
+    <!-- Help Section Content -->
       
     <div class="wpb-timeline-block">
 
@@ -89,15 +89,7 @@
 
 
 
-    <!-- About Section Button -->
-    <!-- <div class="text-center mt-4">
-      <a class="btn btn-xl btn-outline-light" href="https://startbootstrap.com/themes/freelancer/">
-        <i class="fas fa-download mr-2"></i>
-        Free Download!
-      </a>
-    </div> -->
-  <!-- </div>
-  </div> -->
+
 </section>
 
 <!-- Modal Daftar -->
@@ -144,36 +136,5 @@
 </script>
 @endif
 
-{{-- <script type="text/javascript">
-  function noAntrian(id_poli){
-  // alert(id_poli);?
-  if(id_poli!){
-    $.ajax({
 
-      url: "http://localhost/antrian-puskesmas/Index/getNoAntrian",
-      type : "POST",
-      data : "id_poli="+id_poli,
-      datatype: "json",
-      success:function(response){
-        console.log(response);
-        // alert(data);
-        var output = JSON.parse(response);
-        if(output.no > output.maks){
-          $("#no_antrian_poli2").val('Data Sudah Penuh');
-          // $("#simpan").toggle('slow');
-          $("#simpan").prop("disabled",true);
-        }else{
-
-          $("#no_antrian_poli").val(output.no_hasil);
-          $("#no_antrian_poli2").val(output.no_hasil);
-          $("#simpan").prop("disabled",false);
-        }
-      } // Munculkan alert error
-    });
-  }else{
-    $("#no_antrian_poli").val("");
-    $("#no_antrian_poli2").val("");
-  }
-}
-</script> --}}
 @endsection
