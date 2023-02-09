@@ -28,15 +28,15 @@ Route::get('/logout', [LoginModal::class, 'logout'])->name('logout');
 
 // Admin
 Route::prefix('admin')->group(function (){
-    // Logout
+    // Logout Admin
     Route::get('/logout', [LoginAdminController::class, 'logout'])->name('admin.logout');
-    
+
     // Guest Admin
     Route::middleware(['guest:admin'])->group(function () {
         Route::get('/login', [LoginAdminController::class, 'index'])->name('admin.login');
         Route::post('/login', [LoginAdminController::class, 'authenticate']);
     });
-    
+
     // Required Login Admin
     Route::middleware(['auth:admin'])->group(function () {
         Route::get('/dashboard', function (){
@@ -44,19 +44,19 @@ Route::prefix('admin')->group(function (){
                 'title'=>'Dashboard',
             ]);
         });
-        
+
         Route::get('/pasien', function (){
             return view('admin.pasien-admin', [
                 'title'=>'Data Pasien',
             ]);
         });
-        
+
         Route::get('/poli', function (){
             return view('admin.poli-admin', [
                 'title'=>'Poli',
             ]);
         });
-        
+
         Route::get('/antrian_poli', function (){
             return view('admin.antrian-poli-admin', [
                 'title'=>'Antrian Poli',

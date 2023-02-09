@@ -10,7 +10,7 @@
       <div class="row">
           <div class="col-md-12" style="border: thin solid; ">
             <h3>NO ANTRIAN SAAT INI</h3>
-          <h1 style="margin-top: 5px;">5</h1>
+            <h1 style="margin-top: 5px;">1</h1>
           </div>
       </div>
 
