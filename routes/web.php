@@ -28,6 +28,10 @@ Route::get('/logout', [LoginModal::class, 'logout'])->name('logout');
 
 // Admin
 Route::prefix('admin')->group(function (){
+    Route::get('/', function(){
+        return redirect('/admin/dashboard');
+    });
+
     // Logout Admin
     Route::get('/logout', [LoginAdminController::class, 'logout'])->name('admin.logout');
 
@@ -59,6 +63,12 @@ Route::prefix('admin')->group(function (){
 
         Route::get('/antrian_poli', function (){
             return view('admin.antrian-poli-admin', [
+                'title'=>'Antrian Poli',
+            ]);
+        });
+
+        Route::get('/password', function (){
+            return view('admin.password-admin', [
                 'title'=>'Antrian Poli',
             ]);
         });

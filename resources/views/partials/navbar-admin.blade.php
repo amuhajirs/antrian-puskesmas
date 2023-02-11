@@ -100,14 +100,14 @@
         <!--                </ul>-->
         <!--            </li>-->
         <li class="dropdown">
-            <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+            <a class="dropdown-toggle" data-toggle="dropdown" style="cursor: pointer;">
                 <i class="fa fa-user"></i> admin <b class="caret"></b></a>
             <ul class="dropdown-menu">
                 <!-- <li>
         <a href="/admin/akun"><i class="fa fa-fw fa-user"></i> Profile</a>
     </li> -->
                 <li>
-                    <a href="/admin/akun/reset_password"><i
+                    <a href="/admin/password"><i
                             class="fa fa-fw fa-gear"></i> Password</a>
                 </li>
                 <li class="divider"></li>
