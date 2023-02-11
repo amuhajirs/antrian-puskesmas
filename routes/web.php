@@ -5,6 +5,9 @@ use Illuminate\Support\Facades\Route;
 use App\Http\Livewire\LoginModal;
 
 use App\Http\Controllers\admin\LoginAdminController;
+use App\Http\Controllers\admin\PasienController;
+use App\Http\Controllers\admin\PoliController;
+use App\Http\Controllers\admin\AntrianPoliController;
 
 /*
 |--------------------------------------------------------------------------
@@ -49,23 +52,11 @@ Route::prefix('admin')->group(function (){
             ]);
         });
 
-        Route::get('/pasien', function (){
-            return view('admin.pasien-admin', [
-                'title'=>'Data Pasien',
-            ]);
-        });
+        Route::resource('/pasien', PasienController::class);
 
-        Route::get('/poli', function (){
-            return view('admin.poli-admin', [
-                'title'=>'Poli',
-            ]);
-        });
+        Route::resource('/poli', PoliController::class);
 
-        Route::get('/antrian_poli', function (){
-            return view('admin.antrian-poli-admin', [
-                'title'=>'Antrian Poli',
-            ]);
-        });
+        Route::resource('/antrian_poli', AntrianPoliController::class);
 
         Route::get('/password', function (){
             return view('admin.password-admin', [

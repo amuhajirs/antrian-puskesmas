@@ -176,26 +176,27 @@
                         </thead>
                         <tbody>
 
-                            <tr>
+                            @foreach ($polis as $index=>$poli)
+                            <tr class="{{ ($index)%2 == 1 ? 'erow' : ''}}">
                                 <td width='26%' class=''>
-                                    <div class='text-left'>PLUM</div>
+                                    <div class='text-left'>{{ $index+1 }}</div>
                                 </td>
                                 <td width='26%' class=''>
-                                    <div class='text-left'>Poli Umum</div>
+                                    <div class='text-left'>{{ $poli->nama_poli }}</div>
                                 </td>
                                 <td width='26%' class=''>
-                                    <div class='text-left'>2</div>
+                                    <div class='text-left'>{{ $poli->jumlah }}</div>
                                 </td>
                                 <td align="left" width='20%'>
                                     <div class='tools'>
-                                        <a href='/index.php/admin/poli/index/delete/1'
+                                        <a href='/admin/poli/{{ $poli->id }}'
                                             title='Delete Poli' class="delete-row">
                                             <span class='delete-icon'></span>
                                         </a>
-                                        <a href='/index.php/admin/poli/index/edit/1'
+                                        <a href='/admin/poli/{{ $poli->id }}/edit'
                                             title='Edit Poli' class="edit_button"><span
                                                 class='edit-icon'></span></a>
-                                        <a href='/index.php/admin/poli/index/read/1'
+                                        <a href='/admin/poli/{{ $poli->id }}'
                                             title='View Poli' class="edit_button"><span
                                                 class='read-icon'></span></a>
 
@@ -203,90 +204,7 @@
                                     </div>
                                 </td>
                             </tr>
-
-                            <tr class="erow">
-                                <td width='26%' class=''>
-                                    <div class='text-left'>PLGG</div>
-                                </td>
-                                <td width='26%' class=''>
-                                    <div class='text-left'>Poli Gigi</div>
-                                </td>
-                                <td width='26%' class=''>
-                                    <div class='text-left'>30</div>
-                                </td>
-                                <td align="left" width='20%'>
-                                    <div class='tools'>
-                                        <a href='/index.php/admin/poli/index/delete/2'
-                                            title='Delete Poli' class="delete-row">
-                                            <span class='delete-icon'></span>
-                                        </a>
-                                        <a href='/index.php/admin/poli/index/edit/2'
-                                            title='Edit Poli' class="edit_button"><span
-                                                class='edit-icon'></span></a>
-                                        <a href='/index.php/admin/poli/index/read/2'
-                                            title='View Poli' class="edit_button"><span
-                                                class='read-icon'></span></a>
-
-                                        <div class='clear'></div>
-                                    </div>
-                                </td>
-                            </tr>
-
-                            <tr>
-                                <td width='26%' class=''>
-                                    <div class='text-left'>PLIM</div>
-                                </td>
-                                <td width='26%' class=''>
-                                    <div class='text-left'>Poli Imunisasi</div>
-                                </td>
-                                <td width='26%' class=''>
-                                    <div class='text-left'>30</div>
-                                </td>
-                                <td align="left" width='20%'>
-                                    <div class='tools'>
-                                        <a href='/index.php/admin/poli/index/delete/3'
-                                            title='Delete Poli' class="delete-row">
-                                            <span class='delete-icon'></span>
-                                        </a>
-                                        <a href='/index.php/admin/poli/index/edit/3'
-                                            title='Edit Poli' class="edit_button"><span
-                                                class='edit-icon'></span></a>
-                                        <a href='/index.php/admin/poli/index/read/3'
-                                            title='View Poli' class="edit_button"><span
-                                                class='read-icon'></span></a>
-
-                                        <div class='clear'></div>
-                                    </div>
-                                </td>
-                            </tr>
-
-                            <tr class="erow">
-                                <td width='26%' class=''>
-                                    <div class='text-left'>PLTB</div>
-                                </td>
-                                <td width='26%' class=''>
-                                    <div class='text-left'>Poli Tuberculosis</div>
-                                </td>
-                                <td width='26%' class=''>
-                                    <div class='text-left'>30</div>
-                                </td>
-                                <td align="left" width='20%'>
-                                    <div class='tools'>
-                                        <a href='/index.php/admin/poli/index/delete/4'
-                                            title='Delete Poli' class="delete-row">
-                                            <span class='delete-icon'></span>
-                                        </a>
-                                        <a href='/index.php/admin/poli/index/edit/4'
-                                            title='Edit Poli' class="edit_button"><span
-                                                class='edit-icon'></span></a>
-                                        <a href='/index.php/admin/poli/index/read/4'
-                                            title='View Poli' class="edit_button"><span
-                                                class='read-icon'></span></a>
-
-                                        <div class='clear'></div>
-                                    </div>
-                                </td>
-                            </tr>
+                            @endforeach
 
                         </tbody>
                     </table>

@@ -116,7 +116,7 @@
 
 			<div class="tDiv">
 				<div class="tDiv2">
-					<a href='/index.php/admin/pasien/index/add'
+					<a href='/admin/pasien/create'
 						title='Add Pasien' class='add-anchor add_button'>
 						<div class="fbutton">
 							<div>
@@ -196,43 +196,44 @@
 						</thead>
 						<tbody>
 
-							<tr>
+							@foreach ($pasiens as $index=>$pasien)
+							<tr class="{{ ($index)%2 == 1 ? 'erow' : ''}}">
 								<td width='10%' class=''>
-									<div class='text-left'>3318087776665553</div>
+									<div class='text-left'>{{ $pasien->no_identitas }}</div>
 								</td>
 								<td width='10%' class=''>
-									<div class='text-left'>evi</div>
+									<div class='text-left'>{{ $pasien->nama }}</div>
 								</td>
 								<td width='10%' class=''>
-									<div class='text-left'>Perempuan</div>
+									<div class='text-left'>{{ $pasien->jenis_kelamin }}</div>
 								</td>
 								<td width='10%' class=''>
-									<div class='text-left'>16/07/2000</div>
+									<div class='text-left'>{{ $pasien->tgl_lahir }}</div>
 								</td>
 								<td width='10%' class=''>
 									<div class='text-left'>
-										Desa kajen
+										{{ $pasien->alamat }}
 									</div>
 								</td>
 								<td width='10%' class=''>
-									<div class='text-left'>082199252530</div>
+									<div class='text-left'>{{ $pasien->no_telp }}</div>
 								</td>
 								<td width='10%' class=''>
-									<div class='text-left'>evi</div>
+									<div class='text-left'>{{ $pasien->username }}</div>
 								</td>
 								<td width='10%' class=''>
-									<div class='text-left'>evi</div>
+									<div class='text-left'>{{ $pasien->password }}</div>
 								</td>
 								<td align="left" width='20%'>
 									<div class='tools'>
-										<a href='/index.php/admin/pasien/index/delete/1'
+										<a href='/admin/pasien/{{ $pasien->id }}/delete/'
 											title='Delete Pasien' class="delete-row">
 											<span class='delete-icon'></span>
 										</a>
-										<a href='/index.php/admin/pasien/index/edit/1'
+										<a href='/admin/pasien/{{ $pasien->id }}/edit/'
 											title='Edit Pasien' class="edit_button"><span
 												class='edit-icon'></span></a>
-										<a href='/index.php/admin/pasien/index/read/1'
+										<a href='/admin/pasien/{{ $pasien->id }}'
 											title='View Pasien' class="edit_button"><span
 												class='read-icon'></span></a>
 
@@ -240,411 +241,7 @@
 									</div>
 								</td>
 							</tr>
-
-							<tr class="erow">
-								<td width='10%' class=''>
-									<div class='text-left'>3318087776665554</div>
-								</td>
-								<td width='10%' class=''>
-									<div class='text-left'>rafly</div>
-								</td>
-								<td width='10%' class=''>
-									<div class='text-left'>Laki-Laki</div>
-								</td>
-								<td width='10%' class=''>
-									<div class='text-left'>03/04/1998</div>
-								</td>
-								<td width='10%' class=''>
-									<div class='text-left'>
-										Jl. Merdeka
-									</div>
-								</td>
-								<td width='10%' class=''>
-									<div class='text-left'>08587654323</div>
-								</td>
-								<td width='10%' class=''>
-									<div class='text-left'>raff</div>
-								</td>
-								<td width='10%' class=''>
-									<div class='text-left'>raff</div>
-								</td>
-								<td align="left" width='20%'>
-									<div class='tools'>
-										<a href='/index.php/admin/pasien/index/delete/4'
-											title='Delete Pasien' class="delete-row">
-											<span class='delete-icon'></span>
-										</a>
-										<a href='/index.php/admin/pasien/index/edit/4'
-											title='Edit Pasien' class="edit_button"><span
-												class='edit-icon'></span></a>
-										<a href='/index.php/admin/pasien/index/read/4'
-											title='View Pasien' class="edit_button"><span
-												class='read-icon'></span></a>
-
-										<div class='clear'></div>
-									</div>
-								</td>
-							</tr>
-
-							<tr>
-								<td width='10%' class=''>
-									<div class='text-left'>3318087776665555</div>
-								</td>
-								<td width='10%' class=''>
-									<div class='text-left'>dwi</div>
-								</td>
-								<td width='10%' class=''>
-									<div class='text-left'>Perempuan</div>
-								</td>
-								<td width='10%' class=''>
-									<div class='text-left'>22/03/1999</div>
-								</td>
-								<td width='10%' class=''>
-									<div class='text-left'>
-										Jl Bunga
-									</div>
-								</td>
-								<td width='10%' class=''>
-									<div class='text-left'>09584433221</div>
-								</td>
-								<td width='10%' class=''>
-									<div class='text-left'>dwi</div>
-								</td>
-								<td width='10%' class=''>
-									<div class='text-left'>dwi</div>
-								</td>
-								<td align="left" width='20%'>
-									<div class='tools'>
-										<a href='/index.php/admin/pasien/index/delete/5'
-											title='Delete Pasien' class="delete-row">
-											<span class='delete-icon'></span>
-										</a>
-										<a href='/index.php/admin/pasien/index/edit/5'
-											title='Edit Pasien' class="edit_button"><span
-												class='edit-icon'></span></a>
-										<a href='/index.php/admin/pasien/index/read/5'
-											title='View Pasien' class="edit_button"><span
-												class='read-icon'></span></a>
-
-										<div class='clear'></div>
-									</div>
-								</td>
-							</tr>
-
-							<tr class="erow">
-								<td width='10%' class=''>
-									<div class='text-left'>3318087776665556</div>
-								</td>
-								<td width='10%' class=''>
-									<div class='text-left'>Aisyah</div>
-								</td>
-								<td width='10%' class=''>
-									<div class='text-left'>Perempuan</div>
-								</td>
-								<td width='10%' class=''>
-									<div class='text-left'>11/06/2001</div>
-								</td>
-								<td width='10%' class=''>
-									<div class='text-left'>
-										Jl. Manis
-									</div>
-								</td>
-								<td width='10%' class=''>
-									<div class='text-left'>0838222445</div>
-								</td>
-								<td width='10%' class=''>
-									<div class='text-left'>aisah</div>
-								</td>
-								<td width='10%' class=''>
-									<div class='text-left'>aisah</div>
-								</td>
-								<td align="left" width='20%'>
-									<div class='tools'>
-										<a href='/index.php/admin/pasien/index/delete/6'
-											title='Delete Pasien' class="delete-row">
-											<span class='delete-icon'></span>
-										</a>
-										<a href='/index.php/admin/pasien/index/edit/6'
-											title='Edit Pasien' class="edit_button"><span
-												class='edit-icon'></span></a>
-										<a href='/index.php/admin/pasien/index/read/6'
-											title='View Pasien' class="edit_button"><span
-												class='read-icon'></span></a>
-
-										<div class='clear'></div>
-									</div>
-								</td>
-							</tr>
-
-							<tr>
-								<td width='10%' class=''>
-									<div class='text-left'>3318087776665557</div>
-								</td>
-								<td width='10%' class=''>
-									<div class='text-left'>Simon</div>
-								</td>
-								<td width='10%' class=''>
-									<div class='text-left'>Laki-Laki</div>
-								</td>
-								<td width='10%' class=''>
-									<div class='text-left'>06/02/1997</div>
-								</td>
-								<td width='10%' class=''>
-									<div class='text-left'>
-										Jl. Mawar
-									</div>
-								</td>
-								<td width='10%' class=''>
-									<div class='text-left'>081319898213</div>
-								</td>
-								<td width='10%' class=''>
-									<div class='text-left'>simon</div>
-								</td>
-								<td width='10%' class=''>
-									<div class='text-left'>simon</div>
-								</td>
-								<td align="left" width='20%'>
-									<div class='tools'>
-										<a href='/index.php/admin/pasien/index/delete/7'
-											title='Delete Pasien' class="delete-row">
-											<span class='delete-icon'></span>
-										</a>
-										<a href='/index.php/admin/pasien/index/edit/7'
-											title='Edit Pasien' class="edit_button"><span
-												class='edit-icon'></span></a>
-										<a href='/index.php/admin/pasien/index/read/7'
-											title='View Pasien' class="edit_button"><span
-												class='read-icon'></span></a>
-
-										<div class='clear'></div>
-									</div>
-								</td>
-							</tr>
-
-							<tr class="erow">
-								<td width='10%' class=''>
-									<div class='text-left'>3318087776660002</div>
-								</td>
-								<td width='10%' class=''>
-									<div class='text-left'>Putri</div>
-								</td>
-								<td width='10%' class=''>
-									<div class='text-left'>Perempuan</div>
-								</td>
-								<td width='10%' class=''>
-									<div class='text-left'>18/06/2003</div>
-								</td>
-								<td width='10%' class=''>
-									<div class='text-left'>
-										Jl. Merpati
-									</div>
-								</td>
-								<td width='10%' class=''>
-									<div class='text-left'>081994321522</div>
-								</td>
-								<td width='10%' class=''>
-									<div class='text-left'>putri</div>
-								</td>
-								<td width='10%' class=''>
-									<div class='text-left'>putri</div>
-								</td>
-								<td align="left" width='20%'>
-									<div class='tools'>
-										<a href='/index.php/admin/pasien/index/delete/8'
-											title='Delete Pasien' class="delete-row">
-											<span class='delete-icon'></span>
-										</a>
-										<a href='/index.php/admin/pasien/index/edit/8'
-											title='Edit Pasien' class="edit_button"><span
-												class='edit-icon'></span></a>
-										<a href='/index.php/admin/pasien/index/read/8'
-											title='View Pasien' class="edit_button"><span
-												class='read-icon'></span></a>
-
-										<div class='clear'></div>
-									</div>
-								</td>
-							</tr>
-
-							<tr>
-								<td width='10%' class=''>
-									<div class='text-left'>3318087776660001</div>
-								</td>
-								<td width='10%' class=''>
-									<div class='text-left'>Violita</div>
-								</td>
-								<td width='10%' class=''>
-									<div class='text-left'>Perempuan</div>
-								</td>
-								<td width='10%' class=''>
-									<div class='text-left'>02/09/2003</div>
-								</td>
-								<td width='10%' class=''>
-									<div class='text-left'>
-										Jl Kuningan
-									</div>
-								</td>
-								<td width='10%' class=''>
-									<div class='text-left'>08225488006</div>
-								</td>
-								<td width='10%' class=''>
-									<div class='text-left'>vio</div>
-								</td>
-								<td width='10%' class=''>
-									<div class='text-left'>vio</div>
-								</td>
-								<td align="left" width='20%'>
-									<div class='tools'>
-										<a href='/index.php/admin/pasien/index/delete/9'
-											title='Delete Pasien' class="delete-row">
-											<span class='delete-icon'></span>
-										</a>
-										<a href='/index.php/admin/pasien/index/edit/9'
-											title='Edit Pasien' class="edit_button"><span
-												class='edit-icon'></span></a>
-										<a href='/index.php/admin/pasien/index/read/9'
-											title='View Pasien' class="edit_button"><span
-												class='read-icon'></span></a>
-
-										<div class='clear'></div>
-									</div>
-								</td>
-							</tr>
-
-							<tr class="erow">
-								<td width='10%' class=''>
-									<div class='text-left'>3318087776660006</div>
-								</td>
-								<td width='10%' class=''>
-									<div class='text-left'>Yordan</div>
-								</td>
-								<td width='10%' class=''>
-									<div class='text-left'>Laki-Laki</div>
-								</td>
-								<td width='10%' class=''>
-									<div class='text-left'>02/11/1995</div>
-								</td>
-								<td width='10%' class=''>
-									<div class='text-left'>
-										Jl. Setia
-									</div>
-								</td>
-								<td width='10%' class=''>
-									<div class='text-left'>081316552245</div>
-								</td>
-								<td width='10%' class=''>
-									<div class='text-left'>yordan</div>
-								</td>
-								<td width='10%' class=''>
-									<div class='text-left'>yordan</div>
-								</td>
-								<td align="left" width='20%'>
-									<div class='tools'>
-										<a href='/index.php/admin/pasien/index/delete/10'
-											title='Delete Pasien' class="delete-row">
-											<span class='delete-icon'></span>
-										</a>
-										<a href='/index.php/admin/pasien/index/edit/10'
-											title='Edit Pasien' class="edit_button"><span
-												class='edit-icon'></span></a>
-										<a href='/index.php/admin/pasien/index/read/10'
-											title='View Pasien' class="edit_button"><span
-												class='read-icon'></span></a>
-
-										<div class='clear'></div>
-									</div>
-								</td>
-							</tr>
-
-							<tr>
-								<td width='10%' class=''>
-									<div class='text-left'>3318087776660003</div>
-								</td>
-								<td width='10%' class=''>
-									<div class='text-left'>silva</div>
-								</td>
-								<td width='10%' class=''>
-									<div class='text-left'>Perempuan</div>
-								</td>
-								<td width='10%' class=''>
-									<div class='text-left'>04/01/1998</div>
-								</td>
-								<td width='10%' class=''>
-									<div class='text-left'>
-										Jl. Anggur
-									</div>
-								</td>
-								<td width='10%' class=''>
-									<div class='text-left'>081654432349</div>
-								</td>
-								<td width='10%' class=''>
-									<div class='text-left'>silvi</div>
-								</td>
-								<td width='10%' class=''>
-									<div class='text-left'>silvi</div>
-								</td>
-								<td align="left" width='20%'>
-									<div class='tools'>
-										<a href='/index.php/admin/pasien/index/delete/11'
-											title='Delete Pasien' class="delete-row">
-											<span class='delete-icon'></span>
-										</a>
-										<a href='/index.php/admin/pasien/index/edit/11'
-											title='Edit Pasien' class="edit_button"><span
-												class='edit-icon'></span></a>
-										<a href='/index.php/admin/pasien/index/read/11'
-											title='View Pasien' class="edit_button"><span
-												class='read-icon'></span></a>
-
-										<div class='clear'></div>
-									</div>
-								</td>
-							</tr>
-
-							<tr class="erow">
-								<td width='10%' class=''>
-									<div class='text-left'>3318087776660001</div>
-								</td>
-								<td width='10%' class=''>
-									<div class='text-left'>Lutfia</div>
-								</td>
-								<td width='10%' class=''>
-									<div class='text-left'>Perempuan</div>
-								</td>
-								<td width='10%' class=''>
-									<div class='text-left'>05/03/2002</div>
-								</td>
-								<td width='10%' class=''>
-									<div class='text-left'>
-										Jl.merdeka
-									</div>
-								</td>
-								<td width='10%' class=''>
-									<div class='text-left'>082199252530</div>
-								</td>
-								<td width='10%' class=''>
-									<div class='text-left'>lutfia</div>
-								</td>
-								<td width='10%' class=''>
-									<div class='text-left'>lutfia</div>
-								</td>
-								<td align="left" width='20%'>
-									<div class='tools'>
-										<a href='/index.php/admin/pasien/index/delete/12'
-											title='Delete Pasien' class="delete-row">
-											<span class='delete-icon'></span>
-										</a>
-										<a href='/index.php/admin/pasien/index/edit/12'
-											title='Edit Pasien' class="edit_button"><span
-												class='edit-icon'></span></a>
-										<a href='/index.php/admin/pasien/index/read/12'
-											title='View Pasien' class="edit_button"><span
-												class='read-icon'></span></a>
-
-										<div class='clear'></div>
-									</div>
-								</td>
-							</tr>
+							@endforeach
 
 						</tbody>
 					</table>

@@ -116,7 +116,7 @@
 
             <div class="tDiv">
                 <div class="tDiv2">
-                    <a href='/index.php/admin/antrian_poli/index/add'
+                    <a href='/admin/antrian_poli/create'
                         title='Add Antrian poli' class='add-anchor add_button'>
                         <div class="fbutton">
                             <div>
@@ -195,7 +195,7 @@
                                 </td>
                                 <td align="left" width='20%'>
                                     <div class='tools'>
-                                        <a href='/index.php/admin/antrian_poli/index/read/1'
+                                        <a href='/admin/antrian_poli/1'
                                             title='View Antrian poli' class="edit_button"><span
                                                 class='read-icon'></span></a>
 
@@ -219,7 +219,7 @@
                                 </td>
                                 <td align="left" width='20%'>
                                     <div class='tools'>
-                                        <a href='/index.php/admin/antrian_poli/index/read/2'
+                                        <a href='/admin/antrian_poli/2'
                                             title='View Antrian poli' class="edit_button"><span
                                                 class='read-icon'></span></a>
 
@@ -243,7 +243,7 @@
                                 </td>
                                 <td align="left" width='20%'>
                                     <div class='tools'>
-                                        <a href='/index.php/admin/antrian_poli/index/read/3'
+                                        <a href='/admin/antrian_poli/3'
                                             title='View Antrian poli' class="edit_button"><span
                                                 class='read-icon'></span></a>
 
@@ -267,7 +267,7 @@
                                 </td>
                                 <td align="left" width='20%'>
                                     <div class='tools'>
-                                        <a href='/index.php/admin/antrian_poli/index/read/4'
+                                        <a href='/admin/antrian_poli/4'
                                             title='View Antrian poli' class="edit_button"><span
                                                 class='read-icon'></span></a>
 
@@ -291,7 +291,7 @@
                                 </td>
                                 <td align="left" width='20%'>
                                     <div class='tools'>
-                                        <a href='/index.php/admin/antrian_poli/index/read/5'
+                                        <a href='/admin/antrian_poli/5'
                                             title='View Antrian poli' class="edit_button"><span
                                                 class='read-icon'></span></a>
 
@@ -315,7 +315,7 @@
                                 </td>
                                 <td align="left" width='20%'>
                                     <div class='tools'>
-                                        <a href='/index.php/admin/antrian_poli/index/read/6'
+                                        <a href='/admin/antrian_poli/6'
                                             title='View Antrian poli' class="edit_button"><span
                                                 class='read-icon'></span></a>
 
@@ -339,7 +339,7 @@
                                 </td>
                                 <td align="left" width='20%'>
                                     <div class='tools'>
-                                        <a href='/index.php/admin/antrian_poli/index/read/8'
+                                        <a href='/admin/antrian_poli/8'
                                             title='View Antrian poli' class="edit_button"><span
                                                 class='read-icon'></span></a>
 
@@ -363,7 +363,7 @@
                                 </td>
                                 <td align="left" width='20%'>
                                     <div class='tools'>
-                                        <a href='/index.php/admin/antrian_poli/index/read/9'
+                                        <a href='/admin/antrian_poli/9'
                                             title='View Antrian poli' class="edit_button"><span
                                                 class='read-icon'></span></a>
 
@@ -387,7 +387,7 @@
                                 </td>
                                 <td align="left" width='20%'>
                                     <div class='tools'>
-                                        <a href='/index.php/admin/antrian_poli/index/read/10'
+                                        <a href='/admin/antrian_poli/10'
                                             title='View Antrian poli' class="edit_button"><span
                                                 class='read-icon'></span></a>
 
@@ -411,7 +411,7 @@
                                 </td>
                                 <td align="left" width='20%'>
                                     <div class='tools'>
-                                        <a href='/index.php/admin/antrian_poli/index/read/11'
+                                        <a href='/admin/antrian_poli/11'
                                             title='View Antrian poli' class="edit_button"><span
                                                 class='read-icon'></span></a>
 
