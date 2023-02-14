@@ -184,10 +184,6 @@
 									<div class="text-left field-sorting " rel='username'>
 										Username </div>
 								</th>
-								<th width='10%'>
-									<div class="text-left field-sorting " rel='password'>
-										Password </div>
-								</th>
 								<th align="left" abbr="tools" axis="col1" class="" width='20%'>
 									<div class="text-right">
 										Actions </div>
@@ -220,9 +216,6 @@
 								</td>
 								<td width='10%' class=''>
 									<div class='text-left'>{{ $pasien->username }}</div>
-								</td>
-								<td width='10%' class=''>
-									<div class='text-left'>{{ $pasien->password }}</div>
 								</td>
 								<td align="left" width='20%'>
 									<div class='tools'>
@@ -265,7 +258,6 @@
 							<option value="alamat">Alamat&nbsp;&nbsp;</option>
 							<option value="no_telp">No telp&nbsp;&nbsp;</option>
 							<option value="username">Username&nbsp;&nbsp;</option>
-							<option value="password">Password&nbsp;&nbsp;</option>
 						</select>
 						<input type="button" value="Search" class="crud_search" id='crud_search'>
 					</div>

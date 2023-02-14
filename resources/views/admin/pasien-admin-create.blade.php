@@ -97,8 +97,8 @@
                 </div>
             </div>
             <div id='main-table-box'>
-                <form action="/index.php/admin/pasien/index/insert" method="post"
-                    id="crudForm" enctype="multipart/form-data" accept-charset="utf-8">
+                <form action="/admin/pasien" method="POST">
+                    @csrf
                     <div class='form-div'>
                         <div class='form-field-box odd' id="no_identitas_field_box">
                             <div class='form-display-as-box' id="no_identitas_display_as_box">
@@ -125,11 +125,11 @@
                                 Jenis kelamin :
                             </div>
                             <div class='form-input-box' id="jenis_kelamin_input_box">
-                                <select id='field-jenis_kelamin' name='jenis_kelamin' class='chosen-select'
+                                <select id='field-jenis_kelamin' name='jenis_kelamin' class='form-control'
                                     data-placeholder='Select Jenis kelamin'>
                                     <option value=''></option>
                                     <option value='Perempuan'>Perempuan</option>
-                                    <option value='Laki-Laki'>Laki-Laki</option>
+                                    <option value='Laki-laki'>Laki-Laki</option>
                                 </select>
                             </div>
                             <div class='clear'></div>
@@ -139,9 +139,8 @@
                                 Tgl lahir :
                             </div>
                             <div class='form-input-box' id="tgl_lahir_input_box">
-                                <input id='field-tgl_lahir' name='tgl_lahir' type='text' value='' maxlength='10'
-                                    class='datepicker-input form-control' />
-                                <a class='datepicker-input-clear' tabindex='-1'>Clear</a> (dd/mm/yyyy)
+                                <input id='field-tgl_lahir' name='tgl_lahir' type='date' value=''
+                                    class='form-control' />
                             </div>
                             <div class='clear'></div>
                         </div>
@@ -191,15 +190,15 @@
                         <div id='report-success' class='report-div success'></div>
                     </div>
                     <div class="pDiv">
-                        <div class='form-button-box'>
-                            <input id="form-button-save" type='submit' value='Save' class="btn btn-large" />
+                        <div class='form-button-box' style="margin-bottom: 20px">
+                            <button id="form-button-save" type='submit' value='save' class="btn btn-large" name="action">Save</button>
                         </div>
                         <div class='form-button-box'>
-                            <input type='button' value='Save and go back to list' id="save-and-go-back-button"
-                                class="btn btn-large" />
+                            <button type='submit' value='go-back' id="save-and-go-back-button"
+                                class="btn btn-large" name="action">Save and go back to list</button>
                         </div>
                         <div class='form-button-box'>
-                            <input type='button' value='Cancel' class="btn btn-large" id="cancel-button" />
+                            <a type='button' href="/admin/pasien" class="btn btn-large" style="text-decoration: none; color:black;">Cancel</a>
                         </div>
                         <div class='form-button-box'>
                             <div class='small-loading' id='FormLoading'>Loading, saving data...</div>
