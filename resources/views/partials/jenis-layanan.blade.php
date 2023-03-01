@@ -88,7 +88,7 @@
                     </div>
                 </div>
             </div>
-            <div class="mt-5 col-12 text-center">
+            <div class="mt-3 col-12 text-center">
                 <a class="btn btn-primary mb-3 mr-2" href="#carouselExampleIndicators2" role="button" data-slide="prev">
                     <i class="fa fa-arrow-left"></i>
                 </a>

@@ -18,42 +18,42 @@ class PoliSeeder extends Seeder
         Poli::insert([
             [
                 'kode_poli'=>'PM',
-                'nama_poli'=>'Poliklinik Mata',
+                'nama_poli'=>'Poli Mata',
                 'jumlah'=>99,
                 'updated_at'=>now(),
                 'created_at'=>now()
             ],
             [
                 'kode_poli'=>'PA',
-                'nama_poli'=>'Poliklinik Anak',
+                'nama_poli'=>'Poli Anak',
                 'jumlah'=>99,
                 'updated_at'=>now(),
                 'created_at'=>now()
             ],
             [
                 'kode_poli'=>'PTHT',
-                'nama_poli'=>'Poliklinik THT',
+                'nama_poli'=>'Poli THT',
                 'jumlah'=>99,
                 'updated_at'=>now(),
                 'created_at'=>now()
             ],
             [
                 'kode_poli'=>'PJ',
-                'nama_poli'=>'Poliklinik Jiwa',
+                'nama_poli'=>'Poli Jiwa',
                 'jumlah'=>99,
                 'updated_at'=>now(),
                 'created_at'=>now()
             ],
             [
                 'kode_poli'=>'PS',
-                'nama_poli'=>'Poliklinik Saraf',
+                'nama_poli'=>'Poli Saraf',
                 'jumlah'=>99,
                 'updated_at'=>now(),
                 'created_at'=>now()
             ],
             [
                 'kode_poli'=>'PG',
-                'nama_poli'=>'Poliklinik Gizi',
+                'nama_poli'=>'Poli Gizi',
                 'jumlah'=>99,
                 'updated_at'=>now(),
                 'created_at'=>now()

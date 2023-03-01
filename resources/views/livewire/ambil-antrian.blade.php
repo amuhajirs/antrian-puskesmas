@@ -10,15 +10,15 @@
                 <div class="row justify-content-md-center">
                     <div class="col-md-12" style="margin-top: 20px">
                         <!-- <h1 align="center">Login </h1> -->
-                        <form action="/antrian" method="POST">
+                        <form wire:submit.prevent="submitHandle" method="POST">
                             @csrf
                             <div class="row mt-5">
                                 <div class ="col-lg-2">
-                                    <h6><label>Pilih Poli</label></h6>   
+                                    <h6><label for="poli">Pilih Poli</label></h6>   
                                 </div>
 
                                 <div class="col-lg-5">
-                                    <select name="poli" id="id_poli" class="form-control" wire:model="poli">
+                                    <select id="poli" class="form-control" wire:model="poli">
                                         <option value="">Pilih</option>
                                         @foreach ($polis as $_poli)
                                         <option value="{{$_poli->kode_poli}}">{{$_poli->kode_poli}}</option>
@@ -33,14 +33,14 @@
                                 </div>
 
                                 <div class="col-lg-5">
-                                    <input type="text" name="no_antrian" id="no_antrian" value="{{$poli . $no_antrian}}" disabled class="form-control">
+                                    <input type="text" id="no_antrian" value="{{$poli . $no_antrian}}" disabled class="form-control">
                                 </div>
                             </div>
 
                             
                             <div class="row text-right">
                                 <div class="col-lg-7">
-                                    <input type="submit" name="simpan" id="simpan" value="Ambil Antrian" class="btn btn-primary">
+                                    <button type="submit" class="btn btn-primary">Ambil Antrian</button>
                                 </div>
                             </div>
                         </form>
@@ -69,4 +69,25 @@
         </div>
         <!-- /.row -->
     </div>
+
+    
+    <script>
+        window.addEventListener('antrianAdded', event => {
+            new Noty({
+                text: event.detail,
+                timeout: 3000,
+                theme: "metroui",
+                type: "success",
+            }).show();
+        })
+
+        window.addEventListener('antrianError', event => {
+            new Noty({
+                text: event.detail,
+                timeout: 3000,
+                theme: "metroui",
+                type: "warning",
+            }).show();
+        })
+    </script>
 </section>

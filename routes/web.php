@@ -19,8 +19,6 @@ use App\Http\Livewire\LoginModal;
 // User
 Route::get('/', [HomeController::class, 'index'])->name('home');
 
-Route::post('/antrian');
-
 Route::get('/logout', [LoginModal::class, 'logout'])->name('logout');
 
 

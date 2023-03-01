@@ -33,7 +33,7 @@
 {{-- Udh Login --}}
 @auth('web')
   {{-- Header --}}
-  @include('partials.hero-login')
+  <livewire:hero-login>
   {{-- Ambil Antrian --}}
   <livewire:ambil-antrian>
 
