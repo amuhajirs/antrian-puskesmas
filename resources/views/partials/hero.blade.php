@@ -33,8 +33,8 @@
 
 </header>
 
-<section class="page-section text-white mb-0" id="mulai" style="background-color: #1a6988 " >
+{{-- <section class="page-section text-white mb-0" id="mulai" style="background-color: #1a6988 " >
   
 
 
-</section>
+</section> --}}

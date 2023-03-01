@@ -18,14 +18,11 @@
                                 </div>
 
                                 <div class="col-lg-5">
-                                    <select name="poli" id="id_poli" class="form-control">
+                                    <select name="poli" id="id_poli" class="form-control" wire:model="poli">
                                         <option value="">Pilih</option>
-                                        <option value="PM">PM</option>
-                                        <option value="PA">PA</option>
-                                        <option value="PTHT">PTHT</option>
-                                        <option value="PJ">PJ</option>
-                                        <option value="PS">PS</option>
-                                        <option value="PG">PG</option>
+                                        @foreach ($polis as $poli)
+                                        <option value="{{$poli->kode_poli}}">{{$poli->kode_poli}}</option>
+                                        @endforeach
                                     </select>
                                 </div>
                             </div>

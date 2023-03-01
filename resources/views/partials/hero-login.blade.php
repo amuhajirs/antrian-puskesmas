@@ -16,11 +16,11 @@
 
       <div class="row" style="margin-top: 60px">
         <div class="col-md-2" style="border: thin solid; ">
-            <h3>2</h3>
+            <h3>0</h3>
             <H6>Poli Mata</H6>
         </div>
           <div class="col-md-2" style="border: thin solid; ">
-            <h3>2</h3>
+            <h3>0</h3>
             <H6>Poli Anak</H6></div>
         <div class="col-md-2" style="border: thin solid; ">
             <h3>1</h3>
@@ -48,7 +48,7 @@
           <div class="col-md-5 text-right" >
             <label><h6>Nomor Antrian Anda :</label></h6>
           </div>
-          <div class="col-md-2 text-justify"><h5>2</h5></div>
+          <div class="col-md-2 text-justify"><h5>1</h5></div>
                       <div class="col-md-5"><a href="/Index/cetak/38" style="color: #000; background: #fff; padding: 5px;" target="_blank">Print</a></div>
                   </div>
         <div class="row" style="width: 60%;">
