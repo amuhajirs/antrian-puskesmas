@@ -3,16 +3,7 @@
     <div class="container">
 
         <!-- Portfolio Section Heading -->
-        <h2 class="page-section-heading text-center text-uppercase text-secondary mb-0">Ambil Antrian</h2>
-
-        <!-- Icon Divider -->
-        <div class="divider-custom">
-            <div class="divider-custom-line"></div>
-            <div class="divider-custom-icon">
-                <i class="fas fa-star"></i>
-            </div>
-            <div class="divider-custom-line"></div>
-        </div>
+        <h2 class="page-section-heading text-center text-uppercase text-secondary mb-3">Ambil Antrian</h2>
 
         <!-- Portfolio Grid Items -->
         <div class="row">
@@ -21,7 +12,7 @@
                     <div class="col-md-12" style="margin-top: 20px">
                         <!-- <h1 align="center">Login </h1> -->
                         <form action="/Index/saveAntrian" method="POST">
-                            <div class="row mb-2">
+                            <div class="row mt-5">
                                 <div class ="col-lg-2">
                                     <h6><label>Pilih Poli</label></h6>   
                                 </div>
@@ -29,12 +20,12 @@
                                 <div class="col-lg-5">
                                     <select name="id_poli" id="id_poli" class="form-control" onchange="noAntrian(this.value)">
                                         <option value="">Pilih</option>
-                                        <option value="poli-mata">Poli Mata</option>
-                                        <option value="poli-anak">Poli Anak</option>
-                                        <option value="poli-tht">Poli THT</option>
-                                        <option value="poli-jiwa">Poli Jiwa</option>
-                                        <option value="poli-saraf">Poli Saraf</option>
-                                        <option value="poli-gizi">Poli Gizi</option>
+                                        <option value="poli-mata">PM</option>
+                                        <option value="poli-anak">PA</option>
+                                        <option value="poli-tht">PTHT</option>
+                                        <option value="poli-jiwa">PJ</option>
+                                        <option value="poli-saraf">PS</option>
+                                        <option value="poli-gizi">PG</option>
                                     </select>
                                 </div>
                             </div>
@@ -64,12 +55,14 @@
                                 <h6>Keterangan :</h6>
                             </div>
                             <div class="col-lg-5">
-                                <ol class="pl-3">
-                                    <li>Poli Umum (PLUM)</li>
-                                    <li>Poli Gigi (PLGG) </li>
-                                    <li>Poli Imunisasi (PLIM)</li>
-                                    <li>Poli Tuberculosis (PLTB)</li>
-                                </ol>
+                                <ul class="pl-3">
+                                    <li>Poliklinik Mata (PM)</li>
+                                    <li>Poliklinik Anak (PA)</li>
+                                    <li>Poliklinik THT (PTHT)</li>
+                                    <li>Poliklinik Jiwa (PJ)</li>
+                                    <li>Poliklinik Saraf (PS)</li>
+                                    <li>Poliklinik Gizi (PG)</li>
+                                </ul>
                             </div>
                         </div>
                     </div>

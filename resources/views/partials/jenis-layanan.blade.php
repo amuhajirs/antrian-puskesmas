@@ -1,5 +1,5 @@
 <!-- Portfolio Section -->
-<section class="page-section portfolio" id="registrasi">
+<section class="page-section portfolio" id="poliklinik">
     <div class="container">
 
       <!-- Portfolio Section Heading -->
@@ -9,22 +9,11 @@
       <div class="pt-5 pb-5">
         <div class="container">
             <div class="row">
-                <div class="col-6">
-                    <h3 class="mb-3"></h3>
-                </div>
-                <div class="col-6 text-right">
-                    <a class="btn btn-primary mb-3 mr-1" href="#carouselExampleIndicators2" role="button" data-slide="prev">
-                        <i class="fa fa-arrow-left"></i>
-                    </a>
-                    <a class="btn btn-primary mb-3 " href="#carouselExampleIndicators2" role="button" data-slide="next">
-                        <i class="fa fa-arrow-right"></i>
-                    </a>
-                </div>
                 <div class="col-12">
                     <div id="carouselExampleIndicators2" class="carousel slide" data-ride="carousel">
-    
+                        
                         <div class="carousel-inner">
-
+                            
                             <div class="carousel-item active">
                                 <div class="row">
     
@@ -93,26 +82,34 @@
                                     </div>
     
                                 </div>
-                          
-                                </div>
+                                
                             </div>
                         </div>
                     </div>
                 </div>
             </div>
+            <div class="mt-5 col-12 text-center">
+                <a class="btn btn-primary mb-3 mr-2" href="#carouselExampleIndicators2" role="button" data-slide="prev">
+                    <i class="fa fa-arrow-left"></i>
+                </a>
+                <a class="btn btn-primary mb-3 " href="#carouselExampleIndicators2" role="button" data-slide="next">
+                    <i class="fa fa-arrow-right"></i>
+                </a>
+            </div>
+            </div>
         </div>
-      </div>
+    </div>
+    
+    
+    
+    
 
 
-
-
-
-
-      {{-- <div class="row">
-
+    {{-- <div class="row">
+        
         <div class="container">
-          <div class="row justify-content-md-center">
-            <div class="col-md-4" style="margin-top: 20px">
+            <div class="row justify-content-md-center">
+                <div class="col-md-4" style="margin-top: 20px">
               <h1 align="center">Login </h1>
               <form action="http://localhost/antrian-puskesmas/Index/proses_login" method='POST'>
                 @csrf
