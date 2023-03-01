@@ -35,7 +35,7 @@
   {{-- Header --}}
   @include('partials.hero-login')
   {{-- Ambil Antrian --}}
-  @include('partials.ambil-antrian')
+  <livewire:ambil-antrian>
 
 {{-- Belom Login --}}
 @else

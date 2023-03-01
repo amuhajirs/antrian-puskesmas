@@ -179,7 +179,7 @@
                             @foreach ($polis as $index=>$poli)
                             <tr class="{{ ($index)%2 == 1 ? 'erow' : ''}}">
                                 <td width='26%' class=''>
-                                    <div class='text-left'>{{ $index+1 }}</div>
+                                    <div class='text-left'>{{ $poli->kode_poli }}</div>
                                 </td>
                                 <td width='26%' class=''>
                                     <div class='text-left'>{{ $poli->nama_poli }}</div>

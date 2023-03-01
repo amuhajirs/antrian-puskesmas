@@ -7,7 +7,7 @@
         <div class="collapse navbar-collapse" id="navbarResponsive">
             <ul class="navbar-nav ml-auto">
                 <li class="nav-item mx-0 mx-lg-1">
-                    <span class="nav-link py-3 px-0 px-lg-3 rounded js-scroll-trigger text-white" href="#">Selamat Datang, {{ auth('web')->user()->nama }}</span>
+                    <span class="nav-link py-3 px-0 px-lg-3 rounded js-scroll-trigger text-white" href="#">Selamat Datang, {{ explode(" ",auth('web')->user()->nama)[0] }}</span>
                 </li>
                 <li class="nav-item mx-0 mx-lg-1">
                     <a class="nav-link py-3 px-0 px-lg-3 rounded js-scroll-trigger" href="/logout">Logout</a>

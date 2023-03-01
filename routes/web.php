@@ -20,6 +20,8 @@ Route::get('/', function () {
     return view('home');
 })->name('home');
 
+Route::post('/antrian');
+
 Route::get('/logout', [LoginModal::class, 'logout'])->name('logout');
 
 

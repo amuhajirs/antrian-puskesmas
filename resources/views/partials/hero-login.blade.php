@@ -19,7 +19,7 @@
             <h3>2</h3>
             <H6>Poli Mata</H6>
         </div>
-          <div class="col-2" style="border: thin solid; ">
+          <div class="col-md-2" style="border: thin solid; ">
             <h3>2</h3>
             <H6>Poli Anak</H6></div>
         <div class="col-md-2" style="border: thin solid; ">

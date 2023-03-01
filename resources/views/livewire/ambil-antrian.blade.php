@@ -1,4 +1,3 @@
-<!-- Portfolio Section -->
 <section class="page-section portfolio" id="registrasi">
     <div class="container">
 
@@ -11,21 +10,22 @@
                 <div class="row justify-content-md-center">
                     <div class="col-md-12" style="margin-top: 20px">
                         <!-- <h1 align="center">Login </h1> -->
-                        <form action="/Index/saveAntrian" method="POST">
+                        <form action="/antrian" method="POST">
+                            @csrf
                             <div class="row mt-5">
                                 <div class ="col-lg-2">
                                     <h6><label>Pilih Poli</label></h6>   
                                 </div>
 
                                 <div class="col-lg-5">
-                                    <select name="id_poli" id="id_poli" class="form-control" onchange="noAntrian(this.value)">
+                                    <select name="poli" id="id_poli" class="form-control">
                                         <option value="">Pilih</option>
-                                        <option value="poli-mata">PM</option>
-                                        <option value="poli-anak">PA</option>
-                                        <option value="poli-tht">PTHT</option>
-                                        <option value="poli-jiwa">PJ</option>
-                                        <option value="poli-saraf">PS</option>
-                                        <option value="poli-gizi">PG</option>
+                                        <option value="PM">PM</option>
+                                        <option value="PA">PA</option>
+                                        <option value="PTHT">PTHT</option>
+                                        <option value="PJ">PJ</option>
+                                        <option value="PS">PS</option>
+                                        <option value="PG">PG</option>
                                     </select>
                                 </div>
                             </div>
