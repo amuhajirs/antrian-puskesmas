@@ -15,9 +15,9 @@ return new class extends Migration
     {
         Schema::create('antrians', function (Blueprint $table) {
             $table->id();
-            $table->unsignedBigInteger('poli');
-            $table->unsignedBigInteger('nama_pasien');
             $table->integer('no_antrian');
+            $table->unsignedBigInteger('nama_pasien');
+            $table->unsignedBigInteger('poli');
             $table->timestamps();
 
             $table->foreign('poli')->references('id')->on('polis');

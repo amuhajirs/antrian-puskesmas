@@ -17,18 +17,8 @@ License URL: http://creativecommons.org/licenses/by/3.0/
     <link rel="icon" href="images/icon_logo.png">
     <link href='http://fonts.googleapis.com/css?family=Droid+Sans' rel='stylesheet' type='text/css'>
     <link href="css/style.css" rel="stylesheet" type="text/css" media="all" />
-    <!-- -->
     <link href="/assets/user/lib/noty.css" rel="stylesheet">
-    <script>var __links = document.querySelectorAll('a'); function __linkClick(e) { parent.window.postMessage(this.href, '*'); }; for (var i = 0, l = __links.length; i < l; i++) { if (__links[i].getAttribute('data-t') == '_blank') { __links[i].addEventListener('click', __linkClick, false); } }</script>
-    {{-- <script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script> --}}
-    {{-- <script>$(document).ready(function (c) {
-            $('.alert-close').on('click', function (c) {
-                $('.message').fadeOut('slow', function (c) {
-                    $('.message').remove();
-                });
-            });
-        });
-    </script> --}}
+    <link href="/assets/user/lib/themes/metroui.css" rel="stylesheet">
 </head>
 
 <body>
@@ -36,8 +26,10 @@ License URL: http://creativecommons.org/licenses/by/3.0/
     <div class="message warning">
         <div class="inset">
             <div class="login-head" style="">
-                <h1><img src="images/klinik_logo.png" alt="" width="80"
-                        height="80" style="float: left; margin-top: -25px; margin-right: 25px">Login Administrator</h1>
+                <h1>
+                    <img src="images/klinik_logo.png" alt="" width="80" height="80" style="float: left; margin-top: -25px; margin-right: 25px">
+                    Login Administrator
+                </h1>
             </div>
             <form method="POST" action="">
                 @csrf
@@ -68,16 +60,18 @@ License URL: http://creativecommons.org/licenses/by/3.0/
         <!-- <p>Template by <a href="http://w3layouts.com">w3layouts</a></p> -->
     </div>
     
-    {{-- @if(request()->session()->has('loginError')) --}}
+    <script src="/assets/user/lib/noty.min.js"></script>
+
+    @if(request()->session()->has('loginError'))
     <script type="text/javascript">
-    new Noty({
-        text: "{{session('loginError')}}",
-        timeout: 3000,
-        theme: "metroui",
-        type: "warning",
-    }).show();
+        new Noty({
+            text: "{{session('loginError')}}",
+            timeout: 3000,
+            theme: "metroui",
+            type: "warning",
+        }).show();
     </script>
-    {{-- @endif --}}
+    @endif
 </body>
 
 </html>
