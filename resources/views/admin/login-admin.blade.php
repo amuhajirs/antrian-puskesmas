@@ -18,16 +18,17 @@ License URL: http://creativecommons.org/licenses/by/3.0/
     <link href='http://fonts.googleapis.com/css?family=Droid+Sans' rel='stylesheet' type='text/css'>
     <link href="css/style.css" rel="stylesheet" type="text/css" media="all" />
     <!-- -->
+    <link href="/assets/user/lib/noty.css" rel="stylesheet">
     <script>var __links = document.querySelectorAll('a'); function __linkClick(e) { parent.window.postMessage(this.href, '*'); }; for (var i = 0, l = __links.length; i < l; i++) { if (__links[i].getAttribute('data-t') == '_blank') { __links[i].addEventListener('click', __linkClick, false); } }</script>
-    <script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
-    <script>$(document).ready(function (c) {
+    {{-- <script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script> --}}
+    {{-- <script>$(document).ready(function (c) {
             $('.alert-close').on('click', function (c) {
                 $('.message').fadeOut('slow', function (c) {
                     $('.message').remove();
                 });
             });
         });
-    </script>
+    </script> --}}
 </head>
 
 <body>
@@ -66,6 +67,17 @@ License URL: http://creativecommons.org/licenses/by/3.0/
     <div class="footer">
         <!-- <p>Template by <a href="http://w3layouts.com">w3layouts</a></p> -->
     </div>
+    
+    {{-- @if(request()->session()->has('loginError')) --}}
+    <script type="text/javascript">
+    new Noty({
+        text: "{{session('loginError')}}",
+        timeout: 3000,
+        theme: "metroui",
+        type: "warning",
+    }).show();
+    </script>
+    {{-- @endif --}}
 </body>
 
 </html>

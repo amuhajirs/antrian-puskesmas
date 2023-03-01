@@ -13,9 +13,15 @@ return new class extends Migration
      */
     public function up()
     {
-        Schema::create('antrian_polis', function (Blueprint $table) {
+        Schema::create('antrians', function (Blueprint $table) {
             $table->id();
+            $table->unsignedBigInteger('poli');
+            $table->unsignedBigInteger('nama_pasien');
+            $table->integer('no_antrian');
             $table->timestamps();
+
+            $table->foreign('poli')->references('id')->on('polis');
+            $table->foreign('nama_pasien')->references('id')->on('users');
         });
     }
 
@@ -26,6 +32,6 @@ return new class extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('antrian_polis');
+        Schema::dropIfExists('antrians');
     }
 };

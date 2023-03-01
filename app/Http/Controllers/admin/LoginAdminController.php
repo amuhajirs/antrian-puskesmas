@@ -21,6 +21,7 @@ class LoginAdminController extends Controller{
             $request->session()->regenerate();
             return redirect('/admin/dashboard');
         }
+        return back()->with('loginError', 'Email atau Password salah');
     }
 
     public function logout(Request $request){
