@@ -20,8 +20,8 @@
                                 <div class="col-lg-5">
                                     <select name="poli" id="id_poli" class="form-control" wire:model="poli">
                                         <option value="">Pilih</option>
-                                        @foreach ($polis as $poli)
-                                        <option value="{{$poli->kode_poli}}">{{$poli->kode_poli}}</option>
+                                        @foreach ($polis as $_poli)
+                                        <option value="{{$_poli->kode_poli}}">{{$_poli->kode_poli}}</option>
                                         @endforeach
                                     </select>
                                 </div>
@@ -33,9 +33,7 @@
                                 </div>
 
                                 <div class="col-lg-5">
-                                    <input type="text" name="no_antrian_poli2" id="no_antrian_poli2" value="" disabled="" class="form-control">
-                                    <input type="hidden" name="no_antrian_poli" id="no_antrian_poli" value="" class="form-control">
-                                    <input type="hidden" name="no_antrian" value="5">
+                                    <input type="text" name="no_antrian" id="no_antrian" value="{{$poli . $no_antrian}}" disabled class="form-control">
                                 </div>
                             </div>
 

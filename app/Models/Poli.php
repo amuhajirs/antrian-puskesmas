@@ -4,6 +4,7 @@ namespace App\Models;
 
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
+use Illuminate\Database\Eloquent\Relations\HasMany;
 
 class Poli extends Model
 {
@@ -14,4 +15,8 @@ class Poli extends Model
         'nama_poli',
         'jumlah',
     ];
+
+    public function antrians(): HasMany{
+        return $this->hasMany(Antrian::class, 'poli', 'kode_poli');
+    }
 }

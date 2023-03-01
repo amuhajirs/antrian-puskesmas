@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\HomeController;
 use Illuminate\Support\Facades\Route;
 
 use App\Http\Livewire\LoginModal;
@@ -16,9 +17,7 @@ use App\Http\Livewire\LoginModal;
 */
 
 // User
-Route::get('/', function () {
-    return view('home');
-})->name('home');
+Route::get('/', [HomeController::class, 'index'])->name('home');
 
 Route::post('/antrian');
 
