@@ -14,6 +14,14 @@
     background-attachment: fixed;
   }
 
+  ._header2{
+    background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('https://picklinik.id/storage/2021/10/header.jpg');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size : cover;
+    background-attachment: fixed;
+  }
+
   header{
     min-height: 100vh;
   }
