@@ -120,25 +120,25 @@
     </ul> <!-- Sidebar Menu Items - These collapse to the responsive navigation menu on small screens -->
     <div class="collapse navbar-collapse navbar-ex1-collapse">
         <ul class="nav navbar-nav side-nav">
-            <li class="dashboard">
+            <li class="dashboard {{$title==='Dashboard'?'active':''}}">
                 <a href="/admin/dashboard"><i
                         class="fa fa-fw fa-dashboard"></i>
                     Dashboard </a>
 
             </li>
-            <li class="data_pasien">
+            <li class="data_pasien {{$title==='Data Pasien'?'active':''}}">
                 <a href="/admin/pasien"><i
                         class="glyphicon glyphicon-user"></i>
                     Data Pasien </a>
 
             </li>
-            <li class="poli">
+            <li class="poli {{$title==='Poli'?'active':''}}">
                 <a href="/admin/poli"><i
                         class="glyphicon glyphicon-list-alt"></i>
                     Poli </a>
 
             </li>
-            <li class="antrian_poli">
+            <li class="antrian_poli {{$title==='Antrian Poli'?'active':''}}">
                 <a href="/admin/antrian_poli"><i
                         class="glyphicon glyphicon-list"></i>
                     Antrian Poli </a>
