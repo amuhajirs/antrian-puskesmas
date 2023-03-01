@@ -49,7 +49,7 @@
             <label><h6>Nomor Antrian Anda :</label></h6>
           </div>
           <div class="col-md-2 text-justify"><h5>2</h5></div>
-                      <div class="col-md-5"><a href="/Index/cetak/38" style="color: #000; background: #fff; padding: 5px;" target="_blank">Print</a></div>
+                      <div class="col-md-5"><a href="/Index/cetak/38" style="color: #000; background: #fff; padding: 5px;" target="_blank">Cetak</a></div>
                   </div>
         <div class="row" style="width: 60%;">
           <div class="col-md-5 text-right"><label><h6>Poli :</label></h6></div>
