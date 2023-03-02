@@ -161,27 +161,27 @@
 
 							@foreach ($pasiens as $index=>$pasien)
 							<tr class="{{ ($index)%2 == 1 ? 'erow' : ''}}">
-								<td width='10%' class=''>
+								<td width='10%'>
 									<div class='text-left'>{{ $pasien->no_identitas }}</div>
 								</td>
-								<td width='10%' class=''>
+								<td width='10%'>
 									<div class='text-left'>{{ $pasien->nama }}</div>
 								</td>
-								<td width='10%' class=''>
+								<td width='10%'>
 									<div class='text-left'>{{ $pasien->jenis_kelamin }}</div>
 								</td>
-								<td width='10%' class=''>
-									<div class='text-left'>{{ $pasien->tgl_lahir }}</div>
+								<td width='10%'>
+									<div class='text-left'>{{ \Carbon\Carbon::parse($pasien->tgl_lahir)->translatedFormat('d F Y') }}</div>
 								</td>
-								<td width='10%' class=''>
+								<td width='10%'>
 									<div class='text-left'>
 										{{ $pasien->alamat }}
 									</div>
 								</td>
-								<td width='10%' class=''>
+								<td width='10%'>
 									<div class='text-left'>{{ $pasien->no_telp }}</div>
 								</td>
-								<td width='10%' class=''>
+								<td width='10%'>
 									<div class='text-left'>{{ $pasien->username }}</div>
 								</td>
 								<td align="left" width='20%'>

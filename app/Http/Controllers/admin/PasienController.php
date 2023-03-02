@@ -14,7 +14,7 @@ class PasienController extends Controller
      * @return \Illuminate\Http\Response
      */
     public function index(){
-        $users = User::all();
+        $users = User::orderBy('id', 'DESC')->get();
 
         return view('admin.pasien-admin', [
             'title'=>'Data Pasien',

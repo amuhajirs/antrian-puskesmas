@@ -17,6 +17,6 @@ class Poli extends Model
     ];
 
     public function antrians(): HasMany{
-        return $this->hasMany(Antrian::class, 'poli', 'kode_poli');
+        return $this->hasMany(Antrian::class, 'kode_poli', 'kode_poli');
     }
 }

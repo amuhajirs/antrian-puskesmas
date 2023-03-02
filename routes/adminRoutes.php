@@ -30,9 +30,9 @@ Route::middleware(['auth:admin'])->group(function () {
 
     Route::resource('/pasien', PasienController::class);
 
-    Route::resource('/poli', PoliController::class);
+    Route::resource('/poli', PoliController::class)->except(['show']);
 
-    Route::resource('/antrian_poli', AntrianPoliController::class);
+    Route::resource('/antrian_poli', AntrianPoliController::class)->except(['store', 'edit', 'update', 'destroy']);
 
     Route::get('/password', function (){
         return view('admin.password-admin', [

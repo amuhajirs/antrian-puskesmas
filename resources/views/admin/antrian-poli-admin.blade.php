@@ -103,6 +103,8 @@
     <div id='list-report-error' class='report-div error'></div>
     <div id='list-report-success' class='report-div success report-list'></div>
     <div class="flexigrid" style='width: 100%;' data-unique-hash="dcd11edfb9b36d4b41c7880fc840a282">
+        @include('partials.admin-message')
+
         <div id="hidden-operations" class="hidden-operations"></div>
         <div class="mDiv">
             <div class="ftitle">
@@ -160,18 +162,19 @@
                         </thead>
                         <tbody>
 
-                            <tr>
-                                <td width='20%' class=''>
-                                    <div class='text-left'>Poli Gigi</div>
+                            @foreach ($antrians as $index=>$antrian)
+                            <tr class="{{ ($index)%2 == 1 ? 'erow' : ''}}">
+                                <td width='20%'>
+                                    <div class='text-left'>{{ $antrian->poli->nama_poli }}</div>
                                 </td>
-                                <td width='20%' class=''>
-                                    <div class='text-left'>evi</div>
+                                <td width='20%'>
+                                    <div class='text-left'>{{ $antrian->pasien->nama }}</div>
                                 </td>
-                                <td width='20%' class=''>
-                                    <div class='text-left'>17/07/2019</div>
+                                <td width='20%'>
+                                    <div class='text-left'>{{ \Carbon\Carbon::parse($antrian->created_at)->translatedFormat('d F Y') }}</div>
                                 </td>
-                                <td width='20%' class=''>
-                                    <div class='text-left'>1</div>
+                                <td width='20%'>
+                                    <div class='text-left'>{{ $antrian->no_antrian }}</div>
                                 </td>
                                 <td align="left" width='20%'>
                                     <div class='tools'>
@@ -183,222 +186,7 @@
                                     </div>
                                 </td>
                             </tr>
-
-                            <tr class="erow">
-                                <td width='20%' class=''>
-                                    <div class='text-left'>Poli Gigi</div>
-                                </td>
-                                <td width='20%' class=''>
-                                    <div class='text-left'>evi</div>
-                                </td>
-                                <td width='20%' class=''>
-                                    <div class='text-left'>17/07/2019</div>
-                                </td>
-                                <td width='20%' class=''>
-                                    <div class='text-left'>2</div>
-                                </td>
-                                <td align="left" width='20%'>
-                                    <div class='tools'>
-                                        <a href='/admin/antrian_poli/2'
-                                            title='View Antrian poli' class="edit_button"><span
-                                                class='read-icon'></span></a>
-
-                                        <div class='clear'></div>
-                                    </div>
-                                </td>
-                            </tr>
-
-                            <tr>
-                                <td width='20%' class=''>
-                                    <div class='text-left'>Poli Gigi</div>
-                                </td>
-                                <td width='20%' class=''>
-                                    <div class='text-left'>evi</div>
-                                </td>
-                                <td width='20%' class=''>
-                                    <div class='text-left'>17/07/2019</div>
-                                </td>
-                                <td width='20%' class=''>
-                                    <div class='text-left'>3</div>
-                                </td>
-                                <td align="left" width='20%'>
-                                    <div class='tools'>
-                                        <a href='/admin/antrian_poli/3'
-                                            title='View Antrian poli' class="edit_button"><span
-                                                class='read-icon'></span></a>
-
-                                        <div class='clear'></div>
-                                    </div>
-                                </td>
-                            </tr>
-
-                            <tr class="erow">
-                                <td width='20%' class=''>
-                                    <div class='text-left'>Poli Tuberculosis</div>
-                                </td>
-                                <td width='20%' class=''>
-                                    <div class='text-left'>evi</div>
-                                </td>
-                                <td width='20%' class=''>
-                                    <div class='text-left'>17/07/2019</div>
-                                </td>
-                                <td width='20%' class=''>
-                                    <div class='text-left'>1</div>
-                                </td>
-                                <td align="left" width='20%'>
-                                    <div class='tools'>
-                                        <a href='/admin/antrian_poli/4'
-                                            title='View Antrian poli' class="edit_button"><span
-                                                class='read-icon'></span></a>
-
-                                        <div class='clear'></div>
-                                    </div>
-                                </td>
-                            </tr>
-
-                            <tr>
-                                <td width='20%' class=''>
-                                    <div class='text-left'>Poli Imunisasi</div>
-                                </td>
-                                <td width='20%' class=''>
-                                    <div class='text-left'>evi</div>
-                                </td>
-                                <td width='20%' class=''>
-                                    <div class='text-left'>17/07/2019</div>
-                                </td>
-                                <td width='20%' class=''>
-                                    <div class='text-left'>1</div>
-                                </td>
-                                <td align="left" width='20%'>
-                                    <div class='tools'>
-                                        <a href='/admin/antrian_poli/5'
-                                            title='View Antrian poli' class="edit_button"><span
-                                                class='read-icon'></span></a>
-
-                                        <div class='clear'></div>
-                                    </div>
-                                </td>
-                            </tr>
-
-                            <tr class="erow">
-                                <td width='20%' class=''>
-                                    <div class='text-left'>Poli Imunisasi</div>
-                                </td>
-                                <td width='20%' class=''>
-                                    <div class='text-left'>evi</div>
-                                </td>
-                                <td width='20%' class=''>
-                                    <div class='text-left'>17/07/2019</div>
-                                </td>
-                                <td width='20%' class=''>
-                                    <div class='text-left'>30</div>
-                                </td>
-                                <td align="left" width='20%'>
-                                    <div class='tools'>
-                                        <a href='/admin/antrian_poli/6'
-                                            title='View Antrian poli' class="edit_button"><span
-                                                class='read-icon'></span></a>
-
-                                        <div class='clear'></div>
-                                    </div>
-                                </td>
-                            </tr>
-
-                            <tr>
-                                <td width='20%' class=''>
-                                    <div class='text-left'>Poli Tuberculosis</div>
-                                </td>
-                                <td width='20%' class=''>
-                                    <div class='text-left'>evi</div>
-                                </td>
-                                <td width='20%' class=''>
-                                    <div class='text-left'>17/07/2019</div>
-                                </td>
-                                <td width='20%' class=''>
-                                    <div class='text-left'>2</div>
-                                </td>
-                                <td align="left" width='20%'>
-                                    <div class='tools'>
-                                        <a href='/admin/antrian_poli/8'
-                                            title='View Antrian poli' class="edit_button"><span
-                                                class='read-icon'></span></a>
-
-                                        <div class='clear'></div>
-                                    </div>
-                                </td>
-                            </tr>
-
-                            <tr class="erow">
-                                <td width='20%' class=''>
-                                    <div class='text-left'>Poli Gigi</div>
-                                </td>
-                                <td width='20%' class=''>
-                                    <div class='text-left'>evi</div>
-                                </td>
-                                <td width='20%' class=''>
-                                    <div class='text-left'>18/07/2019</div>
-                                </td>
-                                <td width='20%' class=''>
-                                    <div class='text-left'>1</div>
-                                </td>
-                                <td align="left" width='20%'>
-                                    <div class='tools'>
-                                        <a href='/admin/antrian_poli/9'
-                                            title='View Antrian poli' class="edit_button"><span
-                                                class='read-icon'></span></a>
-
-                                        <div class='clear'></div>
-                                    </div>
-                                </td>
-                            </tr>
-
-                            <tr>
-                                <td width='20%' class=''>
-                                    <div class='text-left'>Poli Gigi</div>
-                                </td>
-                                <td width='20%' class=''>
-                                    <div class='text-left'>&nbsp;</div>
-                                </td>
-                                <td width='20%' class=''>
-                                    <div class='text-left'>18/07/2019</div>
-                                </td>
-                                <td width='20%' class=''>
-                                    <div class='text-left'>30</div>
-                                </td>
-                                <td align="left" width='20%'>
-                                    <div class='tools'>
-                                        <a href='/admin/antrian_poli/10'
-                                            title='View Antrian poli' class="edit_button"><span
-                                                class='read-icon'></span></a>
-
-                                        <div class='clear'></div>
-                                    </div>
-                                </td>
-                            </tr>
-
-                            <tr class="erow">
-                                <td width='20%' class=''>
-                                    <div class='text-left'>Poli Imunisasi</div>
-                                </td>
-                                <td width='20%' class=''>
-                                    <div class='text-left'>Aisyah</div>
-                                </td>
-                                <td width='20%' class=''>
-                                    <div class='text-left'>30/07/2019</div>
-                                </td>
-                                <td width='20%' class=''>
-                                    <div class='text-left'>1</div>
-                                </td>
-                                <td align="left" width='20%'>
-                                    <div class='tools'>
-                                        <a href='/admin/antrian_poli/11'
-                                            title='View Antrian poli' class="edit_button"><span
-                                                class='read-icon'></span></a>
-
-                                        <div class='clear'></div>
-                                    </div>
-                                </td>
-                            </tr>
+                            @endforeach
 
                         </tbody>
                     </table>

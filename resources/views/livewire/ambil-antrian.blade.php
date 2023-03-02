@@ -70,7 +70,17 @@
         <!-- /.row -->
     </div>
 
-    
+    @error('poli')
+        <script>
+            new Noty({
+                text: '{{$message}}',
+                timeout: 3000,
+                theme: "metroui",
+                type: "warning",
+            }).show();
+        </script>
+    @enderror
+
     <script>
         window.addEventListener('antrianAdded', event => {
             new Noty({
@@ -78,15 +88,6 @@
                 timeout: 3000,
                 theme: "metroui",
                 type: "success",
-            }).show();
-        })
-
-        window.addEventListener('antrianError', event => {
-            new Noty({
-                text: event.detail,
-                timeout: 3000,
-                theme: "metroui",
-                type: "warning",
             }).show();
         })
     </script>

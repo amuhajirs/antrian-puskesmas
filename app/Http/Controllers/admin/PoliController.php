@@ -14,7 +14,7 @@ class PoliController extends Controller
      * @return \Illuminate\Http\Response
      */
     public function index(){
-        $polis = Poli::all();
+        $polis = Poli::orderBy('id', 'DESC')->get();
 
         return view('admin.poli-admin', [
             'title'=>'Poli',

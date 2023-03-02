@@ -16,7 +16,7 @@ class AntrianPoliController extends Controller
      * @return \Illuminate\Http\Response
      */
     public function index(){
-        $antrians = Antrian::all();
+        $antrians = Antrian::orderBy('id', 'DESC')->get();
 
         return view('admin.antrian-poli-admin', [
             'title'=>'Antrian Poli',
@@ -30,13 +30,8 @@ class AntrianPoliController extends Controller
      * @return \Illuminate\Http\Response
      */
     public function create(){
-        $polis = Poli::all();
-        $users = User::all();
-
         return view('admin.antrian-poli-admin-create', [
             'title'=>'Antrian Poli',
-            'polis'=>$polis,
-            'pasiens'=>$users,
         ]);
     }
 

@@ -4,22 +4,27 @@ namespace App\Http\Livewire;
 
 use Livewire\Component;
 
-use App\Models\Poli;
 use App\Models\Antrian;
+use App\Models\Poli;
+use App\Models\User;
 
-class AmbilAntrian extends Component{
+class AntrianPoliForm extends Component{
     public $polis;
+    public $pasiens;
     public $no_antrian='';
 
     public $poli;
+    public $pasien;
 
     public function mount(){
         $this->polis = Poli::all();
+        $this->pasiens = User::all();
     }
 
     public function render(){
-        return view('livewire.ambil-antrian', [
-            'polis'=>$this->polis
+        return view('livewire.antrian-poli-form', [
+            'polis'=>$this->polis,
+            'pasiens'=>$this->pasiens,
         ]);
     }
 
@@ -34,18 +39,21 @@ class AmbilAntrian extends Component{
 
     public function submitHandle(){
         $this->validate([
-            'poli'=>'required'
+            'poli'=>'required',
+            'pasien'=>'required'
         ]);
+
+        $pasien = User::where('username', $this->pasien)->first();
 
         Antrian::create([
             'no_antrian'=>$this->no_antrian,
-            'pasien_id'=>auth('web')->user()->id,
+            'pasien_id'=>$pasien->id,
             'kode_poli'=>$this->poli,
         ]);
 
         $this->poli = '';
         $this->no_antrian = '';
-        $this->emit('antrianAdded');
-        $this->dispatchBrowserEvent('antrianAdded', 'Antrian berhasil dibuat');
+
+        return redirect('/admin/antrian_poli')->with('updated', 'Antrian berhasil dibuat');
     }
 }

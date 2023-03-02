@@ -15,12 +15,12 @@ return new class extends Migration
     {
         Schema::create('antrians', function (Blueprint $table) {
             $table->id();
-            $table->string('poli');
+            $table->string('kode_poli');
             $table->integer('no_antrian');
             $table->unsignedBigInteger('pasien_id');
             $table->timestamps();
 
-            $table->foreign('poli')->references('kode_poli')->on('polis')->onDelete('cascade')->onUpdate('cascade');
+            $table->foreign('kode_poli')->references('kode_poli')->on('polis')->onDelete('cascade')->onUpdate('cascade');
             $table->foreign('pasien_id')->references('id')->on('users')->onDelete('cascade')->onUpdate('cascade');
         });
     }

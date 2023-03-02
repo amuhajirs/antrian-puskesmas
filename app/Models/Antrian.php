@@ -12,14 +12,14 @@ class Antrian extends Model{
     protected $fillable = [
         'no_antrian',
         'pasien_id',
-        'poli',
+        'kode_poli',
     ];
 
-    public function user():BelongsTo{
+    public function pasien():BelongsTo{
         return $this->belongsTo(User::class);
     }
 
     public function poli():BelongsTo{
-        return $this->belongsTo(Poli::class, 'poli', 'kode_poli');
+        return $this->belongsTo(Poli::class, 'kode_poli', 'kode_poli');
     }
 }

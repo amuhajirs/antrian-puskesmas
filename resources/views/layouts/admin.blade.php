@@ -20,6 +20,7 @@
     {{-- Custom Fonts --}}
     <link href="font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
 
+    @livewireStyles
     {{-- CSS Blade --}}
     @yield('styles')
 </head>
@@ -37,6 +38,9 @@
 
     <!-- jQuery -->
     <script src="js/bootstrap.min.js"></script>
+
+    @livewireScripts
+
     @yield('scripts')
     <!-- Bootstrap Core JavaScript -->
 </body>
