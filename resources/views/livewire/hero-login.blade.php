@@ -31,7 +31,7 @@
                 <h5>1</h5>
             </div>
             <div class="col-md-5">
-                <a href="/Index/cetak/38" style="color: #000; background: #fff; padding: 5px;" target="_blank">Print</a>
+                <a href="/print.php" style="color: #000; background: #fff; padding: 5px;" target="_blank">Print</a>
             </div>
             <div class="col-md-5 text-right">
                 <h6><label>Poli :</label></h6>
