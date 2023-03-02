@@ -21,7 +21,7 @@
         <div class="" style="border: thin solid; width : 300px; height : 100px; padding: 5px; margin: 20px auto">
             <center>
                 <h3>"Nomor Antrian"</h3>
-                <H6>"Nama"</H6>
+                <H4>"Nama"</H4>
             </center>
         </div>
         
