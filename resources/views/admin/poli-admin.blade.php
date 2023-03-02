@@ -103,6 +103,8 @@
     <div id='list-report-error' class='report-div error'></div>
     <div id='list-report-success' class='report-div success report-list'></div>
     <div class="flexigrid" style='width: 100%;' data-unique-hash="7ea6df50001cbab5b75c30b63e038530">
+        @include('partials.admin-message')
+
         <div id="hidden-operations" class="hidden-operations"></div>
         <div class="mDiv">
             <div class="ftitle">
@@ -116,7 +118,7 @@
 
             <div class="tDiv">
                 <div class="tDiv2">
-                    <a href='/index.php/admin/poli/index/add'
+                    <a href='/admin/poli/create'
                         title='Add Poli' class='add-anchor add_button'>
                         <div class="fbutton">
                             <div>
@@ -127,28 +129,6 @@
                     <div class="btnseparator">
                     </div>
                 </div>
-                <div class="tDiv3">
-                    <a class="export-anchor"
-                        data-url="/index.php/admin/poli/index/export"
-                        target="_blank">
-                        <div class="fbutton">
-                            <div>
-                                <span class="export">Export</span>
-                            </div>
-                        </div>
-                    </a>
-                    <div class="btnseparator"></div>
-                    <a class="print-anchor"
-                        data-url="/index.php/admin/poli/index/print">
-                        <div class="fbutton">
-                            <div>
-                                <span class="print">Print</span>
-                            </div>
-                        </div>
-                    </a>
-                    <div class="btnseparator"></div>
-                </div>
-                <div class='clear'></div>
             </div>
 
             <div id='ajax_list' class="ajax_list">
@@ -189,16 +169,15 @@
                                 </td>
                                 <td align="left" width='20%'>
                                     <div class='tools'>
-                                        <a href='/admin/poli/{{ $poli->id }}'
-                                            title='Delete Poli' class="delete-row">
-                                            <span class='delete-icon'></span>
-                                        </a>
+                                        <form action="/admin/poli/{{ $poli->id }}" method="POST">
+											@csrf
+											@method('DELETE')
+											<button type="submit" class='delete-icon' title="Delete Pasien"></button>
+										</form>
+
                                         <a href='/admin/poli/{{ $poli->id }}/edit'
                                             title='Edit Poli' class="edit_button"><span
                                                 class='edit-icon'></span></a>
-                                        <a href='/admin/poli/{{ $poli->id }}'
-                                            title='View Poli' class="edit_button"><span
-                                                class='read-icon'></span></a>
 
                                         <div class='clear'></div>
                                     </div>
@@ -308,13 +287,4 @@
     <div style="min-height: 100px;"></div>
 </div>
 <!-- /.container-fluid -->
-@endsection
-
-@section('scripts')
-<script type="text/javascript">
-    $(document).ready(function () {
-        $('.Poli').addClass('active');
-    });
-</script>
-<!-- Bootstrap Core JavaScript -->
 @endsection

@@ -23,15 +23,7 @@
         </div>
         <!-- /.row -->
 
-        <!--            <div class="row">-->
-        <!--                <div class="col-lg-12">-->
-        <!--                    <div class="alert alert-info alert-dismissable">-->
-        <!--                        <button type="button" class="close" data-dismiss="alert" aria-hidden="true">&times;</button>-->
-        <!--                        <i class="fa fa-info-circle"></i>  <strong>Like SB Admin?</strong> Try out <a href="http://startbootstrap.com/template-overviews/sb-admin-2" class="alert-link">SB Admin 2</a> for additional features!-->
-        <!--                    </div>-->
-        <!--                </div>-->
-        <!--            </div>-->
-        <!-- /.row -->
+        @include('partials.admin-message')
 
         <link type="text/css" rel="stylesheet"
             href="/assets/grocery_crud/css/jquery_plugins/chosen/chosen.css" />
@@ -82,7 +74,7 @@
                 min-height: 30px;
             }
         </style>
-        <div class="flexigrid crud-form" style='width: 100%;' data-unique-hash="cd9bbe3e5b7499c1866f9fe1b9b0fa82">
+        <div class="flexigrid crud-form" style='width: 100%;'>
             <div class="mDiv">
                 <div class="ftitle">
                     <div class='ftitle-left'>
@@ -94,8 +86,9 @@
                 </div>
             </div>
             <div id='main-table-box'>
-                <form action="/index.php/admin/pasien/index/update/12" method="post"
-                    id="crudForm" enctype="multipart/form-data" accept-charset="utf-8">
+                <form action="/admin/pasien/{{$pasien->id}}" method="POST">
+                    @csrf
+                    @method('PATCH')
                     <div class='form-div'>
                         <div class='form-field-box odd' id="no_identitas_field_box">
                             <div class='form-display-as-box' id="no_identitas_display_as_box">
@@ -122,9 +115,7 @@
                                 Jenis kelamin :
                             </div>
                             <div class='form-input-box' id="jenis_kelamin_input_box">
-                                <select id='field-jenis_kelamin' name='jenis_kelamin' class='chosen-select'
-                                    data-placeholder='Select Jenis kelamin'>
-                                    <option value=''></option>
+                                <select id='field-jenis_kelamin' name='jenis_kelamin' class='form-select'>
                                     <option value='Perempuan' {{ $pasien->jenis_kelamin == 'Perempuan' ? 'selected' : '' }}>Perempuan</option>
                                     <option value='Laki-laki' {{ $pasien->jenis_kelamin == 'Laki-laki' ? 'selected' : '' }}>Laki-Laki</option>
                                 </select>
@@ -136,9 +127,7 @@
                                 Tgl lahir :
                             </div>
                             <div class='form-input-box' id="tgl_lahir_input_box">
-                                <input id='field-tgl_lahir' name='tgl_lahir' type='text' value='{{ $pasien->tgl_lahir }}' maxlength='10'
-                                    class='datepicker-input form-control' />
-                                <a class='datepicker-input-clear' tabindex='-1'>Clear</a> (dd/mm/yyyy)
+                                <input id='field-tgl_lahir' name='tgl_lahir' type='date' value='{{ $pasien->tgl_lahir }}' class='form-control' />
                             </div>
                             <div class='clear'></div>
                         </div>
@@ -147,8 +136,7 @@
                                 Alamat :
                             </div>
                             <div class='form-input-box' id="alamat_input_box">
-                                <textarea id='field-alamat' name='alamat' class='texteditor'><p>{{ $pasien->alamat }}</p>
-                                </textarea>
+                                <textarea id='field-alamat' name='alamat' style="resize: none;">{{ $pasien->alamat }}</textarea>
                             </div>
                             <div class='clear'></div>
                         </div>
@@ -157,7 +145,7 @@
                                 No telp :
                             </div>
                             <div class='form-input-box' id="no_telp_input_box">
-                                <input id='field-no_telp' class='form-control' name='no_telp' type='text'
+                                <input id='field-no_telp' class='form-control' name='no_telp' type='tel'
                                     value="{{ $pasien->no_telp }}" maxlength='15' />
                             </div>
                             <div class='clear'></div>
@@ -177,8 +165,7 @@
                                 Password :
                             </div>
                             <div class='form-input-box' id="password_input_box">
-                                <input id='field-password' class='form-control' name='password' type='text' value=""
-                                    maxlength='35' />
+                                <input id='field-password' class='form-control' name='password' type='password' value="" />
                             </div>
                             <div class='clear'></div>
                         </div>
@@ -186,15 +173,14 @@
                         <div id='report-success' class='report-div success'></div>
                     </div>
                     <div class="pDiv">
-                        <div class='form-button-box'>
-                            <input id="form-button-save" type='submit' value='Update changes' class="btn btn-large" />
+                        <div class='form-button-box' style="margin-bottom: 20px">
+                            <button id="form-button-save" type='submit' value='save' class="btn btn-large" name="action">Update changes</button>
                         </div>
                         <div class='form-button-box'>
-                            <input type='button' value='Update and go back to list' id="save-and-go-back-button"
-                                class="btn btn-large" />
+                            <button id="save-and-go-back-button" type='submit' value='go-back' class="btn btn-large" name="action">Update and go back to list</button>
                         </div>
                         <div class='form-button-box'>
-                            <input type='button' value='Cancel' class="btn btn-large" id="cancel-button" />
+                            <a href="/admin/pasien" class="btn btn-large" style="text-decoration: none; color:black;">Cancel</a>
                         </div>
                         <div class='form-button-box'>
                             <div class='small-loading' id='FormLoading'>Loading, updating changes...</div>
@@ -204,33 +190,7 @@
                 </form>
             </div>
         </div>
-        <script>
-            var validation_url = '/admin/pasien/index/update_validation/12';
-            var list_url = '/admin/pasien/';
-
-            var message_alert_edit_form = "The data you had change may not be saved.\nAre you sure you want to go back to list?";
-            var message_update_error = "An error has occurred on saving.";
-        </script>
-        <script type="text/javascript">
-            var js_date_format = 'dd/mm/yy';
-        </script>
-        <script type="text/javascript">
-            var default_javascript_path = '/assets/grocery_crud/js';
-            var default_css_path = '/assets/grocery_crud/css';
-            var default_texteditor_path = '/assets/grocery_crud/texteditor';
-            var default_theme_path = '/assets/grocery_crud/themes';
-            var base_url = '/';
-
-        </script>
         <div style="min-height: 100px;"></div>
     </div>
     <!-- /.container-fluid -->
-@endsection
-
-@section('scripts')
-    <script type="text/javascript">
-        $(document).ready(function(){
-        $('.Pasien').addClass('active');
-        });
-    </script>
 @endsection

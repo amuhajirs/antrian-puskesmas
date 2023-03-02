@@ -4,6 +4,7 @@ namespace App\Http\Controllers\admin;
 
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
+use App\Models\Antrian;
 use App\Models\Poli;
 use App\Models\User;
 
@@ -14,10 +15,12 @@ class AntrianPoliController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-    public function index()
-    {
+    public function index(){
+        $antrians = Antrian::all();
+
         return view('admin.antrian-poli-admin', [
             'title'=>'Antrian Poli',
+            'antrians'=>$antrians,
         ]);
     }
 

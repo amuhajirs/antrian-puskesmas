@@ -1,6 +1,5 @@
 @extends('layouts.admin')
 
-
 @section('content')
     <div class="container-fluid">
 
@@ -24,15 +23,7 @@
         </div>
         <!-- /.row -->
 
-        <!--            <div class="row">-->
-        <!--                <div class="col-lg-12">-->
-        <!--                    <div class="alert alert-info alert-dismissable">-->
-        <!--                        <button type="button" class="close" data-dismiss="alert" aria-hidden="true">&times;</button>-->
-        <!--                        <i class="fa fa-info-circle"></i>  <strong>Like SB Admin?</strong> Try out <a href="http://startbootstrap.com/template-overviews/sb-admin-2" class="alert-link">SB Admin 2</a> for additional features!-->
-        <!--                    </div>-->
-        <!--                </div>-->
-        <!--            </div>-->
-        <!-- /.row -->
+        @include('partials.admin-message')
 
         <link type="text/css" rel="stylesheet"
             href="/assets/grocery_crud/css/jquery_plugins/chosen/chosen.css" />
@@ -85,7 +76,7 @@
                 min-height: 30px;
             }
         </style>
-        <div class="flexigrid crud-form" style='width: 100%;' data-unique-hash="cd9bbe3e5b7499c1866f9fe1b9b0fa82">
+        <div class="flexigrid crud-form" style='width: 100%;'>
             <div class="mDiv">
                 <div class="ftitle">
                     <div class='ftitle-left'>
@@ -105,7 +96,7 @@
                                 No identitas :
                             </div>
                             <div class='form-input-box' id="no_identitas_input_box">
-                                <input id='field-no_identitas' class='form-control' name='no_identitas' type='text' value=""
+                                <input id='field-no_identitas' class='form-control' name='no_identitas' type='text' value="{{ old('no_identitas') }}"
                                     maxlength='25' />
                             </div>
                             <div class='clear'></div>
@@ -115,7 +106,7 @@
                                 Nama :
                             </div>
                             <div class='form-input-box' id="nama_input_box">
-                                <input id='field-nama' class='form-control' name='nama' type='text' value=""
+                                <input id='field-nama' class='form-control' name='nama' type='text' value="{{ old('nama') }}"
                                     maxlength='150' />
                             </div>
                             <div class='clear'></div>
@@ -125,11 +116,10 @@
                                 Jenis kelamin :
                             </div>
                             <div class='form-input-box' id="jenis_kelamin_input_box">
-                                <select id='field-jenis_kelamin' name='jenis_kelamin' class='form-control'
-                                    data-placeholder='Select Jenis kelamin'>
-                                    <option value=''></option>
-                                    <option value='Perempuan'>Perempuan</option>
-                                    <option value='Laki-laki'>Laki-Laki</option>
+                                <select id='field-jenis_kelamin' name='jenis_kelamin' class='form-select'>
+                                    <option value=''>Pilih</option>
+                                    <option value='Perempuan' {{ old('jenis_kelamin') === 'Perempuan' ? 'selected' : '' }}>Perempuan</option>
+                                    <option value='Laki-laki' {{ old('jenis_kelamin') === 'Laki-laki' ? 'selected' : '' }}>Laki-Laki</option>
                                 </select>
                             </div>
                             <div class='clear'></div>
@@ -139,8 +129,7 @@
                                 Tgl lahir :
                             </div>
                             <div class='form-input-box' id="tgl_lahir_input_box">
-                                <input id='field-tgl_lahir' name='tgl_lahir' type='date' value=''
-                                    class='form-control' />
+                                <input id='field-tgl_lahir' name='tgl_lahir' type='date' value='{{ old('tgl_lahir') }}' class='form-control' />
                             </div>
                             <div class='clear'></div>
                         </div>
@@ -149,7 +138,7 @@
                                 Alamat :
                             </div>
                             <div class='form-input-box' id="alamat_input_box">
-                                <textarea id='field-alamat' name='alamat' class='texteditor'></textarea>
+                                <textarea id='field-alamat' name='alamat' style="resize: none;">{{ old('alamat') }}</textarea>
                             </div>
                             <div class='clear'></div>
                         </div>
@@ -158,7 +147,7 @@
                                 No telp :
                             </div>
                             <div class='form-input-box' id="no_telp_input_box">
-                                <input id='field-no_telp' class='form-control' name='no_telp' type='text' value=""
+                                <input id='field-no_telp' class='form-control' name='no_telp' type='tel' value="{{ old('no_telp') }}"
                                     maxlength='15' />
                             </div>
                             <div class='clear'></div>
@@ -168,7 +157,7 @@
                                 Username :
                             </div>
                             <div class='form-input-box' id="username_input_box">
-                                <input id='field-username' class='form-control' name='username' type='text' value=""
+                                <input id='field-username' class='form-control' name='username' type='text' value="{{ old('username') }}"
                                     maxlength='50' />
                             </div>
                             <div class='clear'></div>
@@ -178,8 +167,7 @@
                                 Password :
                             </div>
                             <div class='form-input-box' id="password_input_box">
-                                <input id='field-password' class='form-control' name='password' type='text' value=""
-                                    maxlength='35' />
+                                <input id='field-password' class='form-control' name='password' type='password' value="{{ old('password') }}" />
                             </div>
                             <div class='clear'></div>
                         </div>
@@ -208,32 +196,7 @@
                 </form>
             </div>
         </div>
-        <script>
-            var validation_url = '/index.php/admin/pasien/index/insert_validation';
-            var list_url = '/index.php/admin/pasien/index/';
-
-            var message_alert_add_form = "The data you had insert may not be saved.\nAre you sure you want to go back to list?";
-            var message_insert_error = "An error has occurred on insert.";
-        </script>
-        <script type="text/javascript">
-            var js_date_format = 'dd/mm/yy';
-        </script>
-        <script type="text/javascript">
-            var default_javascript_path = '/assets/grocery_crud/js';
-            var default_css_path = '/assets/grocery_crud/css';
-            var default_texteditor_path = '/assets/grocery_crud/texteditor';
-            var default_theme_path = '/assets/grocery_crud/themes';
-            var base_url = '/';
-        </script>
         <div style="min-height: 100px;"></div>
     </div>
     <!-- /.container-fluid -->
-@endsection
-
-@section('scripts')
-    <script type="text/javascript">
-        $(document).ready(function(){
-        $('.Pasien').addClass('active');
-        });
-    </script>
 @endsection

@@ -23,15 +23,7 @@
         </div>
         <!-- /.row -->
 
-        <!--            <div class="row">-->
-        <!--                <div class="col-lg-12">-->
-        <!--                    <div class="alert alert-info alert-dismissable">-->
-        <!--                        <button type="button" class="close" data-dismiss="alert" aria-hidden="true">&times;</button>-->
-        <!--                        <i class="fa fa-info-circle"></i>  <strong>Like SB Admin?</strong> Try out <a href="http://startbootstrap.com/template-overviews/sb-admin-2" class="alert-link">SB Admin 2</a> for additional features!-->
-        <!--                    </div>-->
-        <!--                </div>-->
-        <!--            </div>-->
-        <!-- /.row -->
+        @include('partials.admin-message')
 
         <link type="text/css" rel="stylesheet"
             href="/assets/grocery_crud/themes/flexigrid/css/flexigrid.css" />
@@ -77,15 +69,16 @@
                 </div>
             </div>
             <div id='main-table-box'>
-                <form action="/index.php/admin/poli/index/update/7" method="post"
-                    id="crudForm" enctype="multipart/form-data" accept-charset="utf-8">
+                <form action="/admin/poli/{{ $poli->id }}" method="POST">
+                    @csrf
+                    @method('PATCH')
                     <div class='form-div'>
                         <div class='form-field-box odd' id="kode_poli_field_box">
                             <div class='form-display-as-box' id="kode_poli_display_as_box">
                                 Kode poli :
                             </div>
                             <div class='form-input-box' id="kode_poli_input_box">
-                                <input id='field-kode_poli' class='form-control' name='kode_poli' type='text' value="PLY"
+                                <input id='field-kode_poli' class='form-control' name='kode_poli' type='text' value="{{ $poli->kode_poli }}"
                                     maxlength='5' />
                             </div>
                             <div class='clear'></div>
@@ -96,7 +89,7 @@
                             </div>
                             <div class='form-input-box' id="nama_poli_input_box">
                                 <input id='field-nama_poli' class='form-control' name='nama_poli' type='text'
-                                    value="Poli YEAA" maxlength='100' />
+                                    value="{{ $poli->nama_poli }}" maxlength='100' />
                             </div>
                             <div class='clear'></div>
                         </div>
@@ -105,8 +98,7 @@
                                 Jumlah maksimal :
                             </div>
                             <div class='form-input-box' id="jumlah_maksimal_input_box">
-                                <input id='field-jumlah_maksimal' class='form-control' name='jumlah_maksimal' type='text'
-                                    value="99" maxlength='2' />
+                                <input id='field-jumlah_maksimal' class='form-control' name='jumlah' type='number' value="{{ $poli->jumlah }}" />
                             </div>
                             <div class='clear'></div>
                         </div>
@@ -114,15 +106,14 @@
                         <div id='report-success' class='report-div success'></div>
                     </div>
                     <div class="pDiv">
-                        <div class='form-button-box'>
-                            <input id="form-button-save" type='submit' value='Update changes' class="btn btn-large" />
+                        <div class='form-button-box' style="margin-bottom: 20px">
+                            <button id="form-button-save" type='submit' value='save' class="btn btn-large" name="action">Update changes</button>
                         </div>
                         <div class='form-button-box'>
-                            <input type='button' value='Update and go back to list' id="save-and-go-back-button"
-                                class="btn btn-large" />
+                            <button id="save-and-go-back-button" type='submit' value='go-back' class="btn btn-large" name="action">Update and go back to list</button>
                         </div>
                         <div class='form-button-box'>
-                            <input type='button' value='Cancel' class="btn btn-large" id="cancel-button" />
+                            <a href="/admin/poli" class="btn btn-large" style="text-decoration: none; color:black;">Cancel</a>
                         </div>
                         <div class='form-button-box'>
                             <div class='small-loading' id='FormLoading'>Loading, updating changes...</div>
@@ -153,12 +144,4 @@
         <div style="min-height: 100px;"></div>
     </div>
     <!-- /.container-fluid -->
-@endsection
-
-@section('scripts')
-    <script type="text/javascript">
-        $(document).ready(function(){
-        $('.Poli').addClass('active');
-        });
-    </script>
 @endsection

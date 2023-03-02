@@ -127,27 +127,7 @@
                     <div class="btnseparator">
                     </div>
                 </div>
-                <div class="tDiv3">
-                    <a class="export-anchor"
-                        data-url="/index.php/admin/antrian_poli/index/export"
-                        target="_blank">
-                        <div class="fbutton">
-                            <div>
-                                <span class="export">Export</span>
-                            </div>
-                        </div>
-                    </a>
-                    <div class="btnseparator"></div>
-                    <a class="print-anchor"
-                        data-url="/index.php/admin/antrian_poli/index/print">
-                        <div class="fbutton">
-                            <div>
-                                <span class="print">Print</span>
-                            </div>
-                        </div>
-                    </a>
-                    <div class="btnseparator"></div>
-                </div>
+
                 <div class='clear'></div>
             </div>
 

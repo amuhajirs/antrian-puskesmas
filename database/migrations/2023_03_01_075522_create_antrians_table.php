@@ -20,8 +20,8 @@ return new class extends Migration
             $table->unsignedBigInteger('pasien_id');
             $table->timestamps();
 
-            $table->foreign('poli')->references('kode_poli')->on('polis');
-            $table->foreign('pasien_id')->references('id')->on('users');
+            $table->foreign('poli')->references('kode_poli')->on('polis')->onDelete('cascade')->onUpdate('cascade');
+            $table->foreign('pasien_id')->references('id')->on('users')->onDelete('cascade')->onUpdate('cascade');
         });
     }
 

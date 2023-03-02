@@ -39,9 +39,28 @@ class PoliController extends Controller
      * @param  \Illuminate\Http\Request  $request
      * @return \Illuminate\Http\Response
      */
-    public function store(Request $request)
-    {
-        //
+    public function store(Request $request){
+        $request->validate([
+            'kode_poli'=>'required|unique:polis',
+            'nama_poli'=>'required',
+            'jumlah'=>'required|numeric|max_digits:3',
+        ]);
+
+        Poli::create([
+            'kode_poli'=>$request->kode_poli,
+            'nama_poli'=>$request->nama_poli,
+            'jumlah'=>$request->jumlah,
+        ]);
+
+        switch ($request->input('action')) {
+            case 'save':
+                return back()->with('updated', 'Poli added successfully');
+                break;
+
+            case 'go-back':
+                return redirect('/admin/poli')->with('updated', 'Poli added successfully');
+                break;
+        }
     }
 
     /**
@@ -61,10 +80,11 @@ class PoliController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function edit($id)
-    {
+    public function edit($id){
+        $poli = Poli::where('id', $id)->first();
         return view('admin.poli-admin-edit', [
-            'title'=>'Poli'
+            'title'=>'Poli',
+            'poli'=>$poli
         ]);
     }
 
@@ -75,9 +95,30 @@ class PoliController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, $id)
-    {
-        //
+    public function update(Request $request, $id){
+        $poli = Poli::where('id', $id)->first();
+
+        $request->validate([
+            'kode_poli'=>'required' . ($request->kode_poli != $poli->kode_poli ? '|unique:polis' : ''),
+            'nama_poli'=>'required',
+            'jumlah'=>'required|numeric|max_digits:3',
+        ]);
+
+        $poli->update([
+            'kode_poli'=>$request->kode_poli,
+            'nama_poli'=>$request->nama_poli,
+            'jumlah'=>$request->jumlah,
+        ]);
+
+        switch ($request->input('action')) {
+            case 'save':
+                return back()->with('updated', 'Poli updated successfully');
+                break;
+
+            case 'go-back':
+                return redirect('/admin/poli')->with('updated', 'Poli updated successfully');
+                break;
+        }
     }
 
     /**
@@ -86,8 +127,9 @@ class PoliController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function destroy($id)
-    {
-        //
+    public function destroy($id){
+        Poli::where('id', $id)->delete();
+
+        return back()->with('updated', 'Poli deleted successfully');
     }
 }

@@ -86,23 +86,11 @@
 			min-height: 30px;
 		}
 	</style>
-	<script type="text/javascript">
-		var dialog_forms = '';
-
-	</script>
-	<script type='text/javascript'>
-		var base_url = '/';
-
-		var subject = 'Pasien';
-		var ajax_list_info_url = '/index.php/admin/pasien/index/ajax_list_info';
-		var unique_hash = 'cd9bbe3e5b7499c1866f9fe1b9b0fa82';
-
-		var message_alert_delete = "Are you sure that you want to delete this record?";
-
-	</script>
 	<div id='list-report-error' class='report-div error'></div>
 	<div id='list-report-success' class='report-div success report-list'></div>
 	<div class="flexigrid" style='width: 100%;' data-unique-hash="cd9bbe3e5b7499c1866f9fe1b9b0fa82">
+		@include('partials.admin-message')
+
 		<div id="hidden-operations" class="hidden-operations"></div>
 		<div class="mDiv">
 			<div class="ftitle">
@@ -112,6 +100,7 @@
 				<span></span>
 			</div>
 		</div>
+
 		<div id='main-table-box' class="main-table-box">
 
 			<div class="tDiv">
@@ -127,28 +116,6 @@
 					<div class="btnseparator">
 					</div>
 				</div>
-				<div class="tDiv3">
-					<a class="export-anchor"
-						data-url="/index.php/admin/pasien/index/export"
-						target="_blank">
-						<div class="fbutton">
-							<div>
-								<span class="export">Export</span>
-							</div>
-						</div>
-					</a>
-					<div class="btnseparator"></div>
-					<a class="print-anchor"
-						data-url="/index.php/admin/pasien/index/print">
-						<div class="fbutton">
-							<div>
-								<span class="print">Print</span>
-							</div>
-						</div>
-					</a>
-					<div class="btnseparator"></div>
-				</div>
-				<div class='clear'></div>
 			</div>
 
 			<div id='ajax_list' class="ajax_list">
@@ -219,15 +186,17 @@
 								</td>
 								<td align="left" width='20%'>
 									<div class='tools'>
-										<a href='/admin/pasien/{{ $pasien->id }}/delete/'
-											title='Delete Pasien' class="delete-row">
-											<span class='delete-icon'></span>
-										</a>
+										<form action="/admin/pasien/{{ $pasien->id }}" method="POST">
+											@csrf
+											@method('DELETE')
+											<button type="submit" class='delete-icon' title="Delete Pasien"></button>
+										</form>
+
 										<a href='/admin/pasien/{{ $pasien->id }}/edit/'
 											title='Edit Pasien' class="edit_button"><span
 												class='edit-icon'></span></a>
 										<a href='/admin/pasien/{{ $pasien->id }}'
-											title='View Pasien' class="edit_button"><span
+											title='View Pasien' class="read_button"><span
 												class='read-icon'></span></a>
 
 										<div class='clear'></div>
@@ -331,24 +300,7 @@
 			</form>
 		</div>
 	</div>
-	<script type="text/javascript">
-		var default_javascript_path = '/assets/grocery_crud/js';
-		var default_css_path = '/assets/grocery_crud/css';
-		var default_texteditor_path = '/assets/grocery_crud/texteditor';
-		var default_theme_path = '/assets/grocery_crud/themes';
-		var base_url = '/';
-
-	</script>
 	<div style="min-height: 100px;"></div>
 </div>
 <!-- /.container-fluid -->
-@endsection
-
-@section('scripts')
-<script type="text/javascript">
-	$(document).ready(function () {
-		$('.Pasien').addClass('active');
-	});
-</script>
-<!-- Bootstrap Core JavaScript -->
 @endsection

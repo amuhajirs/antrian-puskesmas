@@ -21,6 +21,5 @@ Route::get('/', [HomeController::class, 'index'])->name('home');
 
 Route::get('/logout', [LoginModal::class, 'logout'])->name('logout');
 
-
 // Admin
 Route::prefix('/admin')->group(__DIR__.'/adminRoutes.php');

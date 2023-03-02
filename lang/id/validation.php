@@ -171,16 +171,22 @@ return [
     */
 
     'attributes' => [
+        'alamat'=>'Alamat',
+        'confirm_password'=>'Konfirmasi Password',
+        'current_password'=>'Password saat ini',
+        'email'=> 'Email',
+        'jenis_kelamin'=>'Jenis Kelamin',
+        'jumlah'=>'Jumlah Maksimal',
+        'kode_poli'=>'Kode Poli',
         'nama'=>'Nama',
+        'nama_poli'=>'Nama Poli',
+        'new_password'=>'Password Baru',
         'no_identitas'=>'Nomor KTP',
         'no_telp'=>'No Telephone',
-        'username'=>'Username',
-        'email'=> 'Email',
         'phone'=> 'Nomor HP',
         'password'=>'Password',
-        'current_password'=>'Password saat ini',
-        'new_password'=>'Password Baru',
         'password_confirmation'=>'Konfirmasi Password',
-        'confirm_password'=>'Konfirmasi Password',
+        'tgl_lahir'=>'Tanggal Lahir',
+        'username'=>'Username',
     ],
 ];

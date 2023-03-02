@@ -17,12 +17,12 @@ class DaftarModal extends Component{
 
     protected $rules = [
         'no_identitas'=>'required|numeric|digits:16',
-        'nama'=>'required|min:3',
+        'nama'=>'required',
         'jenis_kelamin'=>'required',
         'tgl_lahir'=>'required',
         'alamat'=>'required',
-        'no_telp'=>'required|min:10',
-        'username'=>'required|min:3',
+        'no_telp'=>'required|min:10|max:13',
+        'username'=>'required|min:3|unique:users',
         'password'=>'required',
     ];
 

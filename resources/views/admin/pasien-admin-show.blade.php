@@ -146,22 +146,13 @@
                             </div>
                             <div class='clear'></div>
                         </div>
-                        <div class='form-field-box even' id="password_field_box">
-                            <div class='form-display-as-box' id="password_display_as_box">
-                                Password :
-                            </div>
-                            <div class='form-input-box' id="password_input_box">
-                                <div id="field-password" class="readonly_label">{{ $pasien->password }}</div>
-                            </div>
-                            <div class='clear'></div>
-                        </div>
+
                         <div id='report-error' class='report-div error'></div>
                         <div id='report-success' class='report-div success'></div>
                     </div>
                     <div class="pDiv">
                         <div class='form-button-box'>
-                            <input type='button' value='Back to list' class="btn btn-large back-to-list"
-                                id="cancel-button" />
+                            <a href="/admin/pasien" class="btn btn-large back-to-list" style="text-decoration: none; color: black;">Back to list</a>
                         </div>
                         <div class='form-button-box'>
                             <div class='small-loading' id='FormLoading'>Loading, updating changes...</div>
@@ -171,33 +162,7 @@
                 </form>
             </div>
         </div>
-        <script>
-            var validation_url = '/admin/pasien/index/update_validation/1';
-            var list_url = '/admin/pasien/';
-
-            var message_alert_edit_form = "The data you had change may not be saved.\nAre you sure you want to go back to list?";
-            var message_update_error = "An error has occurred on saving.";
-        </script>
-        <script type="text/javascript">
-            var js_date_format = 'dd/mm/yy';
-        </script>
-        <script type="text/javascript">
-            var default_javascript_path = '/assets/grocery_crud/js';
-            var default_css_path = '/assets/grocery_crud/css';
-            var default_texteditor_path = '/assets/grocery_crud/texteditor';
-            var default_theme_path = '/assets/grocery_crud/themes';
-            var base_url = '/';
-
-        </script>
         <div style="min-height: 100px;"></div>
     </div>
     <!-- /.container-fluid -->
-@endsection
-
-@section('scripts')
-    <script type="text/javascript">
-        $(document).ready(function(){
-        $('.Pasien').addClass('active');
-        });
-    </script>
 @endsection
