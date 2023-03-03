@@ -7,19 +7,19 @@ use App\Models\Poli;
 use Livewire\Component;
 
 class HeroLogin extends Component{
+    public $antrian_sekarang;
+    public $polis;
+    public $antrian_anda;
     protected $listeners = ['antrianAdded' => '$refresh'];
 
     public function render(){
-        $antrian_sekarang = Antrian::pluck('no_antrian')->count();
-        if(!$antrian_sekarang){
-            $antrian_sekarang=0;
+        $this->antrian_sekarang = Antrian::pluck('no_antrian')->count();
+        if(!$this->antrian_sekarang){
+            $this->antrian_sekarang=0;
         }
+        $this->polis = Poli::all();
+        $this->antrian_anda = Antrian::where('pasien_id', auth('web')->user()->id)->orderBy('created_at', 'DESC')->first();
 
-        $polis = Poli::all();
-
-        return view('livewire.hero-login', [
-            'antrian_sekarang'=>$antrian_sekarang,
-            'polis'=>$polis,
-        ]);
+        return view('livewire.hero-login');
     }
 }

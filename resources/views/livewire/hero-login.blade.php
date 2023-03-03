@@ -28,16 +28,16 @@
                 <h6><label>Nomor Antrian Anda :</label></h6>
             </div>
             <div class="col-md-2 text-justify">
-                <h5>1</h5>
+                <h5>{{ $antrian_anda->no_antrian }}</h5>
             </div>
             <div class="col-md-5">
-                <a href="/print.php" style="color: #000; background: #fff; padding: 5px;" target="_blank">Print</a>
+                <a href="/print" style="color: #000; background: #fff; padding: 5px;" target="_blank">Print</a>
             </div>
             <div class="col-md-5 text-right">
                 <h6><label>Poli :</label></h6>
             </div>
             <div class="col-md-5 mb-5 text-justify">
-                <h6>Poli Umum</h6>
+                <h6>{{ $antrian_anda->poli->nama_poli }}</h6>
             </div>
         </div>
 

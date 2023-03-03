@@ -1,6 +1,7 @@
 <?php
 
 use App\Http\Controllers\HomeController;
+use App\Http\Controllers\PrintController;
 use Illuminate\Support\Facades\Route;
 
 use App\Http\Livewire\LoginModal;
@@ -18,6 +19,8 @@ use App\Http\Livewire\LoginModal;
 
 // User
 Route::get('/', [HomeController::class, 'index'])->name('home');
+
+Route::get('/print', [PrintController::class, 'index']);
 
 Route::get('/logout', [LoginModal::class, 'logout'])->name('logout');
 
