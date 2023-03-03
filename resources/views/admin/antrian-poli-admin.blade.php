@@ -178,7 +178,7 @@
                                 </td>
                                 <td align="left" width='20%'>
                                     <div class='tools'>
-                                        <a href='/admin/antrian_poli/1'
+                                        <a href='/admin/antrian_poli/{{ $antrian->id }}'
                                             title='View Antrian poli' class="edit_button"><span
                                                 class='read-icon'></span></a>
 

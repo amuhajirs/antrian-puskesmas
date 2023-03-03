@@ -52,8 +52,11 @@ class AntrianPoliController extends Controller
      * @return \Illuminate\Http\Response
      */
     public function show($id){
+        $antrian = Antrian::where('id', $id)->first();
+
         return view('admin.antrian-poli-admin-show', [
             'title'=>'Antrian Poli',
+            'antrian'=>$antrian,
         ]);
     }
 
