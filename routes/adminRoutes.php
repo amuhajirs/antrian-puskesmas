@@ -3,6 +3,7 @@
 use Illuminate\Support\Facades\Route;
 
 use App\Http\Controllers\admin\LoginAdminController;
+use App\Http\Controllers\admin\DashboardController;
 use App\Http\Controllers\admin\PasienController;
 use App\Http\Controllers\admin\PoliController;
 use App\Http\Controllers\admin\AntrianPoliController;
@@ -22,11 +23,7 @@ Route::middleware(['guest:admin'])->group(function () {
 
 // Required Login Admin
 Route::middleware(['auth:admin'])->group(function () {
-    Route::get('/dashboard', function (){
-        return view('admin.dashboard-admin', [
-            'title'=>'Dashboard',
-        ]);
-    });
+    Route::get('/dashboard', [DashboardController::class, 'index']);
 
     Route::resource('/pasien', PasienController::class);
 
