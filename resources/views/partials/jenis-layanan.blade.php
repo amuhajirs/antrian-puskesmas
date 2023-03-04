@@ -89,10 +89,10 @@
                 </div>
             </div>
             <div class="mt-3 col-12 text-center">
-                <a class="btn btn-primary mb-3 mr-2" href="#carouselExampleIndicators2" role="button" data-slide="prev">
+                <a class="btn btn-primary mb-3 mr-2" href="#carouselExampleIndicators2" role="button" data-slide="prev" style="background-color: #1e789c">
                     <i class="fa fa-arrow-left"></i>
                 </a>
-                <a class="btn btn-primary mb-3 " href="#carouselExampleIndicators2" role="button" data-slide="next">
+                <a class="btn btn-primary mb-3 " href="#carouselExampleIndicators2" role="button" data-slide="next" style="background-color: #1e789c">
                     <i class="fa fa-arrow-right"></i>
                 </a>
             </div>

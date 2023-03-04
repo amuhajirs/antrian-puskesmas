@@ -19,6 +19,9 @@ class HeroLogin extends Component{
         }
         $this->polis = Poli::all();
         $this->antrian_anda = Antrian::where('pasien_id', auth('web')->user()->id)->orderBy('created_at', 'DESC')->first();
+        // if(!$this->antrian_anda){
+        //     $this->antrian_anda = ['no_antrian'=>];
+        // }
 
         return view('livewire.hero-login');
     }

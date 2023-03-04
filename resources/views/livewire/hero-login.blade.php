@@ -28,7 +28,7 @@
                 <h6><label>Nomor Antrian Anda :</label></h6>
             </div>
             <div class="col-md-2 text-justify">
-                <h5>{{ $antrian_anda->no_antrian }}</h5>
+                <h5>{{ $antrian_anda ? $antrian_anda->no_antrian : 0 }}</h5>
             </div>
             <div class="col-md-5">
                 <a href="/print" style="color: #000; background: #fff; padding: 5px;" target="_blank">Print</a>
@@ -37,7 +37,7 @@
                 <h6><label>Poli :</label></h6>
             </div>
             <div class="col-md-5 mb-5 text-justify">
-                <h6>{{ $antrian_anda->poli->nama_poli }}</h6>
+                <h6>{{ $antrian_anda ? $antrian_anda->poli->nama_poli : '-' }}</h6>
             </div>
         </div>
 
