@@ -31,18 +31,19 @@
         <link href="css/plugins/morris.css" rel="stylesheet" />
         <div class="row">
             <div class="col-lg-9 col-md-6">
-                <form action="http://localhost:8080/antrian-puskesmas/admin/akun/reset_password" method="POST">
+                <form method="POST">
+                    @csrf
                     <div class="form-group">
-                        <label for="exampleInputEmail1">Password Saat Ini</label>
-                        <input type="password" name="cur_pass" class="form-control" id="exampleInputEmail1" placeholder="Password Sekarang" required="required" />
+                        <label for="current_password">Password Saat Ini</label>
+                        <input type="password" class="form-control" name="current_password" id="current_password" placeholder="Password Sekarang" required />
                     </div>
                     <div class="form-group">
-                        <label for="exampleInputPassword1">Password Baru</label>
-                        <input type="password" class="form-control" name="new_password" id="exampleInputPassword1" placeholder="Password Baru" required="required" />
+                        <label for="password">Password Baru</label>
+                        <input type="password" class="form-control" name="password" id="password" placeholder="Password Baru" required />
                     </div>
                     <div class="form-group">
-                        <label for="exampleInputPassword1">Password Baru Lagi</label>
-                        <input type="password" class="form-control" name="re_password" id="exampleInputPassword1" placeholder="Password Baru" required="required" />
+                        <label for="confirm_password">Password Baru Lagi</label>
+                        <input type="password" class="form-control" name="confirm_password" id="confirm_password" placeholder="Password Baru" required />
                     </div>
                     <button type="submit" class="btn btn-default">
                         Simpan
@@ -56,12 +57,4 @@
         <script src="js/jquery.js"></script>
     </div>
     <!-- /.container-fluid -->
-@endsection
-
-@section('scripts')
-    <script type="text/javascript">
-        $(document).ready(function () {
-            $(".dash").addClass("active");
-        });
-    </script>
 @endsection

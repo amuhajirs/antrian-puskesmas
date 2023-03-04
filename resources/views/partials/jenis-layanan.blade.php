@@ -2,11 +2,11 @@
 <section class="page-section portfolio" id="poliklinik">
     <div class="container">
 
-      <!-- Portfolio Section Heading -->
-      <h2 class="page-section-heading text-center text-uppercase text-secondary mb-0">JENIS PELAYANAN</h2>
+    <!-- Portfolio Section Heading -->
+    <h2 class="page-section-heading text-center text-uppercase text-secondary mb-0">JENIS PELAYANAN</h2>
 
-      <!-- Portfolio Grid Items -->
-      <div class="pt-5 pb-5">
+    <!-- Portfolio Grid Items -->
+    <div class="pt-5 pb-5">
         <div class="container">
             <div class="row">
                 <div class="col-12">

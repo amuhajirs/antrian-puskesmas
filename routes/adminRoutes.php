@@ -4,6 +4,7 @@ use Illuminate\Support\Facades\Route;
 
 use App\Http\Controllers\admin\LoginAdminController;
 use App\Http\Controllers\admin\DashboardController;
+use App\Http\Controllers\admin\PasswordController;
 use App\Http\Controllers\admin\PasienController;
 use App\Http\Controllers\admin\PoliController;
 use App\Http\Controllers\admin\AntrianPoliController;
@@ -31,9 +32,6 @@ Route::middleware(['auth:admin'])->group(function () {
 
     Route::resource('/antrian_poli', AntrianPoliController::class)->except(['store', 'edit', 'update', 'destroy']);
 
-    Route::get('/password', function (){
-        return view('admin.password-admin', [
-            'title'=>'Antrian Poli',
-        ]);
-    });
+    Route::get('/password', [PasswordController::class, 'index']);
+    Route::post('/password', [PasswordController::class, 'store']);
 });

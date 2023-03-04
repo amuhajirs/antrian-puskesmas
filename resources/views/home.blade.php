@@ -3,7 +3,6 @@
 <style>
   .carousel-item .card{
     height: 450px;
-    overflow: hidden;
   }
 
   ._header{
