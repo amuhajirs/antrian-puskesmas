@@ -7,7 +7,7 @@
     <div class="row">
         <div class="col-lg-12">
             <h1 class="page-header">
-                Dashboard <small>Selamat Datang | Admin</small>
+                Dashboard <small>Selamat Datang | {{ auth()->user()->nama }}</small>
             </h1>
             <ol class="breadcrumb">
                 <li class="active">
@@ -24,7 +24,7 @@
     <div class="row">
     @foreach ($polis as $poli)
     <div class="col-lg-3 col-md-6">
-        <div class="panel panel-primary">
+        <div class="panel panel-red">
             <div class="panel-heading">
                 <div class="row">
                     <div class="col-xs-3">
@@ -36,13 +36,13 @@
                     </div>
                 </div>
             </div>
-            <a href="#">
+            {{-- <a href="/admin/poli"> --}}
                 <div class="panel-footer">
-                    <!-- <span class="pull-left">View Details</span>
-    <span class="pull-right"><i class="fa fa-arrow-circle-right"></i></span> -->
-                    <div class="clearfix"></div>
+                    {{-- <span class="pull-left">View Details</span>
+    <span class="pull-right"><i class="fa fa-arrow-circle-right"></i></span>
+                    <div class="clearfix"></div> --}}
                 </div>
-            </a>
+            {{-- </a> --}}
         </div>
     </div>
     @endforeach

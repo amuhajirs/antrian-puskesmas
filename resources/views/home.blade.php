@@ -5,7 +5,7 @@
     height: 450px;
   }
 
-  ._header{
+  .header{
     background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('http://news.propanraya.com/upload/2018_april/Klinik_Darma_Nusantara_7.jpeg');
     background-repeat: no-repeat;
     background-position: center;
@@ -13,7 +13,7 @@
     background-attachment: fixed;
   }
 
-  ._header2{
+  .header2{
     background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('https://picklinik.id/storage/2021/10/header.jpg');
     background-repeat: no-repeat;
     background-position: center;

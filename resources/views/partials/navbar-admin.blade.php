@@ -101,7 +101,7 @@
         <!--            </li>-->
         <li class="dropdown">
             <a class="dropdown-toggle" data-toggle="dropdown" style="cursor: pointer;">
-                <i class="fa fa-user"></i> admin <b class="caret"></b></a>
+                <i class="fa fa-user"></i> {{ auth()->user()->nama }} <b class="caret"></b></a>
             <ul class="dropdown-menu">
                 <!-- <li>
         <a href="/admin/akun"><i class="fa fa-fw fa-user"></i> Profile</a>

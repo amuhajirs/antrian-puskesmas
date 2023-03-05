@@ -29,28 +29,26 @@
 
         <!-- Morris Charts CSS -->
         <link href="css/plugins/morris.css" rel="stylesheet" />
-        <div class="row">
+        @include('partials.admin-message')
+        <div class="row" style="padding-bottom: 20px;">
             <div class="col-lg-9 col-md-6">
                 <form method="POST">
                     @csrf
                     <div class="form-group">
-                        <label for="current_password">Password Saat Ini</label>
-                        <input type="password" class="form-control" name="current_password" id="current_password" placeholder="Password Sekarang" required />
+                        <label for="password">Password Saat Ini</label>
+                        <input type="password" class="form-control is-invalid" name="password" id="password" placeholder="Password Sekarang" required />
                     </div>
                     <div class="form-group">
-                        <label for="password">Password Baru</label>
-                        <input type="password" class="form-control" name="password" id="password" placeholder="Password Baru" required />
+                        <label for="new_password">Password Baru</label>
+                        <input type="password" class="form-control" name="new_password" id="new_password" placeholder="Password Baru" required />
                     </div>
                     <div class="form-group">
-                        <label for="confirm_password">Password Baru Lagi</label>
+                        <label for="confirm_password">Konfirmasi Password Baru</label>
                         <input type="password" class="form-control" name="confirm_password" id="confirm_password" placeholder="Password Baru" required />
                     </div>
-                    <button type="submit" class="btn btn-default">
-                        Simpan
-                    </button>
+                    <button type="submit" class="btn btn-default">Simpan</button>
                 </form>
             </div>
-            <div class="col-lg-3 col-md-6"></div>
         </div>
         <!-- /.row -->
 

@@ -16,20 +16,20 @@ class PasswordController extends Controller{
 
     public function store(Request $request){
         $request->validate([
-            'current_password'=>'required',
             'password'=>'required',
-            'confirm_password'=>'required',
+            'new_password'=>'required',
+            'confirm_password'=>'required|same:new_password',
         ]);
 
         if(Hash::check($request->password, auth('admin')->user()->password)){
             Admin::where('id', auth('admin')->user()->id)
             ->update([
-                'password' => bcrypt($request->password)
+                'password' => bcrypt($request->new_password)
             ]);
 
-            return back();
+            return back()->with('success', 'Password has been Changed');
         } else{
-            return back()->withErrors('');
+            return back()->with('error', 'Password Wrong');
         }
     }
 }

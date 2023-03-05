@@ -1,5 +1,5 @@
 <!-- Masthead -->
-<header class="masthead text-white text-center _header">
+<header class="masthead text-white text-center header">
     <div class="container d-flex align-items-center flex-column">
   
       <!-- Masthead Avatar Image -->

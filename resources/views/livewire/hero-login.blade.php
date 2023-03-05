@@ -1,4 +1,4 @@
-<header class="masthead pb-0 text-white text-center _header2" style="background-color: #1a6988 ">
+<header class="masthead pb-0 text-white text-center header2" style="background-color: #1a6988 ">
     <div class="container d-flex align-items-center flex-column">
 
         <!-- Masthead Avatar Image -->
