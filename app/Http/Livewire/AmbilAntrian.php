@@ -43,9 +43,6 @@ class AmbilAntrian extends Component{
             'kode_poli'=>$this->poli,
         ]);
 
-        $this->poli = '';
-        $this->no_antrian = '';
-        $this->emit('antrianAdded');
-        $this->dispatchBrowserEvent('antrianAdded', 'Antrian berhasil dibuat');
+        return redirect('/')->with('antrianAdded', 'Antrian berhasil dibuat');
     }
 }

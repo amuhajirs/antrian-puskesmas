@@ -32,7 +32,7 @@
 {{-- Udh Login --}}
 @auth('web')
   {{-- Header --}}
-  <livewire:hero-login>
+  @include('partials.hero-login')
   {{-- Ambil Antrian --}}
   <livewire:ambil-antrian>
 
@@ -136,6 +136,17 @@
   new Noty({
       
     text: "{{session('loggedOut')}}",
+    timeout: 3000,
+    theme: "metroui",
+    type: "success",
+  }).show();
+</script>
+@endif
+
+@if(request()->session()->has('antrianAdded'))
+<script type="text/javascript">
+  new Noty({
+    text: "{{session('antrianAdded')}}",
     timeout: 3000,
     theme: "metroui",
     type: "success",

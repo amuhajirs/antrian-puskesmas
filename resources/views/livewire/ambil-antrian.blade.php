@@ -21,7 +21,7 @@
                                     <select id="poli" class="form-control" wire:model="poli">
                                         <option value="">Pilih</option>
                                         @foreach ($polis as $_poli)
-                                        <option value="{{$_poli->kode_poli}}">{{$_poli->kode_poli}}</option>
+                                        <option value="{{$_poli->kode_poli}}">{{$_poli->nama_poli}}</option>
                                         @endforeach
                                     </select>
                                 </div>
@@ -80,15 +80,4 @@
             }).show();
         </script>
     @enderror
-
-    <script>
-        window.addEventListener('antrianAdded', event => {
-            new Noty({
-                text: event.detail,
-                timeout: 3000,
-                theme: "metroui",
-                type: "success",
-            }).show();
-        })
-    </script>
 </section>

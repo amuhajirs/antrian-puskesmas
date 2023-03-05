@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Models\Antrian;
+use App\Models\Poli;
 
 class HomeController extends Controller
 {
@@ -12,8 +13,13 @@ class HomeController extends Controller
             $antrian_sekarang=0;
         }
 
+        $polis = Poli::all();
+        $antrian_anda = Antrian::where('pasien_id', auth('web')->user()->id)->orderBy('created_at', 'DESC')->first();
+
         return view('home', [
             'antrian_sekarang'=>$antrian_sekarang,
+            'antrian_anda'=>$antrian_anda,
+            'polis'=>$polis,
         ]);
     }
 }
