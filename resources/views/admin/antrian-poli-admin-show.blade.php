@@ -21,17 +21,6 @@
                 </ol>
             </div>
         </div>
-        <!-- /.row -->
-
-        <!--            <div class="row">-->
-        <!--                <div class="col-lg-12">-->
-        <!--                    <div class="alert alert-info alert-dismissable">-->
-        <!--                        <button type="button" class="close" data-dismiss="alert" aria-hidden="true">&times;</button>-->
-        <!--                        <i class="fa fa-info-circle"></i>  <strong>Like SB Admin?</strong> Try out <a href="http://startbootstrap.com/template-overviews/sb-admin-2" class="alert-link">SB Admin 2</a> for additional features!-->
-        <!--                    </div>-->
-        <!--                </div>-->
-        <!--            </div>-->
-        <!-- /.row -->
 
         <link type="text/css" rel="stylesheet"
             href="/assets/grocery_crud/themes/flexigrid/css/flexigrid.css" />
@@ -71,9 +60,6 @@
                     <div class='ftitle-left'>
                         Record Antrian poli </div>
                     <div class='clear'></div>
-                </div>
-                <div title="Minimize/Maximize" class="ptogtitle">
-                    <span></span>
                 </div>
             </div>
             <div id='main-table-box'>
@@ -129,8 +115,7 @@
                 </div>
                 <div class="pDiv">
                     <div class='form-button-box'>
-                        <input type='button' value='Back to list' class="btn btn-large back-to-list"
-                            id="cancel-button" />
+                        <a href="/admin/antrian-poli" class="btn btn-large back-to-list" style="margin-bottom: 10px; text-decoration: none; color:black;">Back to list</a>
                     </div>
                     <div class='form-button-box'>
                         <div class='small-loading' id='FormLoading'>Loading, updating changes...</div>
@@ -140,24 +125,6 @@
 
             </div>
         </div>
-        <script>
-            var validation_url = '/admin/antrian_poli/index/update_validation/1';
-            var list_url = '/admin/antrian_poli';
-
-            var message_alert_edit_form = "The data you had change may not be saved.\nAre you sure you want to go back to list?";
-            var message_update_error = "An error has occurred on saving.";
-        </script>
-        <script type="text/javascript">
-            var js_date_format = 'dd/mm/yy';
-        </script>
-        <script type="text/javascript">
-            var default_javascript_path = '/assets/grocery_crud/js';
-            var default_css_path = '/assets/grocery_crud/css';
-            var default_texteditor_path = '/assets/grocery_crud/texteditor';
-            var default_theme_path = '/assets/grocery_crud/themes';
-            var base_url = '/';
-
-        </script>
         <div style="min-height: 100px;"></div>
     </div>
     <!-- /.container-fluid -->

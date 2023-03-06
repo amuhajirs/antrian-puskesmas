@@ -72,94 +72,85 @@
                         Record Pasien </div>
                     <div class='clear'></div>
                 </div>
-                <div title="Minimize/Maximize" class="ptogtitle">
-                    <span></span>
-                </div>
             </div>
             <div id='main-table-box'>
-                <form action="/index.php/admin/pasien/index/read/1" method="post"
-                    id="crudForm" enctype="multipart/form-data" accept-charset="utf-8">
-                    <div class='form-div'>
-                        <div class='form-field-box odd' id="no_identitas_field_box">
-                            <div class='form-display-as-box' id="no_identitas_display_as_box">
-                                No identitas :
-                            </div>
-                            <div class='form-input-box' id="no_identitas_input_box">
-                                <div id="field-no_identitas" class="readonly_label">{{ $pasien->no_identitas }}</div>
-                            </div>
-                            <div class='clear'></div>
+                <div class='form-div'>
+                    <div class='form-field-box odd' id="no_identitas_field_box">
+                        <div class='form-display-as-box' id="no_identitas_display_as_box">
+                            No identitas :
                         </div>
-                        <div class='form-field-box even' id="nama_field_box">
-                            <div class='form-display-as-box' id="nama_display_as_box">
-                                Nama :
-                            </div>
-                            <div class='form-input-box' id="nama_input_box">
-                                <div id="field-nama" class="readonly_label">{{ $pasien->nama }}</div>
-                            </div>
-                            <div class='clear'></div>
-                        </div>
-                        <div class='form-field-box odd' id="jenis_kelamin_field_box">
-                            <div class='form-display-as-box' id="jenis_kelamin_display_as_box">
-                                Jenis kelamin :
-                            </div>
-                            <div class='form-input-box' id="jenis_kelamin_input_box">
-                                <div id="field-jenis_kelamin" class="readonly_label">{{ $pasien->jenis_kelamin }}</div>
-                            </div>
-                            <div class='clear'></div>
-                        </div>
-                        <div class='form-field-box even' id="tgl_lahir_field_box">
-                            <div class='form-display-as-box' id="tgl_lahir_display_as_box">
-                                Tgl lahir :
-                            </div>
-                            <div class='form-input-box' id="tgl_lahir_input_box">
-                                <div id="field-tgl_lahir" class="readonly_label">{{ $pasien->tgl_lahir }}</div>
-                            </div>
-                            <div class='clear'></div>
-                        </div>
-                        <div class='form-field-box odd' id="alamat_field_box">
-                            <div class='form-display-as-box' id="alamat_display_as_box">
-                                Alamat :
-                            </div>
-                            <div class='form-input-box' id="alamat_input_box">
-                                <div id="field-alamat" class="readonly_label">
-                                    <p>
-                                        {{ $pasien->alamat }}</p>
-                                </div>
-                            </div>
-                            <div class='clear'></div>
-                        </div>
-                        <div class='form-field-box even' id="no_telp_field_box">
-                            <div class='form-display-as-box' id="no_telp_display_as_box">
-                                No telp :
-                            </div>
-                            <div class='form-input-box' id="no_telp_input_box">
-                                <div id="field-no_telp" class="readonly_label">{{ $pasien->no_telp }}</div>
-                            </div>
-                            <div class='clear'></div>
-                        </div>
-                        <div class='form-field-box odd' id="username_field_box">
-                            <div class='form-display-as-box' id="username_display_as_box">
-                                Username :
-                            </div>
-                            <div class='form-input-box' id="username_input_box">
-                                <div id="field-username" class="readonly_label">{{ $pasien->username }}</div>
-                            </div>
-                            <div class='clear'></div>
-                        </div>
-
-                        <div id='report-error' class='report-div error'></div>
-                        <div id='report-success' class='report-div success'></div>
-                    </div>
-                    <div class="pDiv">
-                        <div class='form-button-box'>
-                            <a href="/admin/pasien" class="btn btn-large back-to-list" style="text-decoration: none; color: black;">Back to list</a>
-                        </div>
-                        <div class='form-button-box'>
-                            <div class='small-loading' id='FormLoading'>Loading, updating changes...</div>
+                        <div class='form-input-box' id="no_identitas_input_box">
+                            <div id="field-no_identitas" class="readonly_label">{{ $pasien->no_identitas }}</div>
                         </div>
                         <div class='clear'></div>
                     </div>
-                </form>
+                    <div class='form-field-box even' id="nama_field_box">
+                        <div class='form-display-as-box' id="nama_display_as_box">
+                            Nama :
+                        </div>
+                        <div class='form-input-box' id="nama_input_box">
+                            <div id="field-nama" class="readonly_label">{{ $pasien->nama }}</div>
+                        </div>
+                        <div class='clear'></div>
+                    </div>
+                    <div class='form-field-box odd' id="jenis_kelamin_field_box">
+                        <div class='form-display-as-box' id="jenis_kelamin_display_as_box">
+                            Jenis kelamin :
+                        </div>
+                        <div class='form-input-box' id="jenis_kelamin_input_box">
+                            <div id="field-jenis_kelamin" class="readonly_label">{{ $pasien->jenis_kelamin }}</div>
+                        </div>
+                        <div class='clear'></div>
+                    </div>
+                    <div class='form-field-box even' id="tgl_lahir_field_box">
+                        <div class='form-display-as-box' id="tgl_lahir_display_as_box">
+                            Tgl lahir :
+                        </div>
+                        <div class='form-input-box' id="tgl_lahir_input_box">
+                            <div id="field-tgl_lahir" class="readonly_label">{{ $pasien->tgl_lahir }}</div>
+                        </div>
+                        <div class='clear'></div>
+                    </div>
+                    <div class='form-field-box odd' id="alamat_field_box">
+                        <div class='form-display-as-box' id="alamat_display_as_box">
+                            Alamat :
+                        </div>
+                        <div class='form-input-box' id="alamat_input_box">
+                            <div id="field-alamat" class="readonly_label">
+                                <p>
+                                    {{ $pasien->alamat }}</p>
+                            </div>
+                        </div>
+                        <div class='clear'></div>
+                    </div>
+                    <div class='form-field-box even' id="no_telp_field_box">
+                        <div class='form-display-as-box' id="no_telp_display_as_box">
+                            No telp :
+                        </div>
+                        <div class='form-input-box' id="no_telp_input_box">
+                            <div id="field-no_telp" class="readonly_label">{{ $pasien->no_telp }}</div>
+                        </div>
+                        <div class='clear'></div>
+                    </div>
+                    <div class='form-field-box odd' id="username_field_box">
+                        <div class='form-display-as-box' id="username_display_as_box">
+                            Username :
+                        </div>
+                        <div class='form-input-box' id="username_input_box">
+                            <div id="field-username" class="readonly_label">{{ $pasien->username }}</div>
+                        </div>
+                        <div class='clear'></div>
+                    </div>
+                </div>
+                <div class="pDiv">
+                    <div class='form-button-box'>
+                        <a href="/admin/pasien" class="btn btn-large back-to-list" style="text-decoration: none; color: black; margin-bottom: 10px;">Back to list</a>
+                    </div>
+                    <div class='form-button-box'>
+                        <div class='small-loading' id='FormLoading'>Loading, updating changes...</div>
+                    </div>
+                    <div class='clear'></div>
+                </div>
             </div>
         </div>
         <div style="min-height: 100px;"></div>

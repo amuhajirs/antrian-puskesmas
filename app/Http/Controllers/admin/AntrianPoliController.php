@@ -5,8 +5,6 @@ namespace App\Http\Controllers\admin;
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
 use App\Models\Antrian;
-use App\Models\Poli;
-use App\Models\User;
 
 class AntrianPoliController extends Controller
 {
@@ -16,7 +14,7 @@ class AntrianPoliController extends Controller
      * @return \Illuminate\Http\Response
      */
     public function index(){
-        $antrians = Antrian::orderBy('id', 'DESC')->get();
+        $antrians = Antrian::orderBy('id', 'DESC')->paginate(10)->withQueryString();
 
         return view('admin.antrian-poli-admin', [
             'title'=>'Antrian Poli',

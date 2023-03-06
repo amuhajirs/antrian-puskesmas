@@ -64,9 +64,6 @@
                         Edit Poli </div>
                     <div class='clear'></div>
                 </div>
-                <div title="Minimize/Maximize" class="ptogtitle">
-                    <span></span>
-                </div>
             </div>
             <div id='main-table-box'>
                 <form action="/admin/poli/{{ $poli->id }}" method="POST">
@@ -123,24 +120,6 @@
                 </form>
             </div>
         </div>
-        <script>
-            var validation_url = '/index.php/admin/poli/index/update_validation/7';
-            var list_url = '/index.php/admin/poli/index/';
-
-            var message_alert_edit_form = "The data you had change may not be saved.\nAre you sure you want to go back to list?";
-            var message_update_error = "An error has occurred on saving.";
-        </script>
-        <script type="text/javascript">
-            var js_date_format = 'dd/mm/yy';
-        </script>
-        <script type="text/javascript">
-            var default_javascript_path = '/assets/grocery_crud/js';
-            var default_css_path = '/assets/grocery_crud/css';
-            var default_texteditor_path = '/assets/grocery_crud/texteditor';
-            var default_theme_path = '/assets/grocery_crud/themes';
-            var base_url = '/';
-
-        </script>
         <div style="min-height: 100px;"></div>
     </div>
     <!-- /.container-fluid -->

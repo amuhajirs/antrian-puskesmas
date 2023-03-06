@@ -81,9 +81,6 @@
                         Edit Pasien </div>
                     <div class='clear'></div>
                 </div>
-                <div title="Minimize/Maximize" class="ptogtitle">
-                    <span></span>
-                </div>
             </div>
             <div id='main-table-box'>
                 <form action="/admin/pasien/{{$pasien->id}}" method="POST">
@@ -169,8 +166,6 @@
                             </div>
                             <div class='clear'></div>
                         </div>
-                        <div id='report-error' class='report-div error'></div>
-                        <div id='report-success' class='report-div success'></div>
                     </div>
                     <div class="pDiv">
                         <div class='form-button-box' style="margin-bottom: 20px">

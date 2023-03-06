@@ -139,7 +139,7 @@
 
             </li>
             <li class="antrian_poli {{$title==='Antrian Poli'?'active':''}}">
-                <a href="/admin/antrian_poli"><i
+                <a href="/admin/antrian-poli"><i
                         class="glyphicon glyphicon-list"></i>
                     Antrian Poli </a>
 
