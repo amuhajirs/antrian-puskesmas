@@ -16,8 +16,9 @@ class HomeController extends Controller
         $polis = Poli::all();
         if(auth('web')->check()){
             $antrian_anda = Antrian::where('pasien_id', auth('web')->user()->id)->orderBy('created_at', 'DESC')->first();
+        } else{
+            $antrian_anda = null;
         }
-        $antrian_anda = null;
 
         return view('home', [
             'antrian_sekarang'=>$antrian_sekarang,
