@@ -54,6 +54,6 @@ class AntrianPoliForm extends Component{
         $this->poli = '';
         $this->no_antrian = '';
 
-        return redirect('/admin/antrian_poli')->with('updated', 'Antrian berhasil dibuat');
+        return redirect('/admin/antrian-poli')->with('updated', 'Antrian berhasil dibuat');
     }
 }

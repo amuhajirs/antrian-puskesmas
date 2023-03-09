@@ -97,7 +97,7 @@
 
             <div class="tDiv">
                 <div class="tDiv2">
-                    <a href='/admin/antrian_poli/create'
+                    <a href='/admin/antrian-poli/create'
                         title='Add Antrian poli' class='add-anchor add_button'>
                         <div class="fbutton">
                             <div>

@@ -19,6 +19,7 @@
 
     {{-- Custom Fonts --}}
     <link href="font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+    <script src="https://kit.fontawesome.com/7aa6d504e7.js" crossorigin="anonymous"></script>
 
     @livewireStyles
     {{-- CSS Blade --}}
