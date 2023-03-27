@@ -51,12 +51,9 @@
                             </div>
                             <div class="col-lg-5">
                                 <ul class="pl-3">
-                                    <li>Poliklinik Mata (PM)</li>
-                                    <li>Poliklinik Anak (PA)</li>
-                                    <li>Poliklinik THT (PTHT)</li>
-                                    <li>Poliklinik Jiwa (PJ)</li>
-                                    <li>Poliklinik Saraf (PS)</li>
-                                    <li>Poliklinik Gizi (PG)</li>
+                                    @foreach ($polis as $_poli)
+                                        <li>{{$_poli->nama_poli}} ({{$_poli->kode_poli}})</li>
+                                    @endforeach
                                 </ul>
                             </div>
                         </div>

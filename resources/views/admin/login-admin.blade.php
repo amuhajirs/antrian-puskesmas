@@ -33,14 +33,14 @@ License URL: http://creativecommons.org/licenses/by/3.0/
             </div>
             <form method="POST" action="">
                 @csrf
-                <li>
+                <li style="position: relative;">
                     <input type="text" class="text" name="email" placeholder="Email" required>
-                    <span class="icon user"></span>
+                    <span class="icon user" style="position: absolute; top: 0; right: 0;"></span>
                 </li>
                 <div class="clear"> </div>
-                <li>
+                <li style="position: relative;">
                     <input type="password" name="password" placeholder="Password" required>
-                    <span class="icon lock"></span>
+                    <span class="icon lock" style="position: absolute; top: 0; right: 0;"></span>
                 </li>
                 <div class="clear"> </div>
                 <div class="submit">

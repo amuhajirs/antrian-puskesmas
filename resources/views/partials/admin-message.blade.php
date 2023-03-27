@@ -22,7 +22,7 @@
 </div>
 @endif
 
-{{-- Current Password Wrong --}}
+{{-- Error --}}
 @if (session()->has('error'))
 <div class="row">
     <div class="col-lg-12">
@@ -34,7 +34,7 @@
 </div>
 @endif
 
-{{-- Change Password Success --}}
+{{-- Success --}}
 @if (session()->has('success'))
 <div class="row">
     <div class="col-lg-12">

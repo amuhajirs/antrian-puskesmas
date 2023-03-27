@@ -99,40 +99,6 @@
             </div>
         </div>
     </div>
-    
-    
-    
-    
-
-
-    {{-- <div class="row">
-        
-        <div class="container">
-            <div class="row justify-content-md-center">
-                <div class="col-md-4" style="margin-top: 20px">
-              <h1 align="center">Login </h1>
-              <form action="http://localhost/antrian-puskesmas/Index/proses_login" method='POST'>
-                @csrf
-                <label >Username</label>
-                <input type="username" name="username" class="form-control" >
-              
-                <label>Password</label>
-                <input type="password" name="password" class="form-control">
-                <br><br>
-
-                <div align="right">
-                  <button type="submit" class="btn btn-dark">Login</button>
-                </div>
-                
-              </form>
-              <br><center><p>Repost by <a href='https://sharecodingan.blogspot.com/' title='sharecodingan.blogspot.com' target='_blank'>Share Codingan</a></p></center>
-              
-            </div>
-          </div>
-        </div>
-
-      </div> --}}
-      <!-- /.row -->
 
     </div>
-  </section>
+</section>
