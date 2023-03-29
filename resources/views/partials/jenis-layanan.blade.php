@@ -28,7 +28,7 @@
                                     </div>
                                     <div class="col-md-4 mb-3">
                                         <div class="card">
-                                            <img class="img-fluid" alt="" src="https://all-inedu.com/wp-content/uploads/2022/04/mybt-bbBV2FzrNcsfCzEkFZULFdzn4P5zccNwYXl_7HMJ7lRPg0rRjhIxfWdopqir5HXIp9WcFK311m7RYcIr0gKMCort44sgmIJ.jpeg">
+                                            <img class="img-fluid" alt="" src="https://d1bpj0tv6vfxyp.cloudfront.net/articles/134909_10-11-2020_11-20-15.jpeg">
                                             <div class="card-body">
                                                 <h4 class="card-title">Poliklinik Anak</h4>
                                                 <p class="card-text">Poli anak merupakan poli spesialis yang melayani pemeriksaan pada anak-anak yang mengalami sakit maupun konsultasi dan penyediaan imunisasi bagi bayi dan anak.</p>
